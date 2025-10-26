@@ -1,7 +1,0 @@
-{
-  "buildCommand": "cd fixplanet-website && npm run build",
-  "outputDirectory": "fixplanet-website/.next",
-  "installCommand": "cd fixplanet-website && npm install",
-  "framework": "nextjs",
-  "rootDirectory": "fixplanet-website"
-}
