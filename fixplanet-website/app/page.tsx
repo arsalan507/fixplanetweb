@@ -25,6 +25,17 @@ export default function Home() {
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
+              {/* Mobile Hero SVG - Shows on mobile, hidden on desktop */}
+              <div className="block md:hidden mb-6">
+                <Image
+                  src="/images/hero-mobile.svg"
+                  alt="FIXplanet Apple Device Repair Service"
+                  width={300}
+                  height={200}
+                  className="mx-auto"
+                  priority
+                />
+              </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy-primary mb-6 leading-tight">
                 Expert Apple Device Care—At Your Doorstep, Today
               </h1>
