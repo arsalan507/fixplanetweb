@@ -19,7 +19,7 @@ export default function Home() {
       name: formData.get('name'),
       phone: formData.get('phone'),
       device: formData.get('device'),
-      source: 'Google Ads - iPhone Screen',
+      source: 'Google Ads - MacBook Screen',
     };
 
     // Log form submission (in production, send to your backend)
@@ -33,7 +33,7 @@ export default function Home() {
 
     // Redirect to WhatsApp after submission
     setTimeout(() => {
-      window.location.href = `https://wa.me/${whatsapp}?text=Hi%20FIXplanet!%20I%20have%20a%20cracked%20iPhone%20screen.%20My%20name%20is%20${data.name}%20and%20my%20phone%20is%20${data.phone}`;
+      window.location.href = `https://wa.me/${whatsapp}?text=Hi%20FIXplanet!%20I%20have%20a%20damaged%20MacBook%20screen.%20My%20name%20is%20${data.name}%20and%20my%20phone%20is%20${data.phone}`;
     }, 2000);
   };
 
@@ -62,7 +62,7 @@ export default function Home() {
         <div className="px-4 pt-8 pb-6">
           <Image
             src="/images/hero-mobile.svg"
-            alt="iPhone Screen Replacement Service in Bangalore"
+            alt="MacBook Screen Replacement Service in Bangalore"
             width={400}
             height={300}
             className="mx-auto w-full max-w-md"
@@ -75,7 +75,7 @@ export default function Home() {
           <div id="quote-form" className="bg-white rounded-2xl shadow-2xl p-6 border-t-4 border-primary">
             {!submitted ? (
               <>
-                <h3 className="text-xl font-bold text-secondary mb-2">Get Your Screen Replaced Today</h3>
+                <h3 className="text-xl font-bold text-secondary mb-2">Get Your Display Replaced Today</h3>
                 <p className="text-gray-600 mb-6 text-sm">Fill the form below - we'll call you in 15 minutes</p>
 
                 <form onSubmit={handleSubmit} className="space-y-4">
@@ -119,13 +119,14 @@ export default function Home() {
                       className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none bg-white"
                     >
                       <option value="">Select your device</option>
-                      <option value="iPhone 15">iPhone 15 / 15 Pro</option>
-                      <option value="iPhone 14">iPhone 14 / 14 Pro</option>
-                      <option value="iPhone 13">iPhone 13 / 13 Pro</option>
-                      <option value="iPhone 12">iPhone 12 / 12 Pro</option>
-                      <option value="iPhone 11">iPhone 11</option>
-                      <option value="iPhone X/XS">iPhone X / XS / XR</option>
-                      <option value="Other iPhone">Other iPhone Model</option>
+                      <option value="MacBook Air M1">MacBook Air M1</option>
+                      <option value="MacBook Air M2">MacBook Air M2</option>
+                      <option value="MacBook Pro 13">MacBook Pro 13"</option>
+                      <option value="MacBook Pro 14">MacBook Pro 14"</option>
+                      <option value="MacBook Pro 16">MacBook Pro 16"</option>
+                      <option value="MacBook Air Intel">MacBook Air Intel</option>
+                      <option value="MacBook Pro Intel">MacBook Pro Intel</option>
+                      <option value="Other MacBook">Other MacBook</option>
                     </select>
                   </div>
 
@@ -158,8 +159,8 @@ export default function Home() {
         {/* Content - Mobile */}
         <div className="px-4 pb-8">
           <h2 className="text-3xl font-bold text-secondary leading-tight mb-6">
-            iPhone Screen Cracked?<br />
-            <span className="text-primary">We Replace It Today</span>
+            MacBook Screen Damaged?<br />
+            <span className="text-primary">Professional Display Restoration</span>
           </h2>
 
           <div className="space-y-4 mb-8">
@@ -173,7 +174,7 @@ export default function Home() {
               <svg className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
               </svg>
-              <p className="text-base"><strong>Premium OEM Screens</strong> - Original quality guaranteed</p>
+              <p className="text-base"><strong>Premium OEM Displays</strong> - Original quality guaranteed</p>
             </div>
             <div className="flex items-start space-x-3">
               <svg className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -185,13 +186,13 @@ export default function Home() {
               <svg className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
               </svg>
-              <p className="text-base"><strong>Same-Day Service</strong> - Fast screen replacement in Bangalore</p>
+              <p className="text-base"><strong>Same-Day Service</strong> - Fast display replacement in Bangalore</p>
             </div>
           </div>
 
           <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
             <p className="text-sm font-semibold text-yellow-800">
-              🔥 Limited Time: <span className="underline">Free diagnosis worth ₹500</span> with every screen replacement
+              🔥 Limited Time: <span className="underline">Free diagnosis worth ₹500</span> with every display replacement
             </p>
           </div>
 
@@ -211,13 +212,13 @@ export default function Home() {
             {/* LEFT SIDE - Content & Image */}
             <div>
               <h2 className="text-5xl font-bold text-secondary leading-tight mb-6">
-                iPhone Screen Cracked?<br />
-                <span className="text-primary">We Replace It Today</span>
+                MacBook Screen Damaged?<br />
+                <span className="text-primary">Professional Display Restoration</span>
               </h2>
 
               <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-8">
                 <p className="font-semibold text-yellow-800">
-                  🔥 Limited Time: <span className="underline">Free diagnosis worth ₹500</span> with every screen replacement
+                  🔥 Limited Time: <span className="underline">Free diagnosis worth ₹500</span> with every display replacement
                 </p>
               </div>
 
@@ -225,7 +226,7 @@ export default function Home() {
               <div className="mb-8">
                 <Image
                   src="/images/hero-mobile.svg"
-                  alt="iPhone Screen Replacement Service in Bangalore"
+                  alt="MacBook Screen Replacement Service in Bangalore"
                   width={600}
                   height={400}
                   className="w-full rounded-2xl shadow-xl"
@@ -262,7 +263,7 @@ export default function Home() {
                     </svg>
                   </div>
                   <h3 className="font-bold text-lg mb-2">Premium OEM Parts</h3>
-                  <p className="text-gray-600 text-sm">Original quality screens</p>
+                  <p className="text-gray-600 text-sm">Original quality displays</p>
                 </div>
 
                 <div className="bg-white p-6 rounded-xl shadow-md">
@@ -326,13 +327,14 @@ export default function Home() {
                           className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none text-lg bg-white"
                         >
                           <option value="">Select your device</option>
-                          <option value="iPhone 15">iPhone 15 / 15 Pro</option>
-                          <option value="iPhone 14">iPhone 14 / 14 Pro</option>
-                          <option value="iPhone 13">iPhone 13 / 13 Pro</option>
-                          <option value="iPhone 12">iPhone 12 / 12 Pro</option>
-                          <option value="iPhone 11">iPhone 11</option>
-                          <option value="iPhone X/XS">iPhone X / XS / XR</option>
-                          <option value="Other iPhone">Other iPhone Model</option>
+                          <option value="MacBook Air M1">MacBook Air M1</option>
+                          <option value="MacBook Air M2">MacBook Air M2</option>
+                          <option value="MacBook Pro 13">MacBook Pro 13"</option>
+                          <option value="MacBook Pro 14">MacBook Pro 14"</option>
+                          <option value="MacBook Pro 16">MacBook Pro 16"</option>
+                          <option value="MacBook Air Intel">MacBook Air Intel</option>
+                          <option value="MacBook Pro Intel">MacBook Pro Intel</option>
+                          <option value="Other MacBook">Other MacBook</option>
                         </select>
                       </div>
 
@@ -371,7 +373,7 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-3xl font-bold">1,000+</div>
-              <div className="text-sm opacity-90">Screens Replaced</div>
+              <div className="text-sm opacity-90">Displays Replaced</div>
             </div>
             <div>
               <div className="text-3xl font-bold">2 Hours</div>
@@ -393,7 +395,7 @@ export default function Home() {
       <section className="bg-gradient-to-r from-primary to-secondary py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Get Your iPhone Screen Replaced?
+            Ready to Get Your MacBook Display Restored?
           </h2>
           <p className="text-xl text-white opacity-90 mb-8">
             Fill the form above and we'll call you in 15 minutes
@@ -413,7 +415,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div>
               <p className="font-bold text-lg">FIXplanet</p>
-              <p className="text-sm opacity-75">Professional iPhone Screen Replacement in Bangalore</p>
+              <p className="text-sm opacity-75">Professional MacBook Display Restoration in Bangalore</p>
             </div>
             <div className="flex space-x-6 text-sm">
               <a href="/privacy" className="hover:text-primary transition">Privacy Policy</a>
@@ -429,7 +431,7 @@ export default function Home() {
 
       {/* Floating WhatsApp Button (Mobile) */}
       <a
-        href={`https://wa.me/${whatsapp}?text=Hi%20FIXplanet!%20I%20have%20a%20cracked%20iPhone%20screen`}
+        href={`https://wa.me/${whatsapp}?text=Hi%20FIXplanet!%20I%20have%20a%20damaged%20MacBook%20screen`}
         className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition z-50 lg:hidden"
         aria-label="Chat on WhatsApp"
       >

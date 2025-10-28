@@ -1,0 +1,26 @@
+{
+  "name": "fixplanet-macbook-battery-issues",
+  "version": "1.0.0",
+  "description": "Google Ads Landing Page for FIXplanet - MacBook Battery Replacement",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3001",
+    "build": "next build",
+    "start": "next start -p 3001",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "^16.0.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "tailwindcss": "^3.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.9.1",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "autoprefixer": "^10.4.18",
+    "postcss": "^8.4.35",
+    "typescript": "^5.9.3"
+  }
+}
