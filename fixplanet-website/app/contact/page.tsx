@@ -17,7 +17,6 @@ const contactSchema = z.object({
   email: z.string().email('Please enter a valid email'),
   deviceType: z.string().min(1, 'Please select a device type'),
   deviceModel: z.string().optional(),
-  serviceTier: z.enum(['standard', 'premium', 'elite']),
 });
 
 type ContactFormData = z.infer<typeof contactSchema>;
@@ -36,9 +35,6 @@ export default function ContactPage() {
     reset,
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
-    defaultValues: {
-      serviceTier: 'standard',
-    },
   });
 
   const onSubmit = async (data: ContactFormData) => {
@@ -62,7 +58,7 @@ export default function ContactPage() {
       if (response.ok) {
         setSubmitStatus({
           type: 'success',
-          message: result.message || 'Request submitted successfully! We\'ll contact you within 15 minutes.',
+          message: result.message || 'Request submitted successfully! We\'ll contact you as soon as possible.',
         });
         reset();
       } else {
@@ -97,7 +93,7 @@ export default function ContactPage() {
             Get Your Device Restored Today
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl">
-            15-minute response guarantee. Multiple ways to reach us.
+            60-minute response guarantee. Multiple ways to reach us.
           </p>
         </div>
       </section>
@@ -176,50 +172,6 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  <div>
-                    <label className="block text-sm font-medium text-navy-primary mb-3">
-                      Service Tier
-                    </label>
-                    <div className="space-y-3">
-                      <label className="flex items-start p-4 border-2 rounded-lg cursor-pointer hover:border-teal-accent transition-colors">
-                        <input
-                          type="radio"
-                          {...register('serviceTier')}
-                          value="standard"
-                          className="mt-1 mr-3"
-                        />
-                        <div>
-                          <div className="font-semibold text-navy-primary">Standard (24-48 hours)</div>
-                          <div className="text-sm text-gray-dark">Base pricing, doorstep service</div>
-                        </div>
-                      </label>
-                      <label className="flex items-start p-4 border-2 rounded-lg cursor-pointer hover:border-teal-accent transition-colors">
-                        <input
-                          type="radio"
-                          {...register('serviceTier')}
-                          value="premium"
-                          className="mt-1 mr-3"
-                        />
-                        <div>
-                          <div className="font-semibold text-navy-primary">Premium (Same day) <span className="text-teal-accent">+30%</span></div>
-                          <div className="text-sm text-gray-dark">Priority service, 4-hour response</div>
-                        </div>
-                      </label>
-                      <label className="flex items-start p-4 border-2 rounded-lg cursor-pointer hover:border-teal-accent transition-colors">
-                        <input
-                          type="radio"
-                          {...register('serviceTier')}
-                          value="elite"
-                          className="mt-1 mr-3"
-                        />
-                        <div>
-                          <div className="font-semibold text-navy-primary">Elite (2-4 hours) <span className="text-gold-premium">+60%</span></div>
-                          <div className="text-sm text-gray-dark">24/7 emergency service, loaner device</div>
-                        </div>
-                      </label>
-                    </div>
-                  </div>
-
                   <Button
                     type="submit"
                     size="lg"
@@ -282,7 +234,7 @@ export default function ContactPage() {
                 <h3 className="text-xl font-semibold mb-2 text-white">Service Hours</h3>
                 <p className="text-white/90">Monday - Sunday</p>
                 <p className="text-xl font-bold text-white">9:00 AM - 9:00 PM</p>
-                <p className="text-sm text-white/80 mt-2">Emergency service available for Elite tier</p>
+                <p className="text-sm text-white/80 mt-2">Same-day service available</p>
               </Card>
             </div>
           </div>
