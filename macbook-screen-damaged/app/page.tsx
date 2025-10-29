@@ -3,23 +3,93 @@
 import { useState, FormEvent } from 'react';
 import Image from 'next/image';
 
+// Device models data
+const deviceModels = {
+  iPhone: [
+    'iPhone 5S', 'SE 1st Gen', 'SE 2020', 'SE 3rd Gen',
+    'iPhone 6', 'iPhone 6s', 'iPhone 7', 'iPhone 7 Plus',
+    'iPhone 8', 'iPhone 8 Plus', 'iPhone X', 'iPhone XR',
+    'iPhone XS', 'iPhone XS Max', 'iPhone 11', 'iPhone 11 Pro',
+    'iPhone 11 Pro Max', 'iPhone 12', 'iPhone 12 Mini',
+    'iPhone 12 Pro', 'iPhone 12 Pro Max', 'iPhone 13',
+    'iPhone 13 Mini', 'iPhone 13 Pro', 'iPhone 13 Pro Max',
+    'iPhone 14', 'iPhone 14 Plus', 'iPhone 14 Pro',
+    'iPhone 14 Pro Max', 'iPhone 15', 'iPhone 15 Plus',
+    'iPhone 15 Pro', 'iPhone 15 Pro Max', 'iPhone 16',
+    'iPhone 16 E', 'iPhone 16 Plus', 'iPhone 16 Pro',
+    'iPhone 16 Pro Max', 'iPhone 17', 'iPhone 17 Air',
+    'iPhone 17 Pro', 'iPhone 17 Pro Max'
+  ],
+  MacBook: ['MacBook', 'MacBook Air', 'MacBook Pro', 'Others'],
+  iPad: ['iPad Standard', 'iPad Air', 'iPad Mini', 'iPad Pro', 'Others'],
+  iWatch: [
+    'Series 1', 'Series 2', 'Series 3', 'Series 4', 'Series 5',
+    'Series 6', 'Series 7', 'Series 8', 'Series 9',
+    'SE 1', 'SE 2', 'Ultra', 'Ultra 2'
+  ]
+};
+
+// Device issues data
+const deviceIssues = {
+  iPhone: [
+    'Original screen', 'Premium screen', 'Touch & glass',
+    'Battery', 'Charging port', 'Ear speaker', 'Loud speaker',
+    'Backglass', 'Others'
+  ],
+  MacBook: [
+    'Screen', 'Battery', 'Keyboard', 'Liquid damage',
+    'Not powering on', 'Others'
+  ],
+  iPad: [
+    'Touch & glass', 'Screen', 'Battery', 'Charging port', 'Others'
+  ],
+  iWatch: [
+    'Screen', 'Touch & glass', 'Battery', 'Others'
+  ]
+};
+
 export default function Home() {
+  const [formStep, setFormStep] = useState(1); // 1: device selection, 2: contact info, 3: thank you
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
+  const [isFlipping, setIsFlipping] = useState(false);
 
-  const phone = "+91 8660310638";
-  const whatsapp = "918660310638";
+  // Form data
+  const [selectedDevice, setSelectedDevice] = useState('');
+  const [selectedModel, setSelectedModel] = useState('');
+  const [selectedIssue, setSelectedIssue] = useState('');
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const contactPhone = "+91 9880740443";
+  const whatsapp = "919880740443";
+
+  const handleDeviceChange = (device: string) => {
+    setSelectedDevice(device);
+    setSelectedModel(''); // Reset model when device changes
+    setSelectedIssue(''); // Reset issue when device changes
+  };
+
+  const handleStepOne = () => {
+    if (selectedDevice && selectedModel && selectedIssue) {
+      setIsFlipping(true);
+      setTimeout(() => {
+        setFormStep(2);
+        setIsFlipping(false);
+      }, 600);
+    }
+  };
+
+  const handleFinalSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const formData = new FormData(e.currentTarget);
     const data = {
-      name: formData.get('name'),
-      phone: formData.get('phone'),
-      device: formData.get('device'),
-      source: 'Google Ads - MacBook Screen',
+      device: selectedDevice,
+      model: selectedModel,
+      issue: selectedIssue,
+      name,
+      phone,
+      source: 'Google Ads Landing Page',
     };
 
     // Log form submission (in production, send to your backend)
@@ -29,12 +99,11 @@ export default function Home() {
     await new Promise(resolve => setTimeout(resolve, 1000));
 
     setIsSubmitting(false);
-    setSubmitted(true);
-
-    // Redirect to WhatsApp after submission
+    setIsFlipping(true);
     setTimeout(() => {
-      window.location.href = `https://wa.me/${whatsapp}?text=Hi%20FIXplanet!%20I%20have%20a%20damaged%20MacBook%20screen.%20My%20name%20is%20${data.name}%20and%20my%20phone%20is%20${data.phone}`;
-    }, 2000);
+      setFormStep(3);
+      setIsFlipping(false);
+    }, 600);
   };
 
   const scrollToForm = () => {
@@ -48,7 +117,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
           <h1 className="text-2xl font-bold text-primary">FIXplanet</h1>
           <a
-            href={`tel:${phone}`}
+            href={`tel:${contactPhone}`}
             className="bg-accent text-white px-6 py-2 rounded-full font-semibold hover:bg-orange-600 transition"
           >
             Call Now
@@ -56,13 +125,45 @@ export default function Home() {
         </div>
       </header>
 
+      <style jsx>{`
+        @keyframes flipOut {
+          from {
+            transform: rotateY(0deg);
+            opacity: 1;
+          }
+          to {
+            transform: rotateY(90deg);
+            opacity: 0;
+          }
+        }
+
+        @keyframes flipIn {
+          from {
+            transform: rotateY(-90deg);
+            opacity: 0;
+          }
+          to {
+            transform: rotateY(0deg);
+            opacity: 1;
+          }
+        }
+
+        .flip-out {
+          animation: flipOut 0.6s ease-in-out;
+        }
+
+        .flip-in {
+          animation: flipIn 0.6s ease-in-out;
+        }
+      `}</style>
+
       {/* MOBILE VERSION */}
       <div className="block lg:hidden">
         {/* Hero Image - Mobile */}
         <div className="px-4 pt-8 pb-6">
           <Image
             src="/images/hero-mobile.svg"
-            alt="MacBook Screen Replacement Service in Bangalore"
+            alt="Device Repair Service in Bangalore"
             width={400}
             height={300}
             className="mx-auto w-full max-w-md"
@@ -72,13 +173,89 @@ export default function Home() {
 
         {/* Form - Mobile */}
         <div className="px-4 pb-8">
-          <div id="quote-form" className="bg-white rounded-2xl shadow-2xl p-6 border-t-4 border-primary">
-            {!submitted ? (
+          <div id="quote-form" className={`bg-white rounded-2xl shadow-2xl p-6 border-t-4 border-primary ${isFlipping ? 'flip-out' : 'flip-in'}`}>
+            {formStep === 1 && (
               <>
-                <h3 className="text-xl font-bold text-secondary mb-2">Get Your Display Replaced Today</h3>
-                <p className="text-gray-600 mb-6 text-sm">Fill the form below - we'll call you in 15 minutes</p>
+                <h3 className="text-xl font-bold text-secondary mb-2">Get Your Device Fixed Today</h3>
+                <p className="text-gray-600 mb-6 text-sm">Select your device details below</p>
 
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <div className="space-y-4">
+                  <div>
+                    <label htmlFor="device-mobile" className="block text-sm font-semibold text-gray-700 mb-2">
+                      Device Type *
+                    </label>
+                    <select
+                      id="device-mobile"
+                      value={selectedDevice}
+                      onChange={(e) => handleDeviceChange(e.target.value)}
+                      required
+                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none bg-white"
+                    >
+                      <option value="">Select device type</option>
+                      <option value="iPhone">iPhone</option>
+                      <option value="MacBook">MacBook</option>
+                      <option value="iPad">iPad</option>
+                      <option value="iWatch">iWatch</option>
+                    </select>
+                  </div>
+
+                  {selectedDevice && (
+                    <div>
+                      <label htmlFor="model-mobile" className="block text-sm font-semibold text-gray-700 mb-2">
+                        Model *
+                      </label>
+                      <select
+                        id="model-mobile"
+                        value={selectedModel}
+                        onChange={(e) => setSelectedModel(e.target.value)}
+                        required
+                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none bg-white"
+                      >
+                        <option value="">Select model</option>
+                        {deviceModels[selectedDevice as keyof typeof deviceModels]?.map((model) => (
+                          <option key={model} value={model}>{model}</option>
+                        ))}
+                      </select>
+                    </div>
+                  )}
+
+                  {selectedDevice && selectedModel && (
+                    <div>
+                      <label htmlFor="issue-mobile" className="block text-sm font-semibold text-gray-700 mb-2">
+                        Issue *
+                      </label>
+                      <select
+                        id="issue-mobile"
+                        value={selectedIssue}
+                        onChange={(e) => setSelectedIssue(e.target.value)}
+                        required
+                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none bg-white"
+                      >
+                        <option value="">Select issue</option>
+                        {deviceIssues[selectedDevice as keyof typeof deviceIssues]?.map((issue) => (
+                          <option key={issue} value={issue}>{issue}</option>
+                        ))}
+                      </select>
+                    </div>
+                  )}
+
+                  <button
+                    onClick={handleStepOne}
+                    disabled={!selectedDevice || !selectedModel || !selectedIssue}
+                    className="w-full bg-accent text-white py-3 rounded-lg text-lg font-bold hover:bg-orange-600 transition disabled:bg-gray-400 disabled:cursor-not-allowed"
+                  >
+                    Get Free Quote →
+                  </button>
+                </div>
+              </>
+            )}
+
+            {formStep === 2 && (
+              <>
+                <h3 className="text-xl font-bold text-secondary mb-2">Almost There!</h3>
+                <p className="text-gray-600 mb-6 text-sm">Enter your contact details</p>
+
+                <form onSubmit={handleFinalSubmit} className="space-y-4">
                   <div>
                     <label htmlFor="name-mobile" className="block text-sm font-semibold text-gray-700 mb-2">
                       Your Name *
@@ -86,7 +263,8 @@ export default function Home() {
                     <input
                       type="text"
                       id="name-mobile"
-                      name="name"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
                       required
                       className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none"
                       placeholder="Enter your name"
@@ -95,12 +273,13 @@ export default function Home() {
 
                   <div>
                     <label htmlFor="phone-mobile" className="block text-sm font-semibold text-gray-700 mb-2">
-                      Phone Number *
+                      Contact Number *
                     </label>
                     <input
                       type="tel"
                       id="phone-mobile"
-                      name="phone"
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
                       required
                       pattern="[0-9]{10}"
                       className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none"
@@ -108,34 +287,12 @@ export default function Home() {
                     />
                   </div>
 
-                  <div>
-                    <label htmlFor="device-mobile" className="block text-sm font-semibold text-gray-700 mb-2">
-                      Device *
-                    </label>
-                    <select
-                      id="device-mobile"
-                      name="device"
-                      required
-                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none bg-white"
-                    >
-                      <option value="">Select your device</option>
-                      <option value="MacBook Air M1">MacBook Air M1</option>
-                      <option value="MacBook Air M2">MacBook Air M2</option>
-                      <option value="MacBook Pro 13">MacBook Pro 13"</option>
-                      <option value="MacBook Pro 14">MacBook Pro 14"</option>
-                      <option value="MacBook Pro 16">MacBook Pro 16"</option>
-                      <option value="MacBook Air Intel">MacBook Air Intel</option>
-                      <option value="MacBook Pro Intel">MacBook Pro Intel</option>
-                      <option value="Other MacBook">Other MacBook</option>
-                    </select>
-                  </div>
-
                   <button
                     type="submit"
                     disabled={isSubmitting}
                     className="w-full bg-accent text-white py-3 rounded-lg text-lg font-bold hover:bg-orange-600 transition disabled:bg-gray-400"
                   >
-                    {isSubmitting ? 'Submitting...' : '🚀 Get Instant Quote'}
+                    {isSubmitting ? 'Submitting...' : 'Submit Request'}
                   </button>
 
                   <p className="text-xs text-gray-500 text-center">
@@ -143,14 +300,24 @@ export default function Home() {
                   </p>
                 </form>
               </>
-            ) : (
+            )}
+
+            {formStep === 3 && (
               <div className="text-center py-8">
                 <svg className="w-20 h-20 text-green-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
-                <h3 className="text-2xl font-bold text-secondary mb-2">Request Received!</h3>
-                <p className="text-gray-600 mb-4">We'll call you within 15 minutes</p>
-                <p className="text-sm text-gray-500">Redirecting you to WhatsApp...</p>
+                <h3 className="text-2xl font-bold text-secondary mb-2">Thank You!</h3>
+                <p className="text-gray-600 mb-4">We received your request successfully</p>
+                <p className="text-sm text-gray-500">Our team will call you within 15 minutes</p>
+                <div className="mt-6 p-4 bg-blue-50 rounded-lg">
+                  <p className="text-sm font-semibold text-blue-800">
+                    Need immediate assistance?
+                  </p>
+                  <a href={`tel:${contactPhone}`} className="text-blue-600 font-bold text-lg">
+                    Call {contactPhone}
+                  </a>
+                </div>
               </div>
             )}
           </div>
@@ -159,8 +326,8 @@ export default function Home() {
         {/* Content - Mobile */}
         <div className="px-4 pb-8">
           <h2 className="text-3xl font-bold text-secondary leading-tight mb-6">
-            MacBook Screen Damaged?<br />
-            <span className="text-primary">Professional Display Restoration</span>
+            Device Issues?<br />
+            <span className="text-primary">We Fix It Today</span>
           </h2>
 
           <div className="space-y-4 mb-8">
@@ -174,7 +341,7 @@ export default function Home() {
               <svg className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
               </svg>
-              <p className="text-base"><strong>Premium OEM Displays</strong> - Original quality guaranteed</p>
+              <p className="text-base"><strong>Premium Quality Parts</strong> - Original quality guaranteed</p>
             </div>
             <div className="flex items-start space-x-3">
               <svg className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -186,13 +353,13 @@ export default function Home() {
               <svg className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
               </svg>
-              <p className="text-base"><strong>Same-Day Service</strong> - Fast display replacement in Bangalore</p>
+              <p className="text-base"><strong>Same-Day Service</strong> - Fast repair in Bangalore</p>
             </div>
           </div>
 
           <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
             <p className="text-sm font-semibold text-yellow-800">
-              🔥 Limited Time: <span className="underline">Free diagnosis worth ₹500</span> with every display replacement
+              🔥 Limited Time: <span className="underline">Free diagnosis worth ₹500</span> with every repair
             </p>
           </div>
 
@@ -212,13 +379,13 @@ export default function Home() {
             {/* LEFT SIDE - Content & Image */}
             <div>
               <h2 className="text-5xl font-bold text-secondary leading-tight mb-6">
-                MacBook Screen Damaged?<br />
-                <span className="text-primary">Professional Display Restoration</span>
+                Device Issues?<br />
+                <span className="text-primary">We Fix It Today</span>
               </h2>
 
               <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-8">
                 <p className="font-semibold text-yellow-800">
-                  🔥 Limited Time: <span className="underline">Free diagnosis worth ₹500</span> with every display replacement
+                  🔥 Limited Time: <span className="underline">Free diagnosis worth ₹500</span> with every repair
                 </p>
               </div>
 
@@ -226,7 +393,7 @@ export default function Home() {
               <div className="mb-8">
                 <Image
                   src="/images/hero-mobile.svg"
-                  alt="MacBook Screen Replacement Service in Bangalore"
+                  alt="Device Repair Service in Bangalore"
                   width={600}
                   height={400}
                   className="w-full rounded-2xl shadow-xl"
@@ -262,8 +429,8 @@ export default function Home() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
                     </svg>
                   </div>
-                  <h3 className="font-bold text-lg mb-2">Premium OEM Parts</h3>
-                  <p className="text-gray-600 text-sm">Original quality displays</p>
+                  <h3 className="font-bold text-lg mb-2">Premium Quality Parts</h3>
+                  <p className="text-gray-600 text-sm">Original quality parts</p>
                 </div>
 
                 <div className="bg-white p-6 rounded-xl shadow-md">
@@ -280,13 +447,89 @@ export default function Home() {
 
             {/* RIGHT SIDE - Form (Sticky) */}
             <div className="lg:sticky lg:top-24">
-              <div id="quote-form" className="bg-white rounded-2xl shadow-2xl p-8 border-t-4 border-primary">
-                {!submitted ? (
+              <div id="quote-form" className={`bg-white rounded-2xl shadow-2xl p-8 border-t-4 border-primary ${isFlipping ? 'flip-out' : 'flip-in'}`}>
+                {formStep === 1 && (
                   <>
-                    <h3 className="text-2xl font-bold text-secondary mb-2">Get Your Screen Replaced Today</h3>
-                    <p className="text-gray-600 mb-6">Fill the form below - we'll call you in 15 minutes</p>
+                    <h3 className="text-2xl font-bold text-secondary mb-2">Get Your Device Fixed Today</h3>
+                    <p className="text-gray-600 mb-6">Select your device details below</p>
 
-                    <form onSubmit={handleSubmit} className="space-y-5">
+                    <div className="space-y-5">
+                      <div>
+                        <label htmlFor="device" className="block text-sm font-semibold text-gray-700 mb-2">
+                          Device Type *
+                        </label>
+                        <select
+                          id="device"
+                          value={selectedDevice}
+                          onChange={(e) => handleDeviceChange(e.target.value)}
+                          required
+                          className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none text-lg bg-white"
+                        >
+                          <option value="">Select device type</option>
+                          <option value="iPhone">iPhone</option>
+                          <option value="MacBook">MacBook</option>
+                          <option value="iPad">iPad</option>
+                          <option value="iWatch">iWatch</option>
+                        </select>
+                      </div>
+
+                      {selectedDevice && (
+                        <div>
+                          <label htmlFor="model" className="block text-sm font-semibold text-gray-700 mb-2">
+                            Model *
+                          </label>
+                          <select
+                            id="model"
+                            value={selectedModel}
+                            onChange={(e) => setSelectedModel(e.target.value)}
+                            required
+                            className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none text-lg bg-white"
+                          >
+                            <option value="">Select model</option>
+                            {deviceModels[selectedDevice as keyof typeof deviceModels]?.map((model) => (
+                              <option key={model} value={model}>{model}</option>
+                            ))}
+                          </select>
+                        </div>
+                      )}
+
+                      {selectedDevice && selectedModel && (
+                        <div>
+                          <label htmlFor="issue" className="block text-sm font-semibold text-gray-700 mb-2">
+                            Issue *
+                          </label>
+                          <select
+                            id="issue"
+                            value={selectedIssue}
+                            onChange={(e) => setSelectedIssue(e.target.value)}
+                            required
+                            className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none text-lg bg-white"
+                          >
+                            <option value="">Select issue</option>
+                            {deviceIssues[selectedDevice as keyof typeof deviceIssues]?.map((issue) => (
+                              <option key={issue} value={issue}>{issue}</option>
+                            ))}
+                          </select>
+                        </div>
+                      )}
+
+                      <button
+                        onClick={handleStepOne}
+                        disabled={!selectedDevice || !selectedModel || !selectedIssue}
+                        className="w-full bg-accent text-white py-4 rounded-lg text-xl font-bold hover:bg-orange-600 transition disabled:bg-gray-400 disabled:cursor-not-allowed"
+                      >
+                        Get Free Quote →
+                      </button>
+                    </div>
+                  </>
+                )}
+
+                {formStep === 2 && (
+                  <>
+                    <h3 className="text-2xl font-bold text-secondary mb-2">Almost There!</h3>
+                    <p className="text-gray-600 mb-6">Enter your contact details</p>
+
+                    <form onSubmit={handleFinalSubmit} className="space-y-5">
                       <div>
                         <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
                           Your Name *
@@ -294,7 +537,8 @@ export default function Home() {
                         <input
                           type="text"
                           id="name"
-                          name="name"
+                          value={name}
+                          onChange={(e) => setName(e.target.value)}
                           required
                           className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none text-lg"
                           placeholder="Enter your name"
@@ -303,12 +547,13 @@ export default function Home() {
 
                       <div>
                         <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
-                          Phone Number *
+                          Contact Number *
                         </label>
                         <input
                           type="tel"
                           id="phone"
-                          name="phone"
+                          value={phone}
+                          onChange={(e) => setPhone(e.target.value)}
                           required
                           pattern="[0-9]{10}"
                           className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none text-lg"
@@ -316,34 +561,12 @@ export default function Home() {
                         />
                       </div>
 
-                      <div>
-                        <label htmlFor="device" className="block text-sm font-semibold text-gray-700 mb-2">
-                          Device *
-                        </label>
-                        <select
-                          id="device"
-                          name="device"
-                          required
-                          className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none text-lg bg-white"
-                        >
-                          <option value="">Select your device</option>
-                          <option value="MacBook Air M1">MacBook Air M1</option>
-                          <option value="MacBook Air M2">MacBook Air M2</option>
-                          <option value="MacBook Pro 13">MacBook Pro 13"</option>
-                          <option value="MacBook Pro 14">MacBook Pro 14"</option>
-                          <option value="MacBook Pro 16">MacBook Pro 16"</option>
-                          <option value="MacBook Air Intel">MacBook Air Intel</option>
-                          <option value="MacBook Pro Intel">MacBook Pro Intel</option>
-                          <option value="Other MacBook">Other MacBook</option>
-                        </select>
-                      </div>
-
                       <button
                         type="submit"
                         disabled={isSubmitting}
                         className="w-full bg-accent text-white py-4 rounded-lg text-xl font-bold hover:bg-orange-600 transition disabled:bg-gray-400 disabled:cursor-not-allowed"
                       >
-                        {isSubmitting ? 'Submitting...' : '🚀 Get Instant Quote'}
+                        {isSubmitting ? 'Submitting...' : 'Submit Request'}
                       </button>
 
                       <p className="text-xs text-gray-500 text-center">
@@ -351,14 +574,24 @@ export default function Home() {
                       </p>
                     </form>
                   </>
-                ) : (
+                )}
+
+                {formStep === 3 && (
                   <div className="text-center py-8">
                     <svg className="w-20 h-20 text-green-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
-                    <h3 className="text-2xl font-bold text-secondary mb-2">Request Received!</h3>
-                    <p className="text-gray-600 mb-4">We'll call you within 15 minutes</p>
-                    <p className="text-sm text-gray-500">Redirecting you to WhatsApp...</p>
+                    <h3 className="text-2xl font-bold text-secondary mb-2">Thank You!</h3>
+                    <p className="text-gray-600 mb-4">We received your request successfully</p>
+                    <p className="text-sm text-gray-500">Our team will call you within 15 minutes</p>
+                    <div className="mt-6 p-4 bg-blue-50 rounded-lg">
+                      <p className="text-sm font-semibold text-blue-800">
+                        Need immediate assistance?
+                      </p>
+                      <a href={`tel:${contactPhone}`} className="text-blue-600 font-bold text-lg">
+                        Call {contactPhone}
+                      </a>
+                    </div>
                   </div>
                 )}
               </div>
@@ -373,7 +606,7 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-3xl font-bold">1,000+</div>
-              <div className="text-sm opacity-90">Displays Replaced</div>
+              <div className="text-sm opacity-90">Devices Fixed</div>
             </div>
             <div>
               <div className="text-3xl font-bold">2 Hours</div>
@@ -395,7 +628,7 @@ export default function Home() {
       <section className="bg-gradient-to-r from-primary to-secondary py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Get Your MacBook Display Restored?
+            Ready to Get Your Device Fixed?
           </h2>
           <p className="text-xl text-white opacity-90 mb-8">
             Fill the form above and we'll call you in 15 minutes
@@ -415,7 +648,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div>
               <p className="font-bold text-lg">FIXplanet</p>
-              <p className="text-sm opacity-75">Professional MacBook Display Restoration in Bangalore</p>
+              <p className="text-sm opacity-75">Professional Device Repair in Bangalore</p>
             </div>
             <div className="flex space-x-6 text-sm">
               <a href="/privacy" className="hover:text-primary transition">Privacy Policy</a>
@@ -431,7 +664,7 @@ export default function Home() {
 
       {/* Floating WhatsApp Button (Mobile) */}
       <a
-        href={`https://wa.me/${whatsapp}?text=Hi%20FIXplanet!%20I%20have%20a%20damaged%20MacBook%20screen`}
+        href={`https://wa.me/${whatsapp}?text=Hi%20FIXplanet!%20I%20need%20help%20with%20my%20device`}
         className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition z-50 lg:hidden"
         aria-label="Chat on WhatsApp"
       >

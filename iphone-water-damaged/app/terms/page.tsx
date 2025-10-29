@@ -42,7 +42,7 @@ export default function TermsPage() {
 
           <section>
             <h2 className="text-2xl font-bold mb-3">Contact</h2>
-            <p>Questions? Email: hello@fixplanet.in or call +91 8660310638</p>
+            <p>Questions? Email: hello@fixplanet.in or call +91 9880740443</p>
           </section>
         </div>
 

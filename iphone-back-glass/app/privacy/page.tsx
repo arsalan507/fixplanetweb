@@ -33,7 +33,7 @@ export default function PrivacyPage() {
 
           <section>
             <h2 className="text-2xl font-bold mb-3">Contact Us</h2>
-            <p>For privacy questions, email: hello@fixplanet.in or call +91 8660310638</p>
+            <p>For privacy questions, email: hello@fixplanet.in or call +91 9880740443</p>
           </section>
         </div>
 

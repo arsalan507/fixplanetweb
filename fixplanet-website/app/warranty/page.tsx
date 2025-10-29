@@ -122,7 +122,7 @@ export default function WarrantyPage() {
 
             <h2>5. Warranty Claim Process</h2>
             <ol>
-              <li><strong>Contact Us:</strong> Call +91 8660310638 or email hello@fixplanet.in</li>
+              <li><strong>Contact Us:</strong> Call +91 9880740443 or email hello@fixplanet.in</li>
               <li><strong>Describe the Issue:</strong> Explain the problem you&apos;re experiencing</li>
               <li><strong>Provide Proof:</strong> Share your invoice/receipt details</li>
               <li><strong>Schedule Inspection:</strong> Arrange doorstep inspection or drop-off</li>
@@ -222,9 +222,9 @@ export default function WarrantyPage() {
               For warranty service or questions about coverage:
             </p>
             <ul>
-              <li><strong>Phone:</strong> +91 8660310638 (Available 9 AM - 9 PM, 7 days)</li>
+              <li><strong>Phone:</strong> +91 9880740443 (Available 9 AM - 9 PM, 7 days)</li>
               <li><strong>Email:</strong> hello@fixplanet.in</li>
-              <li><strong>WhatsApp:</strong> +91 8660310638</li>
+              <li><strong>WhatsApp:</strong> +91 9880740443</li>
               <li><strong>Service Areas:</strong> Koramangala, Indiranagar, Whitefield, HSR Layout, and nearby Bangalore locations</li>
             </ul>
             <p>

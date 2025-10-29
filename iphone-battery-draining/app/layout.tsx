@@ -3,7 +3,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'iPhone Battery Draining Fast? Same-Day Battery Replacement | FIXplanet',
-  description: 'iPhone battery replacement service in Bangalore. Premium batteries, doorstep service, 12-month warranty, restore your battery life. Call +91 8660310638',
+  description: 'iPhone battery replacement service in Bangalore. Premium batteries, doorstep service, 12-month warranty, restore your battery life. Call +91 9880740443',
   keywords: ['iPhone battery draining fast', 'iPhone battery replacement', 'iPhone battery died', 'battery replacement Bangalore', 'doorstep iPhone service'],
   robots: {
     index: true,

@@ -111,7 +111,7 @@ export default function PrivacyPolicyPage() {
             </p>
             <ul>
               <li>Email: hello@fixplanet.in</li>
-              <li>Phone: +91 8660310638</li>
+              <li>Phone: +91 9880740443</li>
             </ul>
           </div>
         </div>
