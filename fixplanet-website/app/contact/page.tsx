@@ -137,7 +137,7 @@ export default function ContactPage() {
                     <Input
                       label="Phone Number"
                       type="tel"
-                      placeholder="+91-XXXX-XXXXXX"
+                      placeholder="+91 9880740443"
                       {...register('phone')}
                       error={errors.phone?.message}
                       required
