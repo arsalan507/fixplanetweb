@@ -160,13 +160,13 @@ export default function Home() {
       {/* MOBILE VERSION */}
       <div className="block lg:hidden">
         {/* Hero Image - Mobile */}
-        <div className="px-4 pt-8 pb-6">
+        <div className="px-4 pt-6 pb-4">
           <Image
             src="/images/hero-mobile.svg"
             alt="Device Repair Service in Bangalore"
-            width={400}
-            height={300}
-            className="mx-auto w-full max-w-md"
+            width={280}
+            height={210}
+            className="mx-auto w-full max-w-sm"
             priority
           />
         </div>
@@ -309,7 +309,7 @@ export default function Home() {
                 </svg>
                 <h3 className="text-2xl font-bold text-secondary mb-2">Thank You!</h3>
                 <p className="text-gray-600 mb-4">We received your request successfully</p>
-                <p className="text-sm text-gray-500">Our team will call you within 15 minutes</p>
+                <p className="text-sm text-gray-500">Our team will call you as soon as possible</p>
                 <div className="mt-6 p-4 bg-blue-50 rounded-lg">
                   <p className="text-sm font-semibold text-blue-800">
                     Need immediate assistance?
@@ -335,7 +335,7 @@ export default function Home() {
               <svg className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
               </svg>
-              <p className="text-base"><strong>Doorstep Service</strong> - We come to you in 2 hours</p>
+              <p className="text-base"><strong>Doorstep Service</strong> - We come to you in 60 minutes</p>
             </div>
             <div className="flex items-start space-x-3">
               <svg className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -409,7 +409,7 @@ export default function Home() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
                   </div>
-                  <h3 className="font-bold text-lg mb-2">2 Hour Service</h3>
+                  <h3 className="font-bold text-lg mb-2">60 Minute Service</h3>
                   <p className="text-gray-600 text-sm">Doorstep service across Bangalore</p>
                 </div>
 
@@ -583,7 +583,7 @@ export default function Home() {
                     </svg>
                     <h3 className="text-2xl font-bold text-secondary mb-2">Thank You!</h3>
                     <p className="text-gray-600 mb-4">We received your request successfully</p>
-                    <p className="text-sm text-gray-500">Our team will call you within 15 minutes</p>
+                    <p className="text-sm text-gray-500">Our team will call you as soon as possible</p>
                     <div className="mt-6 p-4 bg-blue-50 rounded-lg">
                       <p className="text-sm font-semibold text-blue-800">
                         Need immediate assistance?
@@ -609,7 +609,7 @@ export default function Home() {
               <div className="text-sm opacity-90">Devices Fixed</div>
             </div>
             <div>
-              <div className="text-3xl font-bold">2 Hours</div>
+              <div className="text-3xl font-bold">60 Minutes</div>
               <div className="text-sm opacity-90">Average Response</div>
             </div>
             <div>
@@ -631,7 +631,7 @@ export default function Home() {
             Ready to Get Your Device Fixed?
           </h2>
           <p className="text-xl text-white opacity-90 mb-8">
-            Fill the form above and we'll call you in 15 minutes
+            Fill the form above and we'll call you as soon as possible
           </p>
           <button
             onClick={scrollToForm}

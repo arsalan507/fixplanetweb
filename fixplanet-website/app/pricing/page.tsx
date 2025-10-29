@@ -12,11 +12,9 @@ interface PriceEstimate {
   device: string;
   model: string;
   issues: string[];
-  tier: string;
   partsMin: number;
   partsMax: number;
   service: number;
-  tierAddon: number;
   total: number;
   warranty: string;
   turnaround: string;
@@ -26,22 +24,50 @@ export default function PricingPage() {
   const [device, setDevice] = useState('');
   const [model, setModel] = useState('');
   const [issues, setIssues] = useState<string[]>([]);
-  const [tier, setTier] = useState('standard');
   const [location, setLocation] = useState('');
   const [estimate, setEstimate] = useState<PriceEstimate | null>(null);
 
   const deviceModels: Record<string, string[]> = {
-    'iPhone': ['iPhone 15 Pro Max', 'iPhone 15 Pro', 'iPhone 15', 'iPhone 14 Pro', 'iPhone 14', 'iPhone 13', 'iPhone 12'],
-    'MacBook': ['MacBook Pro 16" M3', 'MacBook Pro 14" M3', 'MacBook Air M2', 'MacBook Air M1'],
-    'iPad': ['iPad Pro 12.9"', 'iPad Pro 11"', 'iPad Air', 'iPad'],
-    'Apple Watch': ['Series 9', 'Series 8', 'Ultra', 'SE'],
+    'iPhone': [
+      'iPhone 5S', 'SE 1st Gen', 'SE 2020', 'SE 3rd Gen',
+      'iPhone 6', 'iPhone 6s', 'iPhone 7', 'iPhone 7 Plus',
+      'iPhone 8', 'iPhone 8 Plus', 'iPhone X', 'iPhone XR',
+      'iPhone XS', 'iPhone XS Max', 'iPhone 11', 'iPhone 11 Pro',
+      'iPhone 11 Pro Max', 'iPhone 12', 'iPhone 12 Mini',
+      'iPhone 12 Pro', 'iPhone 12 Pro Max', 'iPhone 13',
+      'iPhone 13 Mini', 'iPhone 13 Pro', 'iPhone 13 Pro Max',
+      'iPhone 14', 'iPhone 14 Plus', 'iPhone 14 Pro',
+      'iPhone 14 Pro Max', 'iPhone 15', 'iPhone 15 Plus',
+      'iPhone 15 Pro', 'iPhone 15 Pro Max', 'iPhone 16',
+      'iPhone 16 E', 'iPhone 16 Plus', 'iPhone 16 Pro',
+      'iPhone 16 Pro Max', 'iPhone 17', 'iPhone 17 Air',
+      'iPhone 17 Pro', 'iPhone 17 Pro Max'
+    ],
+    'MacBook': ['MacBook', 'MacBook Air', 'MacBook Pro', 'Others'],
+    'iPad': ['iPad Standard', 'iPad Air', 'iPad Mini', 'iPad Pro', 'Others'],
+    'iWatch': [
+      'Series 1', 'Series 2', 'Series 3', 'Series 4', 'Series 5',
+      'Series 6', 'Series 7', 'Series 8', 'Series 9',
+      'SE 1', 'SE 2', 'Ultra', 'Ultra 2'
+    ]
   };
 
   const issueOptions: Record<string, string[]> = {
-    'iPhone': ['Screen cracked', 'Battery issues', 'Back glass broken', 'Water damage', 'Charging port', 'Camera issues'],
-    'MacBook': ['Screen cracked', 'Battery issues', 'Keyboard problems', 'Trackpad issues', 'Logic board', 'Hinge issues'],
-    'iPad': ['Screen cracked', 'Battery issues', 'Charging port', 'Digitizer issues'],
-    'Apple Watch': ['Screen cracked', 'Battery issues', 'Crown repair'],
+    'iPhone': [
+      'Original screen', 'Premium screen', 'Touch & glass',
+      'Battery', 'Charging port', 'Ear speaker', 'Loud speaker',
+      'Backglass', 'Others'
+    ],
+    'MacBook': [
+      'Screen', 'Battery', 'Keyboard', 'Liquid damage',
+      'Not powering on', 'Others'
+    ],
+    'iPad': [
+      'Touch & glass', 'Screen', 'Battery', 'Charging port', 'Others'
+    ],
+    'iWatch': [
+      'Screen', 'Touch & glass', 'Battery', 'Others'
+    ]
   };
 
   const calculateEstimate = () => {
@@ -70,43 +96,18 @@ export default function PricingPage() {
     partsMin *= issues.length;
     partsMax *= issues.length;
 
-    // Tier pricing
-    let tierMultiplier = 1;
-    let tierAddon = 0;
-    if (tier === 'premium') {
-      tierMultiplier = 1.3;
-      tierAddon = Math.floor((partsMin + partsMax) / 2 * 0.3);
-    } else if (tier === 'elite') {
-      tierMultiplier = 1.6;
-      tierAddon = Math.floor((partsMin + partsMax) / 2 * 0.6);
-    }
-
-    const total = Math.floor((partsMin + partsMax) / 2 + serviceBase) * tierMultiplier;
-
-    const warranties: Record<string, string> = {
-      standard: '6-12 months',
-      premium: '12-18 months',
-      elite: '18 months',
-    };
-
-    const turnarounds: Record<string, string> = {
-      standard: '24-48 hours',
-      premium: '4-8 hours',
-      elite: '2-4 hours',
-    };
+    const total = Math.floor((partsMin + partsMax) / 2 + serviceBase);
 
     setEstimate({
       device,
       model,
       issues,
-      tier,
       partsMin,
       partsMax,
       service: serviceBase,
-      tierAddon,
       total,
-      warranty: warranties[tier],
-      turnaround: turnarounds[tier],
+      warranty: '6-12 months',
+      turnaround: '24-48 hours',
     });
   };
 
@@ -144,7 +145,7 @@ export default function PricingPage() {
                     Step 1: Select Device Type
                   </label>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    {['iPhone', 'MacBook', 'iPad', 'Apple Watch'].map((d) => (
+                    {['iPhone', 'MacBook', 'iPad', 'iWatch'].map((d) => (
                       <button
                         key={d}
                         onClick={() => {
@@ -212,49 +213,10 @@ export default function PricingPage() {
                   </div>
                 )}
 
-                {/* Step 4: Service Tier */}
-                {issues.length > 0 && (
-                  <div>
-                    <label className="block text-lg font-semibold text-navy-primary mb-3">
-                      Step 4: Select Service Tier
-                    </label>
-                    <div className="space-y-3">
-                      {[
-                        { value: 'standard', label: 'Standard', addon: '', time: '24-48 hours' },
-                        { value: 'premium', label: 'Premium', addon: '+30%', time: 'Same day' },
-                        { value: 'elite', label: 'Elite', addon: '+60%', time: '2-4 hours' },
-                      ].map((t) => (
-                        <label
-                          key={t.value}
-                          className={`flex items-center p-4 border-2 rounded-lg cursor-pointer transition-all ${
-                            tier === t.value
-                              ? 'border-teal-accent bg-teal-accent/10'
-                              : 'border-gray-medium hover:border-gray-dark'
-                          }`}
-                        >
-                          <input
-                            type="radio"
-                            name="tier"
-                            value={t.value}
-                            checked={tier === t.value}
-                            onChange={(e) => setTier(e.target.value)}
-                            className="mr-3"
-                          />
-                          <div className="flex-grow">
-                            <span className="font-semibold text-navy-primary">{t.label} </span>
-                            {t.addon && <span className="text-teal-accent font-semibold">{t.addon}</span>}
-                            <div className="text-sm text-gray-dark">{t.time}</div>
-                          </div>
-                        </label>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {/* Step 5: Location */}
+                {/* Step 4: Location */}
                 {issues.length > 0 && (
                   <Input
-                    label="Step 5: Your Location in Bangalore"
+                    label="Step 4: Your Location in Bangalore"
                     placeholder="e.g., Koramangala, Indiranagar"
                     value={location}
                     onChange={(e) => setLocation(e.target.value)}
@@ -291,12 +253,6 @@ export default function PricingPage() {
                     <span>Service Fee:</span>
                     <span className="font-semibold">₹{estimate.service.toLocaleString()}</span>
                   </div>
-                  {estimate.tierAddon > 0 && (
-                    <div className="flex justify-between">
-                      <span>{estimate.tier.charAt(0).toUpperCase() + estimate.tier.slice(1)} Tier Addon:</span>
-                      <span className="font-semibold">₹{estimate.tierAddon.toLocaleString()}</span>
-                    </div>
-                  )}
                   <div className="flex justify-between pt-3 border-t border-white/20">
                     <span>Turnaround Time:</span>
                     <span className="font-semibold">{estimate.turnaround}</span>
