@@ -3,7 +3,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'MacBook Screen Damaged? Professional Display Restoration | FIXplanet',
-  description: 'Expert MacBook display replacement service in Bangalore. Original quality screens, doorstep service, 12-month warranty. Call +91 9880740443',
+  description: 'Expert MacBook display replacement service in Bangalore. Original quality screens, doorstep service, 12-month warranty. Call +91 8105955009',
   keywords: ['MacBook screen damaged', 'MacBook screen cracked', 'MacBook display replacement', 'MacBook screen replacement Bangalore', 'doorstep MacBook service'],
   robots: {
     index: true,

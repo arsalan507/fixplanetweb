@@ -174,7 +174,7 @@ export default function TermsPage() {
             </p>
             <ul>
               <li>Email: hello@fixplanet.in</li>
-              <li>Phone: +91 9880740443</li>
+              <li>Phone: +91 8105955009</li>
               <li>Service Areas: Bangalore, Karnataka</li>
             </ul>
           </div>

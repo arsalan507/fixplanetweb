@@ -60,8 +60,8 @@ export default function Home() {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
 
-  const contactPhone = "+91 9880740443";
-  const whatsapp = "919880740443";
+  const contactPhone = "+91 8105955009";
+  const whatsapp = "918105955009";
 
   const handleDeviceChange = (device: string) => {
     setSelectedDevice(device);

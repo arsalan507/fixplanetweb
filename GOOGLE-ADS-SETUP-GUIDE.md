@@ -626,8 +626,8 @@ Run tests:
 - Tap WhatsApp button → should open WhatsApp
 
 **If not working:**
-- Phone: Ensure `href="tel:+919880740443"`
-- WhatsApp: Ensure `href="https://wa.me/919880740443"`
+- Phone: Ensure `href="tel:+918105955009"`
+- WhatsApp: Ensure `href="https://wa.me/918105955009"`
 
 ---
 
@@ -666,7 +666,7 @@ Add this to your landing page:
 ```javascript
 // When user clicks phone number
 <a
-  href="tel:+919880740443"
+  href="tel:+918105955009"
   onClick={() => {
     gtag('event', 'conversion', {
       'send_to': 'AW-XXXXXXXX/CONVERSION_ID',
@@ -705,7 +705,7 @@ const handleFormSubmit = async (e) => {
 
 ```javascript
 <a
-  href="https://wa.me/919880740443"
+  href="https://wa.me/918105955009"
   onClick={() => {
     gtag('event', 'conversion', {
       'send_to': 'AW-XXXXXXXX/WHATSAPP_CONVERSION_ID',
@@ -893,7 +893,7 @@ Add ALL of these to every campaign:
 ### 1. Call Extensions
 
 **Settings:**
-- Phone: +91 9880740443
+- Phone: +91 8105955009
 - Show on: All devices
 - Use forwarding number: Yes (for tracking)
 - Count calls as conversions: Yes, >45 seconds

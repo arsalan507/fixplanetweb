@@ -156,7 +156,7 @@ Default Bid: ₹40-60 per click
 6. Serving All Bangalore
 7. Free Diagnosis Worth ₹500
 8. 1,000+ Satisfied Customers
-9. Call +91 8660310638 Now
+9. Call +91 8105955009 Now
 10. Get iPhone Working Today
 11. Koramangala | Indiranagar
 12. Pay After You're Satisfied
@@ -177,7 +177,7 @@ Default Bid: ₹40-60 per click
 
 **Call Extension:**
 ```
-Phone Number: +91 8660310638
+Phone Number: +91 8105955009
 Call Reporting: ON (track calls as conversions)
 ```
 
@@ -447,7 +447,7 @@ Each gets its own dedicated campaign with specific targeting.
 
 **Contact:**
 - Email: hello@fixplanet.in
-- Phone: +91 8660310638
+- Phone: +91 8105955009
 
 ---
 

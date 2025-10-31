@@ -88,8 +88,8 @@ After deployment on Vercel:
 Create `.env.local` file (copy from `.env.local.example`):
 
 ```env
-NEXT_PUBLIC_PHONE=+91 8660310638
-NEXT_PUBLIC_WHATSAPP=918660310638
+NEXT_PUBLIC_PHONE=+91 8105955009
+NEXT_PUBLIC_WHATSAPP=918105955009
 NEXT_PUBLIC_SITE_URL=https://your-domain.vercel.app
 NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
 ```
@@ -161,7 +161,7 @@ NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
 6. Serving All Bangalore
 7. Free Diagnosis Worth ₹500
 8. 1,000+ Happy Customers
-9. Call +91 8660310638
+9. Call +91 8105955009
 10. Get Your iPhone Working Today
 
 **Descriptions (use 3-4):**
@@ -175,7 +175,7 @@ NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
 ### 5. Add Extensions
 
 **Call Extension:**
-- Phone: +91 8660310638
+- Phone: +91 8105955009
 - Call reporting: On
 
 **Sitelink Extensions:**
@@ -337,7 +337,7 @@ Each gets its own Google Ads campaign.
 
 For issues or questions:
 - Email: hello@fixplanet.in
-- Phone: +91 8660310638
+- Phone: +91 8105955009
 
 ## 🎯 Success Metrics
 

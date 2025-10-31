@@ -51,14 +51,14 @@ Environment: All three ✅
 **Phone Number:**
 ```
 Key: NEXT_PUBLIC_PHONE
-Value: +91 9880740443
+Value: +91 8105955009
 Environment: All three ✅
 ```
 
 **WhatsApp Number:**
 ```
 Key: NEXT_PUBLIC_WHATSAPP
-Value: 919880740443
+Value: 918105955009
 Environment: All three ✅
 ```
 
