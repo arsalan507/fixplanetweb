@@ -89,21 +89,35 @@ export default function Home() {
       issue: selectedIssue,
       name,
       phone,
-      source: 'Google Ads Landing Page',
+      source: 'iPhone Back Glass Broken Landing Page',
+      landingPage: window.location.href,
     };
 
-    // Log form submission (in production, send to your backend)
-    console.log('Form submitted:', data);
+    try {
+      // Send to API
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
 
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
+      if (!response.ok) {
+        throw new Error('Failed to submit form');
+      }
 
-    setIsSubmitting(false);
-    setIsFlipping(true);
-    setTimeout(() => {
-      setFormStep(3);
-      setIsFlipping(false);
-    }, 600);
+      setIsSubmitting(false);
+      setIsFlipping(true);
+      setTimeout(() => {
+        setFormStep(3);
+        setIsFlipping(false);
+      }, 600);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setIsSubmitting(false);
+      alert('There was an error submitting your request. Please try calling us directly at ' + contactPhone);
+    }
   };
 
   const scrollToForm = () => {
