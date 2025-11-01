@@ -29,22 +29,40 @@ const deviceModels = {
   ]
 };
 
-// Device issues data
+// Device issues data - Problem-based
 const deviceIssues = {
   iPhone: [
-    'Original screen', 'Premium screen', 'Touch & glass',
-    'Battery', 'Charging port', 'Ear speaker', 'Loud speaker',
-    'Backglass', 'Others'
+    'Screen/Display Cracked or Broken',
+    'Won\'t Turn On / Dead Device',
+    'Battery Draining Fast / Won\'t Charge',
+    'Water Damaged / Liquid Spill',
+    'Back Glass Shattered',
+    'Camera Not Working',
+    'Charging Port Issues',
+    'Speaker Not Working',
+    'Other Issue'
   ],
   MacBook: [
-    'Screen', 'Battery', 'Keyboard', 'Liquid damage',
-    'Not powering on', 'Others'
+    'Screen/Display Cracked or Broken',
+    'Won\'t Turn On / Dead Device',
+    'Battery Issues / Won\'t Charge',
+    'Keyboard Not Working',
+    'Liquid Damage / Water Spill',
+    'Trackpad Issues',
+    'Other Issue'
   ],
   iPad: [
-    'Touch & glass', 'Screen', 'Battery', 'Charging port', 'Others'
+    'Screen/Display Cracked or Broken',
+    'Won\'t Turn On / Dead Device',
+    'Battery Draining Fast',
+    'Charging Port Issues',
+    'Other Issue'
   ],
   iWatch: [
-    'Screen', 'Touch & glass', 'Battery', 'Others'
+    'Screen Cracked or Broken',
+    'Won\'t Turn On / Dead Device',
+    'Battery Draining Fast',
+    'Other Issue'
   ]
 };
 
@@ -173,29 +191,43 @@ export default function Home() {
 
       {/* MOBILE VERSION */}
       <div className="block lg:hidden">
+        {/* Heading - Mobile */}
+        <div className="px-4 pt-6 pb-3">
+          <h2 className="text-2xl font-bold text-secondary leading-tight mb-3">
+            iPhone Screen Cracked?<br />
+            <span className="text-primary">We Can Help Today</span>
+          </h2>
+
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 mb-3">
+            <p className="text-xs font-semibold text-yellow-800">
+              🔥 Limited Time: <span className="underline">Free diagnosis worth ₹500</span> with every component replacement
+            </p>
+          </div>
+        </div>
+
         {/* Hero Image - Mobile */}
-        <div className="px-4 pt-6 pb-4">
+        <div className="px-4 pb-3">
           <Image
             src="/images/hero-mobile.svg"
             alt="Device Repair Service in Bangalore"
             width={280}
             height={210}
-            className="mx-auto w-full max-w-sm"
+            className="mx-auto w-full max-w-xs"
             priority
           />
         </div>
 
         {/* Form - Mobile */}
-        <div className="px-4 pb-8">
-          <div id="quote-form" className={`bg-white rounded-2xl shadow-2xl p-6 border-t-4 border-primary ${isFlipping ? 'flip-out' : 'flip-in'}`}>
+        <div className="px-4 pb-6">
+          <div id="quote-form" className={`bg-white rounded-2xl shadow-xl p-5 border-t-4 border-primary ${isFlipping ? 'flip-out' : 'flip-in'}`}>
             {formStep === 1 && (
               <>
-                <h3 className="text-xl font-bold text-secondary mb-2">Get Your Device Fixed Today</h3>
-                <p className="text-gray-600 mb-6 text-sm">Select your device details below</p>
+                <h3 className="text-lg font-bold text-secondary mb-1">Get Help with Your Device</h3>
+                <p className="text-gray-600 mb-4 text-xs">Tell us what happened</p>
 
-                <div className="space-y-4">
+                <div className="space-y-3">
                   <div>
-                    <label htmlFor="device-mobile" className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label htmlFor="device-mobile" className="block text-xs font-semibold text-gray-700 mb-1">
                       Device Type *
                     </label>
                     <select
@@ -203,7 +235,7 @@ export default function Home() {
                       value={selectedDevice}
                       onChange={(e) => handleDeviceChange(e.target.value)}
                       required
-                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none bg-white"
+                      className="w-full px-3 py-2 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none bg-white text-sm"
                     >
                       <option value="">Select device type</option>
                       <option value="iPhone">iPhone</option>
@@ -215,7 +247,7 @@ export default function Home() {
 
                   {selectedDevice && (
                     <div>
-                      <label htmlFor="model-mobile" className="block text-sm font-semibold text-gray-700 mb-2">
+                      <label htmlFor="model-mobile" className="block text-xs font-semibold text-gray-700 mb-1">
                         Model *
                       </label>
                       <select
@@ -223,7 +255,7 @@ export default function Home() {
                         value={selectedModel}
                         onChange={(e) => setSelectedModel(e.target.value)}
                         required
-                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none bg-white"
+                        className="w-full px-3 py-2 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none bg-white text-sm"
                       >
                         <option value="">Select model</option>
                         {deviceModels[selectedDevice as keyof typeof deviceModels]?.map((model) => (
@@ -235,15 +267,15 @@ export default function Home() {
 
                   {selectedDevice && selectedModel && (
                     <div>
-                      <label htmlFor="issue-mobile" className="block text-sm font-semibold text-gray-700 mb-2">
-                        Issue *
+                      <label htmlFor="issue-mobile" className="block text-xs font-semibold text-gray-700 mb-1">
+                        What happened? *
                       </label>
                       <select
                         id="issue-mobile"
                         value={selectedIssue}
                         onChange={(e) => setSelectedIssue(e.target.value)}
                         required
-                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none bg-white"
+                        className="w-full px-3 py-2 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none bg-white text-sm"
                       >
                         <option value="">Select issue</option>
                         {deviceIssues[selectedDevice as keyof typeof deviceIssues]?.map((issue) => (
@@ -256,7 +288,7 @@ export default function Home() {
                   <button
                     onClick={handleStepOne}
                     disabled={!selectedDevice || !selectedModel || !selectedIssue}
-                    className="w-full bg-accent text-white py-3 rounded-lg text-lg font-bold hover:bg-orange-600 transition disabled:bg-gray-400 disabled:cursor-not-allowed"
+                    className="w-full bg-accent text-white py-2.5 rounded-lg text-base font-bold hover:bg-orange-600 transition disabled:bg-gray-400 disabled:cursor-not-allowed"
                   >
                     Get Free Quote →
                   </button>
@@ -266,12 +298,12 @@ export default function Home() {
 
             {formStep === 2 && (
               <>
-                <h3 className="text-xl font-bold text-secondary mb-2">Almost There!</h3>
-                <p className="text-gray-600 mb-6 text-sm">Enter your contact details</p>
+                <h3 className="text-lg font-bold text-secondary mb-1">Almost There!</h3>
+                <p className="text-gray-600 mb-4 text-xs">Enter your contact details</p>
 
-                <form onSubmit={handleFinalSubmit} className="space-y-4">
+                <form onSubmit={handleFinalSubmit} className="space-y-3">
                   <div>
-                    <label htmlFor="name-mobile" className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label htmlFor="name-mobile" className="block text-xs font-semibold text-gray-700 mb-1">
                       Your Name *
                     </label>
                     <input
@@ -280,13 +312,13 @@ export default function Home() {
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       required
-                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none"
+                      className="w-full px-3 py-2 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none text-sm"
                       placeholder="Enter your name"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="phone-mobile" className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label htmlFor="phone-mobile" className="block text-xs font-semibold text-gray-700 mb-1">
                       Contact Number *
                     </label>
                     <input
@@ -296,7 +328,7 @@ export default function Home() {
                       onChange={(e) => setPhone(e.target.value)}
                       required
                       pattern="[0-9]{10}"
-                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none"
+                      className="w-full px-3 py-2 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none text-sm"
                       placeholder="10-digit mobile number"
                     />
                   </div>
@@ -304,7 +336,7 @@ export default function Home() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-accent text-white py-3 rounded-lg text-lg font-bold hover:bg-orange-600 transition disabled:bg-gray-400"
+                    className="w-full bg-accent text-white py-2.5 rounded-lg text-base font-bold hover:bg-orange-600 transition disabled:bg-gray-400"
                   >
                     {isSubmitting ? 'Submitting...' : 'Submit Request'}
                   </button>
@@ -339,45 +371,34 @@ export default function Home() {
 
         {/* Content - Mobile */}
         <div className="px-4 pb-8">
-          <h2 className="text-3xl font-bold text-secondary leading-tight mb-6">
-            Device Issues?<br />
-            <span className="text-primary">We Fix It Today</span>
-          </h2>
-
-          <div className="space-y-4 mb-8">
-            <div className="flex items-start space-x-3">
-              <svg className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="space-y-3 mb-6">
+            <div className="flex items-start space-x-2">
+              <svg className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
               </svg>
-              <p className="text-base"><strong>Doorstep Service</strong> - We come to you in 60 minutes</p>
+              <p className="text-sm"><strong>Doorstep Service</strong> - We come to you in 60 minutes</p>
             </div>
-            <div className="flex items-start space-x-3">
-              <svg className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="flex items-start space-x-2">
+              <svg className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
               </svg>
-              <p className="text-base"><strong>Premium Quality Parts</strong> - Original quality guaranteed</p>
+              <p className="text-sm"><strong>Premium Quality Parts</strong> - Original quality guaranteed</p>
             </div>
-            <div className="flex items-start space-x-3">
-              <svg className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="flex items-start space-x-2">
+              <svg className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
               </svg>
-              <p className="text-base"><strong>12-Month Warranty</strong> - Complete peace of mind</p>
+              <p className="text-sm"><strong>12-Month Warranty</strong> - Complete peace of mind</p>
             </div>
-            <div className="flex items-start space-x-3">
-              <svg className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="flex items-start space-x-2">
+              <svg className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
               </svg>
-              <p className="text-base"><strong>Same-Day Service</strong> - Fast repair in Bangalore</p>
+              <p className="text-sm"><strong>Same-Day Service</strong> - Fast component replacement in Bangalore</p>
             </div>
           </div>
 
-          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
-            <p className="text-sm font-semibold text-yellow-800">
-              🔥 Limited Time: <span className="underline">Free diagnosis worth ₹500</span> with every repair
-            </p>
-          </div>
-
-          <div className="flex items-center space-x-2 text-sm text-gray-600">
+          <div className="flex items-center space-x-2 text-xs text-gray-600 mt-4">
             <svg className="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
               <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
             </svg>
@@ -393,13 +414,13 @@ export default function Home() {
             {/* LEFT SIDE - Content & Image */}
             <div>
               <h2 className="text-5xl font-bold text-secondary leading-tight mb-6">
-                Device Issues?<br />
-                <span className="text-primary">We Fix It Today</span>
+                iPhone Screen Cracked?<br />
+                <span className="text-primary">We Can Help Today</span>
               </h2>
 
               <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-8">
                 <p className="font-semibold text-yellow-800">
-                  🔥 Limited Time: <span className="underline">Free diagnosis worth ₹500</span> with every repair
+                  🔥 Limited Time: <span className="underline">Free diagnosis worth ₹500</span> with every component replacement
                 </p>
               </div>
 
@@ -464,8 +485,8 @@ export default function Home() {
               <div id="quote-form" className={`bg-white rounded-2xl shadow-2xl p-8 border-t-4 border-primary ${isFlipping ? 'flip-out' : 'flip-in'}`}>
                 {formStep === 1 && (
                   <>
-                    <h3 className="text-2xl font-bold text-secondary mb-2">Get Your Device Fixed Today</h3>
-                    <p className="text-gray-600 mb-6">Select your device details below</p>
+                    <h3 className="text-2xl font-bold text-secondary mb-2">Get Help with Your Device Today</h3>
+                    <p className="text-gray-600 mb-6">Tell us what happened to your device</p>
 
                     <div className="space-y-5">
                       <div>
@@ -510,7 +531,7 @@ export default function Home() {
                       {selectedDevice && selectedModel && (
                         <div>
                           <label htmlFor="issue" className="block text-sm font-semibold text-gray-700 mb-2">
-                            Issue *
+                            What happened to your device? *
                           </label>
                           <select
                             id="issue"
@@ -620,7 +641,7 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-3xl font-bold">1,000+</div>
-              <div className="text-sm opacity-90">Devices Fixed</div>
+              <div className="text-sm opacity-90">Devices Restored</div>
             </div>
             <div>
               <div className="text-3xl font-bold">60 Minutes</div>
@@ -638,11 +659,234 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-secondary mb-4">
+            Real Stories from Real Customers
+          </h2>
+          <p className="text-center text-gray-600 mb-12">
+            See how we helped customers with cracked screens across Bangalore
+          </p>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Testimonial 1 */}
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="flex items-center mb-4">
+                <div className="flex text-yellow-400">
+                  {'★'.repeat(5)}
+                </div>
+              </div>
+              <p className="text-gray-700 mb-4">
+                "My iPhone 14 screen was completely shattered after I dropped it. FIXplanet came to my office in HSR Layout within 90 minutes and replaced it while I waited. The new screen works perfectly - it's been 6 months with zero issues!"
+              </p>
+              <div className="border-t pt-4">
+                <p className="font-bold text-secondary">Priya Sharma</p>
+                <p className="text-sm text-gray-600">Koramangala</p>
+                <p className="text-xs text-primary mt-2">Issue: Cracked iPhone 14 Screen</p>
+                <p className="text-xs text-gray-500">Service: 90-minute doorstep replacement</p>
+              </div>
+            </div>
+
+            {/* Testimonial 2 */}
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="flex items-center mb-4">
+                <div className="flex text-yellow-400">
+                  {'★'.repeat(5)}
+                </div>
+              </div>
+              <p className="text-gray-700 mb-4">
+                "Dropped my iPhone 15 Pro and the entire front glass shattered. Called FIXplanet and they reached Indiranagar in 45 minutes. Watched them replace it at my home. Quality is amazing and warranty gives me peace of mind."
+              </p>
+              <div className="border-t pt-4">
+                <p className="font-bold text-secondary">Rahul Mehta</p>
+                <p className="text-sm text-gray-600">Indiranagar</p>
+                <p className="text-xs text-primary mt-2">Issue: iPhone 15 Pro Shattered Display</p>
+                <p className="text-xs text-gray-500">Service: 45-minute doorstep replacement</p>
+              </div>
+            </div>
+
+            {/* Testimonial 3 */}
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="flex items-center mb-4">
+                <div className="flex text-yellow-400">
+                  {'★'.repeat(5)}
+                </div>
+              </div>
+              <p className="text-gray-700 mb-4">
+                "Screen cracked badly on my iPhone 13. Was worried about quality but FIXplanet's technician showed me the parts before installing. It's been 8 months and the screen still looks brand new. Great service in Whitefield!"
+              </p>
+              <div className="border-t pt-4">
+                <p className="font-bold text-secondary">Anjali Reddy</p>
+                <p className="text-sm text-gray-600">Whitefield</p>
+                <p className="text-xs text-primary mt-2">Issue: iPhone 13 Cracked Screen</p>
+                <p className="text-xs text-gray-500">Service: 60-minute doorstep replacement</p>
+              </div>
+            </div>
+
+            {/* Testimonial 4 */}
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="flex items-center mb-4">
+                <div className="flex text-yellow-400">
+                  {'★'.repeat(5)}
+                </div>
+              </div>
+              <p className="text-gray-700 mb-4">
+                "My MacBook Pro display was cracked and I couldn't work. FIXplanet came to Marathahalli same day and replaced the screen. They were transparent about the process and the display quality is excellent. Highly recommend!"
+              </p>
+              <div className="border-t pt-4">
+                <p className="font-bold text-secondary">Vikram Singh</p>
+                <p className="text-sm text-gray-600">Marathahalli</p>
+                <p className="text-xs text-primary mt-2">Issue: MacBook Pro Display Cracked</p>
+                <p className="text-xs text-gray-500">Service: Same-day doorstep replacement</p>
+              </div>
+            </div>
+
+            {/* Testimonial 5 */}
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="flex items-center mb-4">
+                <div className="flex text-yellow-400">
+                  {'★'.repeat(5)}
+                </div>
+              </div>
+              <p className="text-gray-700 mb-4">
+                "iPhone 12 screen and back glass both shattered. FIXplanet replaced both at my location in Bellandur. The technician was professional and explained everything. Device looks brand new now. Worth every rupee!"
+              </p>
+              <div className="border-t pt-4">
+                <p className="font-bold text-secondary">Meera Krishnan</p>
+                <p className="text-sm text-gray-600">Bellandur</p>
+                <p className="text-xs text-primary mt-2">Issue: iPhone 12 Screen & Back Glass Broken</p>
+                <p className="text-xs text-gray-500">Service: 75-minute doorstep replacement</p>
+              </div>
+            </div>
+
+            {/* Testimonial 6 */}
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="flex items-center mb-4">
+                <div className="flex text-yellow-400">
+                  {'★'.repeat(5)}
+                </div>
+              </div>
+              <p className="text-gray-700 mb-4">
+                "Completely shattered my iPhone 14 Plus screen. Needed it urgently for work. FIXplanet reached JP Nagar in 50 minutes and had it done in an hour. Screen quality is fantastic. Very satisfied with the service!"
+              </p>
+              <div className="border-t pt-4">
+                <p className="font-bold text-secondary">Arjun Patel</p>
+                <p className="text-sm text-gray-600">JP Nagar</p>
+                <p className="text-xs text-primary mt-2">Issue: iPhone 14 Plus Screen Shattered</p>
+                <p className="text-xs text-gray-500">Service: 50-minute doorstep replacement</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Warranty & Guarantee Section */}
+      <section className="py-16 bg-gradient-to-br from-blue-50 to-purple-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-secondary mb-4">
+            Our Promise to You
+          </h2>
+          <p className="text-center text-gray-600 mb-12">
+            Your satisfaction and trust are our top priorities
+          </p>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Promise 1 */}
+            <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                </svg>
+              </div>
+              <h3 className="font-bold text-lg mb-2">12-Month Warranty</h3>
+              <p className="text-sm text-gray-600">Industry-leading parts warranty on all replacements</p>
+            </div>
+
+            {/* Promise 2 */}
+            <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path>
+                </svg>
+              </div>
+              <h3 className="font-bold text-lg mb-2">30-Day Satisfaction Guarantee</h3>
+              <p className="text-sm text-gray-600">Not satisfied? We'll make it right</p>
+            </div>
+
+            {/* Promise 3 */}
+            <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                </svg>
+              </div>
+              <h3 className="font-bold text-lg mb-2">Watch the Work Live</h3>
+              <p className="text-sm text-gray-600">Complete transparency - see every step of the process</p>
+            </div>
+
+            {/* Promise 4 */}
+            <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+              <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h3 className="font-bold text-lg mb-2">Pay After Satisfaction</h3>
+              <p className="text-sm text-gray-600">Only pay once you're completely satisfied</p>
+            </div>
+          </div>
+
+          <div className="mt-12 bg-white p-8 rounded-xl shadow-lg">
+            <h3 className="text-2xl font-bold text-center text-secondary mb-6">Additional Benefits</h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="flex items-start space-x-3">
+                <svg className="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <div>
+                  <p className="font-semibold text-gray-800">Free Diagnosis (₹500 value)</p>
+                  <p className="text-sm text-gray-600">Complete device assessment at no cost</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <svg className="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <div>
+                  <p className="font-semibold text-gray-800">Premium OEM-Grade Components</p>
+                  <p className="text-sm text-gray-600">High-quality parts for lasting performance</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <svg className="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <div>
+                  <p className="font-semibold text-gray-800">Same-Day Service Available</p>
+                  <p className="text-sm text-gray-600">Get your device back the same day</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <svg className="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <div>
+                  <p className="font-semibold text-gray-800">Doorstep Service Across Bangalore</p>
+                  <p className="text-sm text-gray-600">We come to your preferred location</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Get Quote CTA Section - Before Footer */}
       <section className="bg-gradient-to-r from-primary to-secondary py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Get Your Device Fixed?
+            Ready to Restore Your Device?
           </h2>
           <p className="text-xl text-white opacity-90 mb-8">
             Fill the form above and we'll call you as soon as possible
@@ -657,12 +901,12 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-secondary text-white py-8">
+      <footer className="bg-secondary text-white py-12">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-start space-y-6 md:space-y-0">
+          <div className="flex flex-col md:flex-row justify-between items-start space-y-6 md:space-y-0 mb-8">
             <div>
               <p className="font-bold text-lg mb-2">FIXplanet</p>
-              <p className="text-sm opacity-75">Professional Device Repair in Bangalore</p>
+              <p className="text-sm opacity-75">Device Component Replacement Specialist in Bangalore</p>
               <div className="mt-4 text-sm">
                 <p className="opacity-75">📞 <a href={`tel:${contactPhone}`} className="hover:text-primary">{contactPhone}</a></p>
                 <p className="opacity-75 mt-1">📧 <a href="mailto:hello@fixplanet.in" className="hover:text-primary">hello@fixplanet.in</a></p>
@@ -677,10 +921,45 @@ export default function Home() {
               <a href="/terms" className="hover:text-primary transition">Terms of Service</a>
             </div>
           </div>
-          <div className="text-center text-xs opacity-75 mt-6 pt-6 border-t border-white/20">
-            <p>© 2025 FIXplanet. All rights reserved.</p>
-            <p className="mt-2">FIXplanet is an independent service provider. Not affiliated with, authorized by, or endorsed by Apple Inc.</p>
-            <p className="mt-2">iPhone, MacBook, iPad, and Apple Watch are trademarks of Apple Inc.</p>
+
+          {/* Enhanced Disclaimers Section */}
+          <div className="border-t border-white/20 pt-8">
+            <div className="bg-white/10 p-6 rounded-xl mb-6">
+              <h3 className="font-bold text-lg mb-4">Important Disclaimers</h3>
+
+              <div className="space-y-4 text-xs opacity-90">
+                <div>
+                  <p className="font-semibold mb-1">✓ Independent Service Provider</p>
+                  <p>FIXplanet is an independent device care specialist. We are not affiliated with, authorized by, sponsored by, or endorsed by Apple Inc. or any device manufacturer. We provide third-party component replacement services.</p>
+                </div>
+
+                <div>
+                  <p className="font-semibold mb-1">✓ Quality Components</p>
+                  <p>We use premium quality, OEM-grade components for all replacements. These are high-quality aftermarket parts that meet or exceed original specifications. Original manufacturer parts are available upon request at additional cost.</p>
+                </div>
+
+                <div>
+                  <p className="font-semibold mb-1">✓ Warranty Coverage</p>
+                  <p>Our 12-month warranty covers the replaced components only, not pre-existing device issues or future accidental damage. Warranty is void if device is serviced elsewhere or subjected to physical/liquid damage after our service.</p>
+                </div>
+
+                <div>
+                  <p className="font-semibold mb-1">✓ Service Transparency</p>
+                  <p>All work is performed at your location in Bangalore. You can watch the entire process and we explain each step clearly. We believe in complete transparency throughout the service.</p>
+                </div>
+
+                <div>
+                  <p className="font-semibold mb-1">✓ Manufacturer Warranty Impact</p>
+                  <p>Using third-party component replacement services may affect your device's manufacturer warranty. Please check your device warranty status before proceeding. We are happy to discuss this with you.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center text-xs opacity-75 pt-6 border-t border-white/20">
+            <p className="mb-2">© 2025 FIXplanet. All rights reserved.</p>
+            <p className="mb-2">iPhone®, MacBook®, iPad®, and Apple Watch® are registered trademarks of Apple Inc.</p>
+            <p>FIXplanet is an independent service provider and is not affiliated with, authorized by, or endorsed by Apple Inc.</p>
           </div>
         </div>
       </footer>

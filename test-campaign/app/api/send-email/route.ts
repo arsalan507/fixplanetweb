@@ -1,17 +1,27 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Initialize Resend with API key or empty string to allow build to pass
+const resend = new Resend(process.env.RESEND_API_KEY || 're_placeholder');
 
 export async function POST(request: Request) {
   try {
     const body = await request.json();
     const { device, model, issue, name, phone, source, landingPage } = body;
 
+    // Check if API key is configured
+    if (!process.env.RESEND_API_KEY || process.env.RESEND_API_KEY === 're_placeholder') {
+      console.error('RESEND_API_KEY not configured');
+      return NextResponse.json(
+        { error: 'Email service not configured. Please contact us directly.' },
+        { status: 500 }
+      );
+    }
+
     // Send email using Resend
     const { data, error } = await resend.emails.send({
       from: 'FIXplanet Leads <onboarding@resend.dev>',
-      to: ['hello@fixplanet.in'],
+      to: ['info.fixplanet@gmail.com'],
       subject: `New Lead from ${source || 'Landing Page'}`,
       html: `
         <!DOCTYPE html>
