@@ -21,6 +21,18 @@ const contactSchema = z.object({
 
 export async function POST(request: NextRequest) {
   try {
+    // Check if API key is configured
+    if (!process.env.RESEND_API_KEY || process.env.RESEND_API_KEY === 're_placeholder_for_build') {
+      console.error('RESEND_API_KEY not configured');
+      return NextResponse.json(
+        {
+          success: false,
+          message: 'Email service not configured. Please call us directly at +91-8105955009',
+        },
+        { status: 500 }
+      );
+    }
+
     const body = await request.json();
 
     // Validate the request body
@@ -45,8 +57,8 @@ export async function POST(request: NextRequest) {
                            'Lead';
 
     // Email to business
-    const businessEmail = await resend.emails.send({
-      from: process.env.FROM_EMAIL || 'FIXplanet Leads <onboarding@resend.dev>',
+    const { data: businessEmailData, error: businessEmailError } = await resend.emails.send({
+      from: 'FIXplanet Leads <onboarding@resend.dev>',
       to: ['info.fixplanet@gmail.com'], // Updated to user's preferred email
       subject: `🔔 ${leadSourceLabel} - ${deviceType}${location ? ` in ${location}` : ''}`,
       html: `
@@ -135,9 +147,24 @@ export async function POST(request: NextRequest) {
       `,
     });
 
+    // Check if business email failed
+    if (businessEmailError) {
+      console.error('Business email error:', businessEmailError);
+      return NextResponse.json(
+        {
+          success: false,
+          message: 'Failed to send email notification. Please call us directly at +91-8105955009',
+          error: businessEmailError.message,
+        },
+        { status: 500 }
+      );
+    }
+
+    console.log('Business email sent successfully:', businessEmailData?.id);
+
     // Confirmation email to customer
-    const customerEmail = await resend.emails.send({
-      from: process.env.FROM_EMAIL || 'notifications@fixplanet.in',
+    const { data: customerEmailData, error: customerEmailError } = await resend.emails.send({
+      from: 'FIXplanet <onboarding@resend.dev>',
       to: email,
       subject: 'Service Request Received - FIXplanet Bangalore',
       html: `
@@ -229,10 +256,19 @@ export async function POST(request: NextRequest) {
       `,
     });
 
+    // Check if customer email failed (non-critical, we still succeeded with business email)
+    if (customerEmailError) {
+      console.error('Customer confirmation email error:', customerEmailError);
+      // Still return success since business email went through
+    } else {
+      console.log('Customer confirmation email sent successfully:', customerEmailData?.id);
+    }
+
     return NextResponse.json(
       {
         success: true,
         message: 'Service request submitted successfully. We\'ll contact you within 15 minutes.',
+        emailId: businessEmailData?.id,
       },
       { status: 200 }
     );
