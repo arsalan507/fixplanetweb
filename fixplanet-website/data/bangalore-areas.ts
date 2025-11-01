@@ -177,7 +177,7 @@ export const bangaloreAreas: BangaloreArea[] = [
   generateAreaData('JP Nagar 8th Phase', 'South', '55-65 minutes'),
   generateAreaData('JP Nagar 9th Phase', 'South', '60-70 minutes'),
 
-  // Additional Areas
+  // Additional Central Areas
   generateAreaData('Silk Board', 'South', '45-55 minutes'),
   generateAreaData('Jeevan Bima Nagar', 'East', '40-50 minutes'),
   generateAreaData('Jayamahal', 'Central', '40-50 minutes'),
@@ -215,6 +215,52 @@ export const bangaloreAreas: BangaloreArea[] = [
   generateAreaData('Doddabommasandra', 'North', '60-70 minutes'),
   generateAreaData('Pattandur Agrahara', 'North', '60-70 minutes'),
   generateAreaData('ECC Road', 'North', '55-65 minutes'),
+
+  // Missing areas from reference data - Central Bangalore
+  generateAreaData('SP Road', 'Central', '35-45 minutes'),
+  generateAreaData('Murphy Town', 'Central', '40-50 minutes'),
+  generateAreaData('Seshadripuram', 'Central', '40-50 minutes'),
+  generateAreaData('Vasanth Nagar', 'Central', '35-45 minutes'),
+
+  // Missing areas - South Bangalore
+  generateAreaData('Sarjapur', 'South', '55-65 minutes'),
+  generateAreaData('Harlur', 'South', '50-60 minutes'),
+  generateAreaData('Begur', 'South', '55-65 minutes'),
+  generateAreaData('Giri Nagar', 'South', '50-60 minutes'),
+  generateAreaData('Kumaraswamy Layout', 'South', '55-65 minutes'),
+  generateAreaData('Padmanabhanagar', 'South', '55-65 minutes'),
+  generateAreaData('Anjanapura', 'South', '60-70 minutes'),
+  generateAreaData('Arekere', 'South', '55-65 minutes'),
+  generateAreaData('Gottigere', 'South', '60-70 minutes'),
+  generateAreaData('Hulimavu', 'South', '60-70 minutes'),
+  generateAreaData('Bommasandra', 'South', '65-75 minutes'),
+
+  // Missing areas - East Bangalore
+  generateAreaData('Mahadevapura', 'East', '50-60 minutes'),
+  generateAreaData('ITPL', 'East', '50-60 minutes'),
+  generateAreaData('Sarjapur Road', 'East', '55-65 minutes'),
+
+  // Missing areas - North Bangalore
+  generateAreaData('Banaswadi', 'North', '45-55 minutes'),
+  generateAreaData('KR Puram', 'North', '50-60 minutes'),
+  generateAreaData('RT Nagar', 'North', '45-55 minutes'),
+  generateAreaData('Yelahanka', 'North', '55-65 minutes'),
+  generateAreaData('Lingarajapuram', 'North', '50-60 minutes'),
+  generateAreaData('Vidyaranyapura', 'North', '55-65 minutes'),
+
+  // Missing areas - West Bangalore
+  generateAreaData('Vijay Nagar', 'West', '50-60 minutes'),
+  generateAreaData('Mathikere', 'West', '50-60 minutes'),
+  generateAreaData('Kamakshipalya', 'West', '55-65 minutes'),
+  generateAreaData('Mahalakshmi Layout', 'West', '50-60 minutes'),
+  generateAreaData('Nagarbhavi', 'West', '55-65 minutes'),
+
+  // Outskirts - Far locations with longer response times
+  generateAreaData('Attibele', 'South', '75-90 minutes'),
+  generateAreaData('Jigani', 'South', '70-85 minutes'),
+  generateAreaData('Anekal', 'South', '75-90 minutes'),
+  generateAreaData('Chandapura', 'South', '70-85 minutes'),
+  generateAreaData('Nelamangala', 'North', '75-90 minutes'),
 ];
 
 // Helper function to get area by slug
