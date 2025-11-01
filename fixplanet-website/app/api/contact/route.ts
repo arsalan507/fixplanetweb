@@ -12,11 +12,11 @@ const contactSchema = z.object({
   email: z.string().email('Please enter a valid email'),
   deviceType: z.string().min(1, 'Please select a device type'),
   deviceModel: z.string().optional(),
-  issueDescription: z.string().min(10, 'Please describe your issue in detail'),
-  location: z.string().min(3, 'Please enter your location'),
+  issueDescription: z.string().optional(), // Made optional for contact page form
+  location: z.string().optional(), // Made optional for contact page form
   preferredDateTime: z.string().optional(),
   serviceTier: z.enum(['standard', 'premium', 'elite']).default('standard'),
-  formSource: z.string().default('contact'),
+  formSource: z.string().default('contact-page'),
 });
 
 export async function POST(request: NextRequest) {
@@ -39,11 +39,16 @@ export async function POST(request: NextRequest) {
       formSource,
     } = validatedData;
 
+    // Determine lead source label for tracking
+    const leadSourceLabel = formSource === 'contact-page' ? 'Website Lead' :
+                           formSource.includes('landing') ? 'Paid Lead' :
+                           'Lead';
+
     // Email to business
     const businessEmail = await resend.emails.send({
-      from: process.env.FROM_EMAIL || 'notifications@fixplanet.in',
-      to: process.env.TO_EMAIL || 'hello@fixplanet.in',
-      subject: `🔔 New Service Request - ${deviceType} in ${location}`,
+      from: process.env.FROM_EMAIL || 'FIXplanet Leads <onboarding@resend.dev>',
+      to: ['info.fixplanet@gmail.com'], // Updated to user's preferred email
+      subject: `🔔 ${leadSourceLabel} - ${deviceType}${location ? ` in ${location}` : ''}`,
       html: `
         <!DOCTYPE html>
         <html>
@@ -91,29 +96,37 @@ export async function POST(request: NextRequest) {
                     <div class="label" style="margin-top: 10px;">Model:</div>
                     <div class="value">${deviceModel}</div>
                   ` : ''}
-                  <div class="label" style="margin-top: 10px;">Issue:</div>
-                  <div class="value">${issueDescription}</div>
+                  ${issueDescription ? `
+                    <div class="label" style="margin-top: 10px;">Issue:</div>
+                    <div class="value">${issueDescription}</div>
+                  ` : ''}
                 </div>
 
+                ${location || preferredDateTime || serviceTier !== 'standard' ? `
                 <div class="section">
                   <h3 style="margin-top: 0;">Service Details</h3>
-                  <div class="label">Location:</div>
-                  <div class="value">${location}</div>
+                  ${location ? `
+                    <div class="label">Location:</div>
+                    <div class="value">${location}</div>
+                  ` : ''}
                   ${preferredDateTime ? `
                     <div class="label" style="margin-top: 10px;">Preferred Time:</div>
                     <div class="value">${preferredDateTime}</div>
                   ` : ''}
-                  <div class="label" style="margin-top: 10px;">Service Tier:</div>
-                  <div class="value">
-                    <span class="tier-badge tier-${serviceTier}">
-                      ${serviceTier.charAt(0).toUpperCase() + serviceTier.slice(1)}
-                    </span>
-                  </div>
+                  ${serviceTier !== 'standard' ? `
+                    <div class="label" style="margin-top: 10px;">Service Tier:</div>
+                    <div class="value">
+                      <span class="tier-badge tier-${serviceTier}">
+                        ${serviceTier.charAt(0).toUpperCase() + serviceTier.slice(1)}
+                      </span>
+                    </div>
+                  ` : ''}
                 </div>
+                ` : ''}
 
                 <div class="section">
                   <div class="label">Lead Source:</div>
-                  <div class="value">${formSource}</div>
+                  <div class="value"><strong>${leadSourceLabel}</strong> (${formSource})</div>
                 </div>
               </div>
             </div>
@@ -162,7 +175,7 @@ export async function POST(request: NextRequest) {
                   <h3 style="margin: 0; font-size: 18px;">📱 What Happens Next:</h3>
                   <ul style="margin: 10px 0; padding-left: 20px;">
                     <li>Our team will call you at <strong>${phone}</strong> within 15 minutes</li>
-                    <li>We'll confirm your ${location} location and preferred time</li>
+                    <li>We'll confirm your location and preferred time</li>
                     <li>Provide exact pricing after understanding the issue</li>
                     <li>Schedule your service at your convenience</li>
                   </ul>
@@ -173,15 +186,21 @@ export async function POST(request: NextRequest) {
                   <div class="detail-row">
                     <span class="label">Device:</span> ${deviceType}${deviceModel ? ` (${deviceModel})` : ''}
                   </div>
+                  ${issueDescription ? `
                   <div class="detail-row">
                     <span class="label">Issue:</span> ${issueDescription}
                   </div>
+                  ` : ''}
+                  ${location ? `
                   <div class="detail-row">
                     <span class="label">Location:</span> ${location}
                   </div>
+                  ` : ''}
+                  ${serviceTier !== 'standard' ? `
                   <div class="detail-row">
                     <span class="label">Service Tier:</span> ${serviceTier.charAt(0).toUpperCase() + serviceTier.slice(1)}
                   </div>
+                  ` : ''}
                 </div>
 
                 <div class="section">
