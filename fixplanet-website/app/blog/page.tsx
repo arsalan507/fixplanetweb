@@ -31,7 +31,7 @@ const blogPosts: BlogPost[] = [
     category: 'Device Care Tips',
     readTime: '8 min read',
     publishedDate: '2024-10-15',
-    image: 'https://via.placeholder.com/800x450/1A2F4F/FFFFFF?text=iPhone+Battery',
+    image: '/images/blog/iphone-battery-health.png',
     featured: true,
   },
   {
@@ -41,7 +41,7 @@ const blogPosts: BlogPost[] = [
     category: 'Troubleshooting Guides',
     readTime: '10 min read',
     publishedDate: '2024-10-10',
-    image: 'https://via.placeholder.com/800x450/1A2F4F/FFFFFF?text=MacBook+Screen',
+    image: '/images/blog/macbook-screen-cracked.png',
   },
   {
     slug: 'iphone-water-damage-emergency-steps',
@@ -50,7 +50,7 @@ const blogPosts: BlogPost[] = [
     category: 'Troubleshooting Guides',
     readTime: '6 min read',
     publishedDate: '2024-10-05',
-    image: 'https://via.placeholder.com/800x450/1A2F4F/FFFFFF?text=Water+Damage',
+    image: '/images/blog/iphone-water-damage.png',
   },
 ];
 
