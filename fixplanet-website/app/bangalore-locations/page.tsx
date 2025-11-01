@@ -1,103 +1,24 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { MapPin, Clock, CheckCircle2, Phone } from 'lucide-react';
+import { MapPin, Clock, CheckCircle2, Phone, ArrowRight } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
+import { bangaloreAreas, getAreasByZone } from '@/data/bangalore-areas';
 
 export const metadata: Metadata = {
   title: 'Service Areas in Bangalore | FIXplanet Apple Device Care',
-  description: 'FIXplanet serves all major Bangalore areas. Same-day doorstep Apple device service in Koramangala, Indiranagar, Whitefield, HSR Layout, and more. Check if we serve your area.',
-  keywords: ['Apple repair Koramangala', 'iPhone repair Indiranagar', 'MacBook service Whitefield', 'Apple repair HSR Layout', 'Bangalore locations'],
+  description: 'FIXplanet serves 140+ Bangalore areas. Same-day doorstep Apple device service across all major neighborhoods. Check if we serve your area.',
+  keywords: ['Apple repair Bangalore', 'iPhone repair locations', 'MacBook service areas', 'Bangalore Apple care', 'doorstep service Bangalore'],
 };
 
-interface ServiceArea {
-  name: string;
-  tier: 'primary' | 'standard' | 'available';
-  responseTime: string;
-  areas: string[];
-  landmark?: string;
-}
-
-const serviceAreas: ServiceArea[] = [
-  {
-    name: 'Koramangala',
-    tier: 'primary',
-    responseTime: '30 minutes',
-    areas: ['5th Block', '6th Block', '7th Block', '8th Block', 'Koramangala 1st Block'],
-    landmark: 'Sony Signal, Forum Mall area',
-  },
-  {
-    name: 'Indiranagar',
-    tier: 'primary',
-    responseTime: '30 minutes',
-    areas: ['All sectors', '100 Feet Road', 'CMH Road', 'Old Airport Road'],
-    landmark: 'Indiranagar Metro, CMH Road',
-  },
-  {
-    name: 'Whitefield',
-    tier: 'primary',
-    responseTime: '45 minutes',
-    areas: ['ITPL Main Road', 'Prestige Tech Park', 'Phoenix Marketcity area', 'Marathahalli Bridge'],
-    landmark: 'ITPL, Phoenix Marketcity',
-  },
-  {
-    name: 'HSR Layout',
-    tier: 'standard',
-    responseTime: '1 hour',
-    areas: ['Sector 1-7', '27th Main Road', 'BDA Complex', 'Agara'],
-  },
-  {
-    name: 'Marathahalli',
-    tier: 'standard',
-    responseTime: '1 hour',
-    areas: ['Outer Ring Road', 'Marathahalli Bridge', 'Spice Garden'],
-  },
-  {
-    name: 'Bellandur',
-    tier: 'standard',
-    responseTime: '1-2 hours',
-    areas: ['Bellandur Gate', 'Devarabisanahalli', 'Kadubeesanahalli'],
-  },
-  {
-    name: 'Electronic City',
-    tier: 'standard',
-    responseTime: '1-2 hours',
-    areas: ['Phase 1', 'Phase 2', 'Neeladri Road'],
-  },
-  {
-    name: 'JP Nagar',
-    tier: 'standard',
-    responseTime: '1 hour',
-    areas: ['Phases 1-9', 'Puttenahalli', 'Sarakki'],
-  },
-  {
-    name: 'Jayanagar',
-    tier: 'standard',
-    responseTime: '1 hour',
-    areas: ['All blocks', 'Jayanagar Metro area'],
-  },
-  {
-    name: 'Sarjapur Road',
-    tier: 'standard',
-    responseTime: '1-2 hours',
-    areas: ['Wipro Circle', 'Carmelaram', 'Dommasandra Circle'],
-  },
-  {
-    name: 'BTM Layout',
-    tier: 'available',
-    responseTime: '2-3 hours',
-    areas: ['Stage 1', 'Stage 2'],
-  },
-  {
-    name: 'Bannerghatta Road',
-    tier: 'available',
-    responseTime: '2-3 hours',
-    areas: ['Arekere', 'Hulimavu', 'Gottigere'],
-  },
-];
-
 export default function BangaloreLocationsPage() {
+  const centralAreas = getAreasByZone('Central');
+  const southAreas = getAreasByZone('South');
+  const eastAreas = getAreasByZone('East');
+  const northAreas = getAreasByZone('North');
+  const westAreas = getAreasByZone('West');
+
   return (
     <div>
       {/* Hero */}
@@ -107,10 +28,10 @@ export default function BangaloreLocationsPage() {
             <Link href="/" className="hover:text-white">Home</Link> / Service Areas
           </nav>
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
-            We Serve Bangalore&apos;s Premium Neighborhoods
+            We Serve 140+ Bangalore Locations
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl">
-            Same-day doorstep Apple device care across Bangalore. Find out if we serve your area.
+            Same-day doorstep Apple device care across all major Bangalore neighborhoods. From Koramangala to Whitefield, we&apos;re at your service.
           </p>
         </div>
       </section>
@@ -121,77 +42,180 @@ export default function BangaloreLocationsPage() {
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-center md:text-left">
             <Clock size={32} />
             <div>
-              <div className="text-2xl font-bold">15-Minute Response Guarantee</div>
-              <div className="text-white/90">Across all service areas, every day from 9 AM - 9 PM</div>
+              <div className="text-2xl font-bold">Quick Response Across Bangalore</div>
+              <div className="text-white/90">30-75 minute response time depending on location | 9 AM - 9 PM Daily</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Service Areas Grid */}
+      {/* Service Areas by Zone */}
       <section className="py-16 bg-gray-light">
         <div className="container-custom">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-7xl mx-auto">
+            <div className="mb-12 text-center">
+              <h2 className="text-3xl font-bold text-navy-primary mb-4">All Service Areas</h2>
+              <p className="text-gray-dark">Click on any area to see detailed service information</p>
+            </div>
+
+            {/* Central Bangalore */}
             <div className="mb-12">
-              <h2 className="text-3xl font-bold text-navy-primary mb-4">Our Service Areas</h2>
-              <div className="flex flex-wrap gap-4">
-                <div className="flex items-center">
-                  <div className="w-4 h-4 bg-teal-accent rounded-full mr-2"></div>
-                  <span className="text-sm font-medium">Primary (30-45 min)</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-4 h-4 bg-navy-primary rounded-full mr-2"></div>
-                  <span className="text-sm font-medium">Standard (1-2 hours)</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-4 h-4 bg-gray-dark rounded-full mr-2"></div>
-                  <span className="text-sm font-medium">Available (2-3 hours)</span>
-                </div>
+              <h3 className="text-2xl font-bold text-navy-primary mb-6 flex items-center">
+                <MapPin className="mr-2 text-teal-accent" size={28} />
+                Central Bangalore
+              </h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                {centralAreas.map((area) => (
+                  <Link
+                    key={area.slug}
+                    href={`/areas/${area.slug}`}
+                    className="group"
+                  >
+                    <Card padding="md" className="h-full hover:shadow-lg transition-shadow border-l-4 border-teal-accent">
+                      <div className="flex items-start justify-between">
+                        <div className="flex-1">
+                          <h4 className="font-bold text-navy-primary group-hover:text-teal-accent transition-colors mb-1">
+                            {area.name}
+                          </h4>
+                          <p className="text-xs text-gray-dark flex items-center">
+                            <Clock size={12} className="mr-1" />
+                            {area.responseTime}
+                          </p>
+                        </div>
+                        <ArrowRight size={16} className="text-teal-accent opacity-0 group-hover:opacity-100 transition-opacity" />
+                      </div>
+                    </Card>
+                  </Link>
+                ))}
               </div>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {serviceAreas.map((area) => (
-                <Card
-                  key={area.name}
-                  padding="lg"
-                  className={`border-l-4 ${
-                    area.tier === 'primary'
-                      ? 'border-teal-accent'
-                      : area.tier === 'standard'
-                      ? 'border-navy-primary'
-                      : 'border-gray-dark'
-                  }`}
-                >
-                  <div className="flex items-start justify-between mb-4">
-                    <div>
-                      <h3 className="text-xl font-bold text-navy-primary mb-1">{area.name}</h3>
-                      {area.landmark && (
-                        <p className="text-sm text-gray-dark flex items-center">
-                          <MapPin size={14} className="mr-1" />
-                          {area.landmark}
-                        </p>
-                      )}
-                    </div>
-                  </div>
-
-                  <div className="mb-4">
-                    <div className="flex items-center text-sm text-teal-accent font-medium mb-2">
-                      <Clock size={16} className="mr-1" />
-                      Avg. Response: {area.responseTime}
-                    </div>
-                  </div>
-
-                  <div className="space-y-1">
-                    {area.areas.map((subArea) => (
-                      <div key={subArea} className="text-sm text-gray-dark flex items-start">
-                        <CheckCircle2 size={14} className="text-teal-accent mr-2 mt-0.5 flex-shrink-0" />
-                        {subArea}
+            {/* South Bangalore */}
+            <div className="mb-12">
+              <h3 className="text-2xl font-bold text-navy-primary mb-6 flex items-center">
+                <MapPin className="mr-2 text-teal-accent" size={28} />
+                South Bangalore
+              </h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                {southAreas.map((area) => (
+                  <Link
+                    key={area.slug}
+                    href={`/areas/${area.slug}`}
+                    className="group"
+                  >
+                    <Card padding="md" className="h-full hover:shadow-lg transition-shadow border-l-4 border-navy-primary">
+                      <div className="flex items-start justify-between">
+                        <div className="flex-1">
+                          <h4 className="font-bold text-navy-primary group-hover:text-teal-accent transition-colors mb-1">
+                            {area.name}
+                          </h4>
+                          <p className="text-xs text-gray-dark flex items-center">
+                            <Clock size={12} className="mr-1" />
+                            {area.responseTime}
+                          </p>
+                        </div>
+                        <ArrowRight size={16} className="text-teal-accent opacity-0 group-hover:opacity-100 transition-opacity" />
                       </div>
-                    ))}
-                  </div>
-                </Card>
-              ))}
+                    </Card>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* East Bangalore */}
+            <div className="mb-12">
+              <h3 className="text-2xl font-bold text-navy-primary mb-6 flex items-center">
+                <MapPin className="mr-2 text-teal-accent" size={28} />
+                East Bangalore (Whitefield Corridor)
+              </h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                {eastAreas.map((area) => (
+                  <Link
+                    key={area.slug}
+                    href={`/areas/${area.slug}`}
+                    className="group"
+                  >
+                    <Card padding="md" className="h-full hover:shadow-lg transition-shadow border-l-4 border-navy-primary">
+                      <div className="flex items-start justify-between">
+                        <div className="flex-1">
+                          <h4 className="font-bold text-navy-primary group-hover:text-teal-accent transition-colors mb-1">
+                            {area.name}
+                          </h4>
+                          <p className="text-xs text-gray-dark flex items-center">
+                            <Clock size={12} className="mr-1" />
+                            {area.responseTime}
+                          </p>
+                        </div>
+                        <ArrowRight size={16} className="text-teal-accent opacity-0 group-hover:opacity-100 transition-opacity" />
+                      </div>
+                    </Card>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* North Bangalore */}
+            <div className="mb-12">
+              <h3 className="text-2xl font-bold text-navy-primary mb-6 flex items-center">
+                <MapPin className="mr-2 text-teal-accent" size={28} />
+                North Bangalore
+              </h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                {northAreas.map((area) => (
+                  <Link
+                    key={area.slug}
+                    href={`/areas/${area.slug}`}
+                    className="group"
+                  >
+                    <Card padding="md" className="h-full hover:shadow-lg transition-shadow border-l-4 border-gray-dark">
+                      <div className="flex items-start justify-between">
+                        <div className="flex-1">
+                          <h4 className="font-bold text-navy-primary group-hover:text-teal-accent transition-colors mb-1">
+                            {area.name}
+                          </h4>
+                          <p className="text-xs text-gray-dark flex items-center">
+                            <Clock size={12} className="mr-1" />
+                            {area.responseTime}
+                          </p>
+                        </div>
+                        <ArrowRight size={16} className="text-teal-accent opacity-0 group-hover:opacity-100 transition-opacity" />
+                      </div>
+                    </Card>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* West Bangalore */}
+            <div className="mb-12">
+              <h3 className="text-2xl font-bold text-navy-primary mb-6 flex items-center">
+                <MapPin className="mr-2 text-teal-accent" size={28} />
+                West Bangalore
+              </h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                {westAreas.map((area) => (
+                  <Link
+                    key={area.slug}
+                    href={`/areas/${area.slug}`}
+                    className="group"
+                  >
+                    <Card padding="md" className="h-full hover:shadow-lg transition-shadow border-l-4 border-gray-dark">
+                      <div className="flex items-start justify-between">
+                        <div className="flex-1">
+                          <h4 className="font-bold text-navy-primary group-hover:text-teal-accent transition-colors mb-1">
+                            {area.name}
+                          </h4>
+                          <p className="text-xs text-gray-dark flex items-center">
+                            <Clock size={12} className="mr-1" />
+                            {area.responseTime}
+                          </p>
+                        </div>
+                        <ArrowRight size={16} className="text-teal-accent opacity-0 group-hover:opacity-100 transition-opacity" />
+                      </div>
+                    </Card>
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </div>
