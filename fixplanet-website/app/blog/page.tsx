@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Clock, Calendar, ArrowRight } from 'lucide-react';
 import Card from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
+import { getFeaturedPost, getRegularPosts } from '@/data/blog-posts';
 
 export const metadata: Metadata = {
   title: 'Apple Device Care Insights & Tips | FIXplanet Blog',
@@ -12,51 +13,9 @@ export const metadata: Metadata = {
   keywords: ['Apple care tips', 'iPhone troubleshooting', 'MacBook maintenance', 'device care guide', 'Bangalore tech'],
 };
 
-interface BlogPost {
-  slug: string;
-  title: string;
-  excerpt: string;
-  category: string;
-  readTime: string;
-  publishedDate: string;
-  image: string;
-  featured?: boolean;
-}
-
-const blogPosts: BlogPost[] = [
-  {
-    slug: 'iphone-battery-health-bangalore',
-    title: 'iPhone Battery Health Below 80%? Here\'s What You Need to Know in Bangalore',
-    excerpt: 'Comprehensive guide to understanding iPhone battery degradation, when to replace, cost comparison, and tips to extend battery life in Bangalore\'s climate.',
-    category: 'Device Care Tips',
-    readTime: '8 min read',
-    publishedDate: '2024-10-15',
-    image: '/images/blog/iphone-battery-health.png',
-    featured: true,
-  },
-  {
-    slug: 'macbook-screen-replacement-guide',
-    title: 'MacBook Screen Cracked? Complete Guide to Display Replacement in Bangalore',
-    excerpt: 'Everything you need to know about MacBook screen damage, repair vs replacement decisions, cost breakdown by model, and how to prevent future damage.',
-    category: 'Troubleshooting Guides',
-    readTime: '10 min read',
-    publishedDate: '2024-10-10',
-    image: '/images/blog/macbook-screen-cracked.png',
-  },
-  {
-    slug: 'iphone-water-damage-emergency-steps',
-    title: 'Dropped Your iPhone in Water? Emergency Steps to Take in Bangalore',
-    excerpt: 'Immediate actions to take after water damage, what NOT to do, recovery success rates, and when to seek professional help in Bangalore.',
-    category: 'Troubleshooting Guides',
-    readTime: '6 min read',
-    publishedDate: '2024-10-05',
-    image: '/images/blog/iphone-water-damage.png',
-  },
-];
-
 export default function BlogPage() {
-  const featuredPost = blogPosts.find((post) => post.featured);
-  const regularPosts = blogPosts.filter((post) => !post.featured);
+  const featuredPost = getFeaturedPost();
+  const regularPosts = getRegularPosts();
 
   return (
     <div>
