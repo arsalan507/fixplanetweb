@@ -30,6 +30,11 @@ export const metadata: Metadata = {
   authors: [{ name: 'FIXplanet' }],
   creator: 'FIXplanet',
   publisher: 'FIXplanet',
+  icons: {
+    icon: '/images/logo-transparent.png',
+    shortcut: '/images/logo-transparent.png',
+    apple: '/images/logo-transparent.png',
+  },
   formatDetection: {
     email: false,
     address: false,
