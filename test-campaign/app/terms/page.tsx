@@ -37,7 +37,7 @@ export default function TermsPage() {
 
           <section>
             <h2 className="text-2xl font-bold mb-3">Disclaimer</h2>
-            <p><strong>FIXplanet is an independent service provider</strong>. We are not affiliated with, authorized by, or endorsed by Apple Inc. iPhone is a trademark of Apple Inc.</p>
+            <p><strong>FIXplanet is an independent component replacement provider</strong>. We are not affiliated with, authorized by, or endorsed by Apple Inc. iPhone is a trademark of Apple Inc.</p>
           </section>
 
           <section>

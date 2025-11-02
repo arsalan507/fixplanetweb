@@ -194,13 +194,13 @@ export default function Home() {
         {/* Heading - Mobile */}
         <div className="px-4 pt-6 pb-3">
           <h2 className="text-2xl font-bold text-secondary leading-tight mb-3">
-            iPhone Screen Cracked?<br />
-            <span className="text-primary">We Can Help Today</span>
+            iPhone & MacBook<br />
+            <span className="text-primary">Component Replacement - Bangalore</span>
           </h2>
 
           <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 mb-3">
             <p className="text-xs font-semibold text-yellow-800">
-              🔥 Limited Time: <span className="underline">Free diagnosis worth ₹500</span> with every component replacement
+              🔥 Limited Time: <span className="underline">Free assessment worth ₹500</span> with every component replacement
             </p>
           </div>
         </div>
@@ -209,7 +209,7 @@ export default function Home() {
         <div className="px-4 pb-3">
           <Image
             src="/images/hero-mobile.svg"
-            alt="Device Repair Service in Bangalore"
+            alt="Device Component Replacement in Bangalore"
             width={280}
             height={210}
             className="mx-auto w-full max-w-xs"
@@ -376,7 +376,7 @@ export default function Home() {
               <svg className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
               </svg>
-              <p className="text-sm"><strong>Doorstep Service</strong> - We come to you in 60 minutes</p>
+              <p className="text-sm"><strong>We Come To You</strong> - At your location in 60 minutes</p>
             </div>
             <div className="flex items-start space-x-2">
               <svg className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -394,7 +394,7 @@ export default function Home() {
               <svg className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
               </svg>
-              <p className="text-sm"><strong>Same-Day Service</strong> - Fast component replacement in Bangalore</p>
+              <p className="text-sm"><strong>Same-Day Replacement</strong> - Fast component replacement in Bangalore</p>
             </div>
           </div>
 
@@ -414,13 +414,13 @@ export default function Home() {
             {/* LEFT SIDE - Content & Image */}
             <div>
               <h2 className="text-5xl font-bold text-secondary leading-tight mb-6">
-                iPhone Screen Cracked?<br />
-                <span className="text-primary">We Can Help Today</span>
+                iPhone & MacBook<br />
+                <span className="text-primary">Component Replacement - Bangalore</span>
               </h2>
 
               <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-8">
                 <p className="font-semibold text-yellow-800">
-                  🔥 Limited Time: <span className="underline">Free diagnosis worth ₹500</span> with every component replacement
+                  🔥 Limited Time: <span className="underline">Free assessment worth ₹500</span> with every component replacement
                 </p>
               </div>
 
@@ -428,7 +428,7 @@ export default function Home() {
               <div className="mb-8">
                 <Image
                   src="/images/hero-mobile.svg"
-                  alt="Device Repair Service in Bangalore"
+                  alt="Device Component Replacement in Bangalore"
                   width={600}
                   height={400}
                   className="w-full rounded-2xl shadow-xl"
@@ -444,8 +444,8 @@ export default function Home() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
                   </div>
-                  <h3 className="font-bold text-lg mb-2">60 Minute Service</h3>
-                  <p className="text-gray-600 text-sm">Doorstep service across Bangalore</p>
+                  <h3 className="font-bold text-lg mb-2">60 Minute Response</h3>
+                  <p className="text-gray-600 text-sm">We come to you across Bangalore</p>
                 </div>
 
                 <div className="bg-white p-6 rounded-xl shadow-md">
@@ -714,7 +714,7 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-gray-700 mb-4">
-                "Screen cracked badly on my iPhone 13. Was worried about quality but FIXplanet's technician showed me the parts before installing. It's been 8 months and the screen still looks brand new. Great service in Whitefield!"
+                "Screen cracked badly on my iPhone 13. Was worried about quality but FIXplanet's specialist showed me the parts before installing. It's been 8 months and the screen still looks brand new. Great experience in Whitefield!"
               </p>
               <div className="border-t pt-4">
                 <p className="font-bold text-secondary">Anjali Reddy</p>
@@ -750,7 +750,7 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-gray-700 mb-4">
-                "iPhone 12 screen and back glass both shattered. FIXplanet replaced both at my location in Bellandur. The technician was professional and explained everything. Device looks brand new now. Worth every rupee!"
+                "iPhone 12 screen and back glass both shattered. FIXplanet replaced both at my location in Bellandur. The specialist was professional and explained everything. Device looks brand new now. Worth every rupee!"
               </p>
               <div className="border-t pt-4">
                 <p className="font-bold text-secondary">Meera Krishnan</p>
@@ -846,7 +846,7 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                 </svg>
                 <div>
-                  <p className="font-semibold text-gray-800">Free Diagnosis (₹500 value)</p>
+                  <p className="font-semibold text-gray-800">Free Assessment (₹500 value)</p>
                   <p className="text-sm text-gray-600">Complete device assessment at no cost</p>
                 </div>
               </div>
@@ -864,7 +864,7 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                 </svg>
                 <div>
-                  <p className="font-semibold text-gray-800">Same-Day Service Available</p>
+                  <p className="font-semibold text-gray-800">Same-Day Replacement Available</p>
                   <p className="text-sm text-gray-600">Get your device back the same day</p>
                 </div>
               </div>
@@ -873,8 +873,8 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                 </svg>
                 <div>
-                  <p className="font-semibold text-gray-800">Doorstep Service Across Bangalore</p>
-                  <p className="text-sm text-gray-600">We come to your preferred location</p>
+                  <p className="font-semibold text-gray-800">We Come To You Across Bangalore</p>
+                  <p className="text-sm text-gray-600">At your preferred location</p>
                 </div>
               </div>
             </div>
@@ -906,7 +906,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-start space-y-6 md:space-y-0 mb-8">
             <div>
               <p className="font-bold text-lg mb-2">FIXplanet</p>
-              <p className="text-sm opacity-75">Device Component Replacement Specialist in Bangalore</p>
+              <p className="text-sm opacity-75">Device Component Replacement - Bangalore</p>
               <div className="mt-4 text-sm">
                 <p className="opacity-75">📞 <a href={`tel:${contactPhone}`} className="hover:text-primary">{contactPhone}</a></p>
                 <p className="opacity-75 mt-1">📧 <a href="mailto:hello@fixplanet.in" className="hover:text-primary">hello@fixplanet.in</a></p>
@@ -929,7 +929,7 @@ export default function Home() {
 
               <div className="space-y-4 text-xs opacity-90">
                 <div>
-                  <p className="font-semibold mb-1">✓ Independent Service Provider</p>
+                  <p className="font-semibold mb-1">✓ Independent Component Replacement Provider</p>
                   <p>FIXplanet is an independent device care specialist. We are not affiliated with, authorized by, sponsored by, or endorsed by Apple Inc. or any device manufacturer. We provide third-party component replacement services.</p>
                 </div>
 
@@ -944,8 +944,8 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <p className="font-semibold mb-1">✓ Service Transparency</p>
-                  <p>All work is performed at your location in Bangalore. You can watch the entire process and we explain each step clearly. We believe in complete transparency throughout the service.</p>
+                  <p className="font-semibold mb-1">✓ Process Transparency</p>
+                  <p>All work is performed at your location in Bangalore. You can watch the entire process and we explain each step clearly. We believe in complete transparency throughout.</p>
                 </div>
 
                 <div>
@@ -959,7 +959,7 @@ export default function Home() {
           <div className="text-center text-xs opacity-75 pt-6 border-t border-white/20">
             <p className="mb-2">© 2025 FIXplanet. All rights reserved.</p>
             <p className="mb-2">iPhone®, MacBook®, iPad®, and Apple Watch® are registered trademarks of Apple Inc.</p>
-            <p>FIXplanet is an independent service provider and is not affiliated with, authorized by, or endorsed by Apple Inc.</p>
+            <p>FIXplanet is an independent component replacement provider and is not affiliated with, authorized by, or endorsed by Apple Inc.</p>
           </div>
         </div>
       </footer>
