@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, FormEvent } from 'react';
+import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 
 // Device models data
@@ -67,7 +68,8 @@ const deviceIssues = {
 };
 
 export default function Home() {
-  const [formStep, setFormStep] = useState(1); // 1: device selection, 2: contact info, 3: thank you
+  const router = useRouter();
+  const [formStep, setFormStep] = useState(1); // 1: device selection, 2: contact info
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isFlipping, setIsFlipping] = useState(false);
 
@@ -125,12 +127,8 @@ export default function Home() {
         throw new Error('Failed to submit form');
       }
 
-      setIsSubmitting(false);
-      setIsFlipping(true);
-      setTimeout(() => {
-        setFormStep(3);
-        setIsFlipping(false);
-      }, 600);
+      // Redirect to thank you page
+      router.push('/thank-you');
     } catch (error) {
       console.error('Error submitting form:', error);
       setIsSubmitting(false);
@@ -346,25 +344,6 @@ export default function Home() {
                   </p>
                 </form>
               </>
-            )}
-
-            {formStep === 3 && (
-              <div className="text-center py-8">
-                <svg className="w-20 h-20 text-green-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-                <h3 className="text-2xl font-bold text-secondary mb-2">Thank You!</h3>
-                <p className="text-gray-600 mb-4">We received your request successfully</p>
-                <p className="text-sm text-gray-500">Our team will call you as soon as possible</p>
-                <div className="mt-6 p-4 bg-blue-50 rounded-lg">
-                  <p className="text-sm font-semibold text-blue-800">
-                    Need immediate assistance?
-                  </p>
-                  <a href={`tel:${contactPhone}`} className="text-blue-600 font-bold text-lg">
-                    Call {contactPhone}
-                  </a>
-                </div>
-              </div>
             )}
           </div>
         </div>
@@ -609,25 +588,6 @@ export default function Home() {
                       </p>
                     </form>
                   </>
-                )}
-
-                {formStep === 3 && (
-                  <div className="text-center py-8">
-                    <svg className="w-20 h-20 text-green-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
-                    <h3 className="text-2xl font-bold text-secondary mb-2">Thank You!</h3>
-                    <p className="text-gray-600 mb-4">We received your request successfully</p>
-                    <p className="text-sm text-gray-500">Our team will call you as soon as possible</p>
-                    <div className="mt-6 p-4 bg-blue-50 rounded-lg">
-                      <p className="text-sm font-semibold text-blue-800">
-                        Need immediate assistance?
-                      </p>
-                      <a href={`tel:${contactPhone}`} className="text-blue-600 font-bold text-lg">
-                        Call {contactPhone}
-                      </a>
-                    </div>
-                  </div>
                 )}
               </div>
             </div>
