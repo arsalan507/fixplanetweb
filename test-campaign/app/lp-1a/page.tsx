@@ -192,13 +192,13 @@ export default function Home() {
         <div className="px-4 pt-6 pb-3">
           <h2 className="text-2xl font-bold text-secondary leading-tight mb-3">
             Premium iPhone® & MacBook® Parts<br />
-            <span className="text-primary">+ On-Site Installation Assistance — Bangalore Only</span>
+            <span className="text-primary">Component Supply & Upgrade — Bangalore Only</span>
           </h2>
 
           {/* Important Disclaimer - Mobile - Above the Fold */}
           <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 mb-4">
             <p className="text-xs text-gray-800 leading-relaxed">
-              <strong>⚠️ Important:</strong> FIXplanet provides independent on-site component installation assistance using premium OEM-grade parts. We are not an Apple Authorized Service Provider (AASP). Using third-party components may affect the manufacturer's warranty.
+              <strong>⚠️ Important:</strong> FIXplanet supplies and installs premium, OEM-grade components on-site. We are not an Apple Authorized Service Provider (AASP). Using third-party components may affect the manufacturer's warranty.
             </p>
           </div>
         </div>
@@ -207,7 +207,7 @@ export default function Home() {
         <div className="px-4 pb-3">
           <img
             src="/lp-1a/images/hero-mobile.svg"
-            alt="Device Component Installation in Bangalore"
+            alt="Device Component Supply & Upgrade in Bangalore"
             className="mx-auto w-full max-w-xs"
           />
         </div>
@@ -217,7 +217,7 @@ export default function Home() {
           <div id="quote-form" className={`bg-white rounded-2xl shadow-xl p-5 border-t-4 border-primary ${isFlipping ? 'flip-out' : 'flip-in'}`}>
             {formStep === 1 && (
               <>
-                <h3 className="text-lg font-bold text-secondary mb-1">Book Installation Visit (Bangalore Only)</h3>
+                <h3 className="text-lg font-bold text-secondary mb-1">Get Your Device Quote Today</h3>
                 <p className="text-gray-600 mb-4 text-xs">Tell us what needs attention</p>
 
                 <div className="space-y-3">
@@ -395,7 +395,7 @@ export default function Home() {
             <div>
               <h2 className="text-5xl font-bold text-secondary leading-tight mb-6">
                 Premium iPhone® & MacBook® Parts<br />
-                <span className="text-primary">+ On-Site Installation Assistance</span>
+                <span className="text-primary">Component Supply & Upgrade</span>
               </h2>
 
               <p className="text-lg text-gray-700 mb-6">Bangalore Only</p>
@@ -403,7 +403,7 @@ export default function Home() {
               {/* Important Disclaimer - Desktop - Above the Fold */}
               <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-8">
                 <p className="text-sm text-gray-800 leading-relaxed">
-                  <strong>⚠️ Important:</strong> FIXplanet provides independent on-site component installation assistance using premium OEM-grade parts. We are not an Apple Authorized Service Provider (AASP). Using third-party components may affect the manufacturer's warranty.
+                  <strong>⚠️ Important:</strong> FIXplanet supplies and installs premium, OEM-grade components on-site. We are not an Apple Authorized Service Provider (AASP). Using third-party components may affect the manufacturer's warranty.
                 </p>
               </div>
 
@@ -411,7 +411,7 @@ export default function Home() {
               <div className="mb-8">
                 <img
                   src="/lp-1a/images/hero-mobile.svg"
-                  alt="Device Component Installation in Bangalore"
+                  alt="Device Component Supply & Upgrade in Bangalore"
                   className="w-full rounded-2xl shadow-xl"
                 />
               </div>
@@ -465,7 +465,7 @@ export default function Home() {
               <div id="quote-form" className={`bg-white rounded-2xl shadow-2xl p-8 border-t-4 border-primary ${isFlipping ? 'flip-out' : 'flip-in'}`}>
                 {formStep === 1 && (
                   <>
-                    <h3 className="text-2xl font-bold text-secondary mb-2">Book Technician Visit</h3>
+                    <h3 className="text-2xl font-bold text-secondary mb-2">Get Your Device Quote Today</h3>
                     <p className="text-gray-600 mb-6">Bangalore Only - Tell us what needs attention</p>
 
                     <div className="space-y-5">
@@ -782,7 +782,7 @@ export default function Home() {
           <div className="space-y-6">
             <div className="bg-gray-50 p-6 rounded-xl">
               <h3 className="font-bold text-lg mb-2">Q: Are you Apple authorized?</h3>
-              <p className="text-gray-700">No. We are an independent provider offering premium OEM-grade components and technician installation assistance. Manufacturer warranties may be affected.</p>
+              <p className="text-gray-700">No. We are an independent supplier of premium OEM-grade components with on-site fitting. Manufacturer warranties may be affected.</p>
             </div>
 
             <div className="bg-gray-50 p-6 rounded-xl">
@@ -928,7 +928,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-start space-y-6 md:space-y-0 mb-8">
             <div>
               <p className="font-bold text-lg mb-2">FIXplanet</p>
-              <p className="text-sm opacity-75">Premium Parts + Installation Assistance — Bangalore</p>
+              <p className="text-sm opacity-75">Component Supply & Upgrade — Bangalore</p>
               <div className="mt-4 text-sm">
                 <p className="opacity-75">📞 <a href={`tel:${contactPhone}`} className="hover:text-primary">{contactPhone}</a></p>
                 <p className="opacity-75 mt-1">📧 <a href="mailto:hello@fixplanet.in" className="hover:text-primary">hello@fixplanet.in</a></p>
@@ -951,8 +951,8 @@ export default function Home() {
 
               <div className="space-y-4 text-xs opacity-90">
                 <div>
-                  <p className="font-semibold mb-1">✓ Independent Component Installation Provider</p>
-                  <p>FIXplanet is an independent device care specialist. We are not affiliated with, authorized by, sponsored by, or endorsed by Apple Inc. or any device manufacturer. We provide independent installation assistance using OEM-grade parts.</p>
+                  <p className="font-semibold mb-1">✓ Independent Component Supplier</p>
+                  <p>FIXplanet is an independent device care specialist. We are not affiliated with, authorized by, sponsored by, or endorsed by Apple Inc. or any device manufacturer. We supply and install premium, OEM-grade components.</p>
                 </div>
 
                 <div>
@@ -981,7 +981,7 @@ export default function Home() {
           <div className="text-center text-xs opacity-75 pt-6 border-t border-white/20">
             <p className="mb-2">© 2025 FIXplanet. All rights reserved.</p>
             <p className="mb-2">iPhone®, MacBook®, iPad®, and Apple Watch® are registered trademarks of Apple Inc.</p>
-            <p>FIXplanet is an independent component installation provider and is not affiliated with, authorized by, or endorsed by Apple Inc.</p>
+            <p>FIXplanet is an independent component supplier and is not affiliated with, authorized by, or endorsed by Apple Inc.</p>
           </div>
         </div>
       </footer>
