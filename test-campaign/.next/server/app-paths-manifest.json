@@ -2,6 +2,8 @@
   "/_global-error/page": "app/_global-error/page.js",
   "/_not-found/page": "app/_not-found/page.js",
   "/api/send-email/route": "app/api/send-email/route.js",
+  "/lp-1/page": "app/lp-1/page.js",
+  "/lp-1a/page": "app/lp-1a/page.js",
   "/page": "app/page.js",
   "/privacy/page": "app/privacy/page.js",
   "/terms/page": "app/terms/page.js",

@@ -78,6 +78,18 @@
       "namedRegex": "^/api/send\\-email(?:/)?$"
     },
     {
+      "page": "/lp-1",
+      "regex": "^/lp\\-1(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/lp\\-1(?:/)?$"
+    },
+    {
+      "page": "/lp-1a",
+      "regex": "^/lp\\-1a(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/lp\\-1a(?:/)?$"
+    },
+    {
       "page": "/privacy",
       "regex": "^/privacy(?:/)?$",
       "routeKeys": {},

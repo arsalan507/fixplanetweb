@@ -2,6 +2,8 @@
   "/_global-error/page": "/_global-error",
   "/_not-found/page": "/_not-found",
   "/api/send-email/route": "/api/send-email",
+  "/lp-1/page": "/lp-1",
+  "/lp-1a/page": "/lp-1a",
   "/page": "/",
   "/privacy/page": "/privacy",
   "/terms/page": "/terms",
