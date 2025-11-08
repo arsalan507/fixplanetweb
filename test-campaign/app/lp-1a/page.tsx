@@ -108,7 +108,7 @@ export default function Home() {
       issue: selectedIssue,
       name,
       phone,
-      source: 'Test Campaign Landing Page',
+      source: 'LP-1A Landing Page',
       landingPage: window.location.href,
     };
 
@@ -191,16 +191,23 @@ export default function Home() {
         {/* Heading - Mobile */}
         <div className="px-4 pt-6 pb-3">
           <h2 className="text-2xl font-bold text-secondary leading-tight mb-3">
-            iPhone & MacBook<br />
-            <span className="text-primary">Component Replacement - Bangalore</span>
+            Premium iPhone® & MacBook® Parts<br />
+            <span className="text-primary">+ On-Site Installation Assistance — Bangalore Only</span>
           </h2>
+
+          {/* Important Disclaimer - Mobile - Above the Fold */}
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 mb-4">
+            <p className="text-xs text-gray-800 leading-relaxed">
+              <strong>⚠️ Important:</strong> FIXplanet provides independent on-site component installation assistance using premium OEM-grade parts. We are not an Apple Authorized Service Provider (AASP). Using third-party components may affect the manufacturer's warranty.
+            </p>
+          </div>
         </div>
 
         {/* Hero Image - Mobile */}
         <div className="px-4 pb-3">
           <img
-            src="/lp-1/images/hero-mobile.svg"
-            alt="Device Component Replacement in Bangalore"
+            src="/lp-1a/images/hero-mobile.svg"
+            alt="Device Component Installation in Bangalore"
             className="mx-auto w-full max-w-xs"
           />
         </div>
@@ -210,8 +217,8 @@ export default function Home() {
           <div id="quote-form" className={`bg-white rounded-2xl shadow-xl p-5 border-t-4 border-primary ${isFlipping ? 'flip-out' : 'flip-in'}`}>
             {formStep === 1 && (
               <>
-                <h3 className="text-lg font-bold text-secondary mb-1">Get Help with Your Device</h3>
-                <p className="text-gray-600 mb-4 text-xs">Tell us what happened</p>
+                <h3 className="text-lg font-bold text-secondary mb-1">Book Installation Visit (Bangalore Only)</h3>
+                <p className="text-gray-600 mb-4 text-xs">Tell us what needs attention</p>
 
                 <div className="space-y-3">
                   <div>
@@ -256,7 +263,7 @@ export default function Home() {
                   {selectedDevice && selectedModel && (
                     <div>
                       <label htmlFor="issue-mobile" className="block text-xs font-semibold text-gray-700 mb-1">
-                        What happened? *
+                        What needs attention? *
                       </label>
                       <select
                         id="issue-mobile"
@@ -278,7 +285,7 @@ export default function Home() {
                     disabled={!selectedDevice || !selectedModel || !selectedIssue}
                     className="w-full bg-accent text-white py-2.5 rounded-lg text-base font-bold hover:bg-orange-600 transition disabled:bg-gray-400 disabled:cursor-not-allowed"
                   >
-                    Get Free Quote →
+                    Request Visit →
                   </button>
                 </div>
               </>
@@ -330,6 +337,10 @@ export default function Home() {
                   </button>
 
                   <p className="text-xs text-gray-500 text-center">
+                    We will call within 15–30 minutes to confirm details. Pay after installation.
+                  </p>
+
+                  <p className="text-xs text-gray-500 text-center">
                     By submitting, you agree to our <a href="/privacy" className="underline">Privacy Policy</a> and <a href="/terms" className="underline">Terms</a>
                   </p>
                 </form>
@@ -345,25 +356,25 @@ export default function Home() {
               <svg className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
               </svg>
-              <p className="text-sm"><strong>We Come To You</strong> - At your location in 60 minutes</p>
+              <p className="text-sm"><strong>Certified Technicians Come to You</strong> - On-site at your location within 60 minutes</p>
             </div>
             <div className="flex items-start space-x-2">
               <svg className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
               </svg>
-              <p className="text-sm"><strong>Premium Quality Parts</strong> - Original quality guaranteed</p>
+              <p className="text-sm"><strong>OEM-Grade Components</strong> - Premium quality parts with 12-month warranty</p>
             </div>
             <div className="flex items-start space-x-2">
               <svg className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
               </svg>
-              <p className="text-sm"><strong>12-Month Warranty</strong> - Complete peace of mind</p>
+              <p className="text-sm"><strong>Transparent Pricing</strong> - Inspect parts before installation</p>
             </div>
             <div className="flex items-start space-x-2">
               <svg className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
               </svg>
-              <p className="text-sm"><strong>Same-Day Replacement</strong> - Fast component replacement in Bangalore</p>
+              <p className="text-sm"><strong>Pay Only After Completion</strong> - Inspect work, then pay</p>
             </div>
           </div>
 
@@ -371,7 +382,7 @@ export default function Home() {
             <svg className="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
               <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
             </svg>
-            <span><strong>4.9/5</strong> from 1,000+ happy customers</span>
+            <span><strong>4.9/5</strong> from 1,000+ installations across Bangalore</span>
           </div>
         </div>
       </div>
@@ -383,15 +394,24 @@ export default function Home() {
             {/* LEFT SIDE - Content & Image */}
             <div>
               <h2 className="text-5xl font-bold text-secondary leading-tight mb-6">
-                iPhone & MacBook<br />
-                <span className="text-primary">Component Replacement - Bangalore</span>
+                Premium iPhone® & MacBook® Parts<br />
+                <span className="text-primary">+ On-Site Installation Assistance</span>
               </h2>
+
+              <p className="text-lg text-gray-700 mb-6">Bangalore Only</p>
+
+              {/* Important Disclaimer - Desktop - Above the Fold */}
+              <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-8">
+                <p className="text-sm text-gray-800 leading-relaxed">
+                  <strong>⚠️ Important:</strong> FIXplanet provides independent on-site component installation assistance using premium OEM-grade parts. We are not an Apple Authorized Service Provider (AASP). Using third-party components may affect the manufacturer's warranty.
+                </p>
+              </div>
 
               {/* Hero Image - Desktop */}
               <div className="mb-8">
                 <img
-                  src="/lp-1/images/hero-mobile.svg"
-                  alt="Device Component Replacement in Bangalore"
+                  src="/lp-1a/images/hero-mobile.svg"
+                  alt="Device Component Installation in Bangalore"
                   className="w-full rounded-2xl shadow-xl"
                 />
               </div>
@@ -405,7 +425,7 @@ export default function Home() {
                     </svg>
                   </div>
                   <h3 className="font-bold text-lg mb-2">60 Minute Response</h3>
-                  <p className="text-gray-600 text-sm">We come to you across Bangalore</p>
+                  <p className="text-gray-600 text-sm">Certified technicians come to your location across Bangalore</p>
                 </div>
 
                 <div className="bg-white p-6 rounded-xl shadow-md">
@@ -415,7 +435,7 @@ export default function Home() {
                     </svg>
                   </div>
                   <h3 className="font-bold text-lg mb-2">12-Month Warranty</h3>
-                  <p className="text-gray-600 text-sm">Industry-leading protection</p>
+                  <p className="text-gray-600 text-sm">Industry-leading warranty on installed components</p>
                 </div>
 
                 <div className="bg-white p-6 rounded-xl shadow-md">
@@ -424,8 +444,8 @@ export default function Home() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
                     </svg>
                   </div>
-                  <h3 className="font-bold text-lg mb-2">Premium Quality Parts</h3>
-                  <p className="text-gray-600 text-sm">Original quality parts</p>
+                  <h3 className="font-bold text-lg mb-2">OEM-Grade Components</h3>
+                  <p className="text-gray-600 text-sm">Premium quality parts</p>
                 </div>
 
                 <div className="bg-white p-6 rounded-xl shadow-md">
@@ -445,8 +465,8 @@ export default function Home() {
               <div id="quote-form" className={`bg-white rounded-2xl shadow-2xl p-8 border-t-4 border-primary ${isFlipping ? 'flip-out' : 'flip-in'}`}>
                 {formStep === 1 && (
                   <>
-                    <h3 className="text-2xl font-bold text-secondary mb-2">Get Help with Your Device Today</h3>
-                    <p className="text-gray-600 mb-6">Tell us what happened to your device</p>
+                    <h3 className="text-2xl font-bold text-secondary mb-2">Book Technician Visit</h3>
+                    <p className="text-gray-600 mb-6">Bangalore Only - Tell us what needs attention</p>
 
                     <div className="space-y-5">
                       <div>
@@ -491,7 +511,7 @@ export default function Home() {
                       {selectedDevice && selectedModel && (
                         <div>
                           <label htmlFor="issue" className="block text-sm font-semibold text-gray-700 mb-2">
-                            What happened to your device? *
+                            What needs attention? *
                           </label>
                           <select
                             id="issue"
@@ -513,7 +533,7 @@ export default function Home() {
                         disabled={!selectedDevice || !selectedModel || !selectedIssue}
                         className="w-full bg-accent text-white py-4 rounded-lg text-xl font-bold hover:bg-orange-600 transition disabled:bg-gray-400 disabled:cursor-not-allowed"
                       >
-                        Get Free Quote →
+                        Request Visit →
                       </button>
                     </div>
                   </>
@@ -565,6 +585,10 @@ export default function Home() {
                       </button>
 
                       <p className="text-xs text-gray-500 text-center">
+                        We will call within 15–30 minutes to confirm details. Pay after installation.
+                      </p>
+
+                      <p className="text-xs text-gray-500 text-center">
                         By submitting, you agree to our <a href="/privacy" className="underline">Privacy Policy</a> and <a href="/terms" className="underline">Terms</a>
                       </p>
                     </form>
@@ -576,13 +600,51 @@ export default function Home() {
         </div>
       </div>
 
+      {/* How It Works Section */}
+      <section className="bg-white py-16">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-secondary mb-4">
+            How It Works
+          </h2>
+          <p className="text-center text-gray-600 mb-12">
+            Simple 3-step process
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                1
+              </div>
+              <h3 className="font-bold text-xl mb-2">Book a Visit</h3>
+              <p className="text-gray-600">Use the form to request a technician visit</p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                2
+              </div>
+              <h3 className="font-bold text-xl mb-2">Technician Arrives</h3>
+              <p className="text-gray-600">Technician arrives, inspects the device and presents components</p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                3
+              </div>
+              <h3 className="font-bold text-xl mb-2">Installation Complete</h3>
+              <p className="text-gray-600">Technician completes installation; you inspect and then pay</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Trust Badges */}
       <section className="bg-primary text-white py-8">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-3xl font-bold">1,000+</div>
-              <div className="text-sm opacity-90">Devices Restored</div>
+              <div className="text-sm opacity-90">Installations Completed</div>
             </div>
             <div>
               <div className="text-3xl font-bold">60 Minutes</div>
@@ -604,10 +666,10 @@ export default function Home() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-secondary mb-4">
-            Real Stories from Real Customers
+            Customer Stories from Bangalore
           </h2>
           <p className="text-center text-gray-600 mb-12">
-            See how we helped customers with cracked screens across Bangalore
+            See what customers say about our installation service
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -619,13 +681,11 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-gray-700 mb-4">
-                "My iPhone 14 screen was completely shattered after I dropped it. FIXplanet came to my office in HSR Layout within 90 minutes and replaced it while I waited. The new screen works perfectly - it's been 6 months with zero issues!"
+                "They installed a premium front display on my iPhone 14 at my office. Works perfectly after 6 months."
               </p>
               <div className="border-t pt-4">
                 <p className="font-bold text-secondary">Priya Sharma</p>
                 <p className="text-sm text-gray-600">Koramangala</p>
-                <p className="text-xs text-primary mt-2">Issue: Cracked iPhone 14 Screen</p>
-                <p className="text-xs text-gray-500">Service: 90-minute doorstep replacement</p>
               </div>
             </div>
 
@@ -637,13 +697,11 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-gray-700 mb-4">
-                "Dropped my iPhone 15 Pro and the entire front glass shattered. Called FIXplanet and they reached Indiranagar in 45 minutes. Watched them replace it at my home. Quality is amazing and warranty gives me peace of mind."
+                "Technician came in 45 mins and installed a new display on my iPhone 15 Pro. Transparent and professional."
               </p>
               <div className="border-t pt-4">
                 <p className="font-bold text-secondary">Rahul Mehta</p>
                 <p className="text-sm text-gray-600">Indiranagar</p>
-                <p className="text-xs text-primary mt-2">Issue: iPhone 15 Pro Shattered Display</p>
-                <p className="text-xs text-gray-500">Service: 45-minute doorstep replacement</p>
               </div>
             </div>
 
@@ -655,13 +713,11 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-gray-700 mb-4">
-                "Screen cracked badly on my iPhone 13. Was worried about quality but FIXplanet's specialist showed me the parts before installing. It's been 8 months and the screen still looks brand new. Great experience in Whitefield!"
+                "Screen cracked badly on my iPhone 13. Specialist showed me the parts before installing. It's been 8 months and the screen still looks brand new!"
               </p>
               <div className="border-t pt-4">
                 <p className="font-bold text-secondary">Anjali Reddy</p>
                 <p className="text-sm text-gray-600">Whitefield</p>
-                <p className="text-xs text-primary mt-2">Issue: iPhone 13 Cracked Screen</p>
-                <p className="text-xs text-gray-500">Service: 60-minute doorstep replacement</p>
               </div>
             </div>
 
@@ -673,13 +729,11 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-gray-700 mb-4">
-                "My MacBook Pro display was cracked and I couldn't work. FIXplanet came to Marathahalli same day and replaced the screen. They were transparent about the process and the display quality is excellent. Highly recommend!"
+                "My MacBook Pro display was cracked. FIXplanet came to Marathahalli same day and installed a new screen. They were transparent about the process and the display quality is excellent."
               </p>
               <div className="border-t pt-4">
                 <p className="font-bold text-secondary">Vikram Singh</p>
                 <p className="text-sm text-gray-600">Marathahalli</p>
-                <p className="text-xs text-primary mt-2">Issue: MacBook Pro Display Cracked</p>
-                <p className="text-xs text-gray-500">Service: Same-day doorstep replacement</p>
               </div>
             </div>
 
@@ -691,13 +745,11 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-gray-700 mb-4">
-                "iPhone 12 screen and back glass both shattered. FIXplanet replaced both at my location in Bellandur. The specialist was professional and explained everything. Device looks brand new now. Worth every rupee!"
+                "iPhone 12 screen and back glass both shattered. FIXplanet installed both components at my location in Bellandur. The specialist was professional and explained everything. Device looks brand new now!"
               </p>
               <div className="border-t pt-4">
                 <p className="font-bold text-secondary">Meera Krishnan</p>
                 <p className="text-sm text-gray-600">Bellandur</p>
-                <p className="text-xs text-primary mt-2">Issue: iPhone 12 Screen & Back Glass Broken</p>
-                <p className="text-xs text-gray-500">Service: 75-minute doorstep replacement</p>
               </div>
             </div>
 
@@ -709,14 +761,43 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-gray-700 mb-4">
-                "Completely shattered my iPhone 14 Plus screen. Needed it urgently for work. FIXplanet reached JP Nagar in 50 minutes and had it done in an hour. Screen quality is fantastic. Very satisfied with the service!"
+                "Completely shattered my iPhone 14 Plus screen. Needed it urgently for work. FIXplanet reached JP Nagar in 50 minutes and completed installation in an hour. Screen quality is fantastic!"
               </p>
               <div className="border-t pt-4">
                 <p className="font-bold text-secondary">Arjun Patel</p>
                 <p className="text-sm text-gray-600">JP Nagar</p>
-                <p className="text-xs text-primary mt-2">Issue: iPhone 14 Plus Screen Shattered</p>
-                <p className="text-xs text-gray-500">Service: 50-minute doorstep replacement</p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-secondary mb-12">
+            Frequently Asked Questions
+          </h2>
+
+          <div className="space-y-6">
+            <div className="bg-gray-50 p-6 rounded-xl">
+              <h3 className="font-bold text-lg mb-2">Q: Are you Apple authorized?</h3>
+              <p className="text-gray-700">No. We are an independent provider offering premium OEM-grade components and technician installation assistance. Manufacturer warranties may be affected.</p>
+            </div>
+
+            <div className="bg-gray-50 p-6 rounded-xl">
+              <h3 className="font-bold text-lg mb-2">Q: Do you offer a warranty?</h3>
+              <p className="text-gray-700">Yes — 12-month warranty on installed components.</p>
+            </div>
+
+            <div className="bg-gray-50 p-6 rounded-xl">
+              <h3 className="font-bold text-lg mb-2">Q: How long does it take?</h3>
+              <p className="text-gray-700">Typical response time is 60 minutes. Installation usually takes 30-90 minutes depending on the component.</p>
+            </div>
+
+            <div className="bg-gray-50 p-6 rounded-xl">
+              <h3 className="font-bold text-lg mb-2">Q: When do I pay?</h3>
+              <p className="text-gray-700">Only after you inspect the completed work and are satisfied with the installation.</p>
             </div>
           </div>
         </div>
@@ -741,7 +822,7 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="font-bold text-lg mb-2">12-Month Warranty</h3>
-              <p className="text-sm text-gray-600">Industry-leading parts warranty on all replacements</p>
+              <p className="text-sm text-gray-600">Industry-leading parts warranty on all installations</p>
             </div>
 
             {/* Promise 2 */}
@@ -805,7 +886,7 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                 </svg>
                 <div>
-                  <p className="font-semibold text-gray-800">Same-Day Replacement Available</p>
+                  <p className="font-semibold text-gray-800">Same-Day Installation Available</p>
                   <p className="text-sm text-gray-600">Get your device back the same day</p>
                 </div>
               </div>
@@ -814,7 +895,7 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                 </svg>
                 <div>
-                  <p className="font-semibold text-gray-800">We Come To You Across Bangalore</p>
+                  <p className="font-semibold text-gray-800">Technicians Come To You Across Bangalore</p>
                   <p className="text-sm text-gray-600">At your preferred location</p>
                 </div>
               </div>
@@ -827,16 +908,16 @@ export default function Home() {
       <section className="bg-gradient-to-r from-primary to-secondary py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Restore Your Device?
+            Need Component Installation?
           </h2>
           <p className="text-xl text-white opacity-90 mb-8">
-            Fill the form above and we'll call you as soon as possible
+            Fill the form above and we'll call you within 15-30 minutes
           </p>
           <button
             onClick={scrollToForm}
             className="bg-accent text-white px-12 py-4 rounded-full text-xl font-bold hover:bg-orange-600 transition shadow-2xl"
           >
-            Get Quote Now
+            Book Visit Now
           </button>
         </div>
       </section>
@@ -847,7 +928,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-start space-y-6 md:space-y-0 mb-8">
             <div>
               <p className="font-bold text-lg mb-2">FIXplanet</p>
-              <p className="text-sm opacity-75">Device Component Replacement - Bangalore</p>
+              <p className="text-sm opacity-75">Premium Parts + Installation Assistance — Bangalore</p>
               <div className="mt-4 text-sm">
                 <p className="opacity-75">📞 <a href={`tel:${contactPhone}`} className="hover:text-primary">{contactPhone}</a></p>
                 <p className="opacity-75 mt-1">📧 <a href="mailto:hello@fixplanet.in" className="hover:text-primary">hello@fixplanet.in</a></p>
@@ -870,18 +951,18 @@ export default function Home() {
 
               <div className="space-y-4 text-xs opacity-90">
                 <div>
-                  <p className="font-semibold mb-1">✓ Independent Component Replacement Provider</p>
-                  <p>FIXplanet is an independent device care specialist. We are not affiliated with, authorized by, sponsored by, or endorsed by Apple Inc. or any device manufacturer. We provide third-party component replacement services.</p>
+                  <p className="font-semibold mb-1">✓ Independent Component Installation Provider</p>
+                  <p>FIXplanet is an independent device care specialist. We are not affiliated with, authorized by, sponsored by, or endorsed by Apple Inc. or any device manufacturer. We provide independent installation assistance using OEM-grade parts.</p>
                 </div>
 
                 <div>
                   <p className="font-semibold mb-1">✓ Quality Components</p>
-                  <p>We use premium quality, OEM-grade components for all replacements. These are high-quality aftermarket parts that meet or exceed original specifications. Original manufacturer parts are available upon request at additional cost.</p>
+                  <p>We use premium quality, OEM-grade components for all installations. These are high-quality aftermarket parts that meet or exceed original specifications. Original manufacturer parts are available upon request at additional cost.</p>
                 </div>
 
                 <div>
                   <p className="font-semibold mb-1">✓ Warranty Coverage</p>
-                  <p>Our 12-month warranty covers the replaced components only, not pre-existing device issues or future accidental damage. Warranty is void if device is serviced elsewhere or subjected to physical/liquid damage after our service.</p>
+                  <p>Our 12-month warranty covers the installed components only, not pre-existing device issues or future accidental damage. Warranty is void if device is serviced elsewhere or subjected to physical/liquid damage after our service.</p>
                 </div>
 
                 <div>
@@ -891,7 +972,7 @@ export default function Home() {
 
                 <div>
                   <p className="font-semibold mb-1">✓ Manufacturer Warranty Impact</p>
-                  <p>Using third-party component replacement services may affect your device's manufacturer warranty. Please check your device warranty status before proceeding. We are happy to discuss this with you.</p>
+                  <p>Using third-party component installation services may affect your device's manufacturer warranty. Please check your device warranty status before proceeding. We are happy to discuss this with you.</p>
                 </div>
               </div>
             </div>
@@ -900,7 +981,7 @@ export default function Home() {
           <div className="text-center text-xs opacity-75 pt-6 border-t border-white/20">
             <p className="mb-2">© 2025 FIXplanet. All rights reserved.</p>
             <p className="mb-2">iPhone®, MacBook®, iPad®, and Apple Watch® are registered trademarks of Apple Inc.</p>
-            <p>FIXplanet is an independent component replacement provider and is not affiliated with, authorized by, or endorsed by Apple Inc.</p>
+            <p>FIXplanet is an independent component installation provider and is not affiliated with, authorized by, or endorsed by Apple Inc.</p>
           </div>
         </div>
       </footer>
