@@ -1,6 +1,21 @@
+'use client';
+
+import { useEffect } from 'react';
+
 export default function ThankYouPage() {
   const contactPhone = "+91 8105955009";
   const whatsapp = "918105955009";
+
+  useEffect(() => {
+    // Fire Google Ads conversion event when page loads
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'conversion', {
+        'send_to': 'AW-17693415239/9rQSCKe4jrwbEMeu8PRB',
+        'value': 1.0,
+        'currency': 'INR'
+      });
+    }
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
