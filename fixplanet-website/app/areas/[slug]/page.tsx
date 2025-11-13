@@ -49,6 +49,10 @@ export async function generateStaticParams() {
   }));
 }
 
+// Force static generation at build time
+export const dynamic = 'force-static';
+export const dynamicParams = false;
+
 export default function AreaPage({ params }: Props) {
   const area = getAreaBySlug(params.slug);
   const phone = process.env.NEXT_PUBLIC_PHONE || '+91-8105955009';
