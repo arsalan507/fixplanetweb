@@ -1,5 +1,6 @@
 import type { NextConfig } from "next";
 
+// Deployment trigger: Ensure all 172 area pages are generated
 const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
