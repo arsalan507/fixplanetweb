@@ -43,10 +43,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
-  const slugs = getAllAreaSlugs();
-  return slugs.map((slug) => ({
-    slug: slug,
-  }));
+  try {
+    const slugs = getAllAreaSlugs();
+    console.log(`[generateStaticParams] Generating ${slugs.length} area pages`);
+    return slugs.map((slug) => ({
+      slug: slug,
+    }));
+  } catch (error) {
+    console.error('[generateStaticParams] Error:', error);
+    return [];
+  }
 }
 
 // Force static generation at build time
