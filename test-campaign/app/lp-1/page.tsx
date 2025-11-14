@@ -188,33 +188,33 @@ export default function Home() {
 
       {/* MOBILE VERSION */}
       <div className="block lg:hidden">
-        {/* Heading - Mobile */}
-        <div className="px-4 pt-6 pb-3">
-          <h2 className="text-2xl font-bold text-secondary leading-tight mb-3">
+        {/* Heading - Mobile - Optimized to show form above fold */}
+        <div className="px-4 pt-3 pb-1">
+          <h2 className="text-lg font-bold text-secondary leading-tight mb-2">
             Premium iPhone® & MacBook® Parts<br />
             <span className="text-primary">+ On-Site Installation Assistance — Bangalore Only</span>
           </h2>
 
-          {/* Important Disclaimer - Mobile - Above the Fold */}
-          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 mb-4">
-            <p className="text-xs text-gray-800 leading-relaxed">
+          {/* Important Disclaimer - Mobile - Compact */}
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-2 mb-2">
+            <p className="text-[10px] text-gray-800 leading-snug">
               <strong>⚠️ Important:</strong> FIXplanet provides independent on-site component installation assistance using premium OEM-grade parts. We are not an Apple Authorized Service Provider (AASP). Using third-party components may affect the manufacturer's warranty.
             </p>
           </div>
         </div>
 
-        {/* Hero Image - Mobile */}
-        <div className="px-4 pb-3">
+        {/* Hero Image - Mobile - Reduced size to show form above fold */}
+        <div className="px-4 pb-2">
           <img
             src="/lp-1/images/hero-mobile.svg"
             alt="Device Component Installation in Bangalore"
-            className="mx-auto w-full max-w-xs"
+            className="mx-auto w-full max-w-[180px]"
           />
         </div>
 
         {/* Form - Mobile */}
-        <div className="px-4 pb-6">
-          <div id="quote-form" className={`bg-white rounded-2xl shadow-xl p-5 border-t-4 border-primary ${isFlipping ? 'flip-out' : 'flip-in'}`}>
+        <div className="px-4 pb-4">
+          <div id="quote-form" className={`bg-white rounded-2xl shadow-xl p-4 border-t-4 border-primary ${isFlipping ? 'flip-out' : 'flip-in'}`}>
             {formStep === 1 && (
               <>
                 <h3 className="text-lg font-bold text-secondary mb-1">Book Installation Visit (Bangalore Only)</h3>
