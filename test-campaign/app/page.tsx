@@ -188,26 +188,26 @@ export default function Home() {
 
       {/* MOBILE VERSION */}
       <div className="block lg:hidden">
-        {/* Heading - Mobile */}
-        <div className="px-4 pt-6 pb-3">
-          <h2 className="text-2xl font-bold text-secondary leading-tight mb-3">
+        {/* Heading - Mobile - Optimized to show form above fold */}
+        <div className="px-4 pt-3 pb-1">
+          <h2 className="text-lg font-bold text-secondary leading-tight mb-2">
             iPhone & MacBook<br />
             <span className="text-primary">Component Replacement - Bangalore</span>
           </h2>
         </div>
 
-        {/* Hero Image - Mobile */}
-        <div className="px-4 pb-3">
+        {/* Hero Image - Mobile - Reduced size to show form above fold */}
+        <div className="px-4 pb-2">
           <img
             src="/lp-1/images/hero-mobile.svg"
             alt="Device Component Replacement in Bangalore"
-            className="mx-auto w-full max-w-xs"
+            className="mx-auto w-full max-w-[180px]"
           />
         </div>
 
         {/* Form - Mobile */}
-        <div className="px-4 pb-6">
-          <div id="quote-form" className={`bg-white rounded-2xl shadow-xl p-5 border-t-4 border-primary ${isFlipping ? 'flip-out' : 'flip-in'}`}>
+        <div className="px-4 pb-4">
+          <div id="quote-form" className={`bg-white rounded-2xl shadow-xl p-4 border-t-4 border-primary ${isFlipping ? 'flip-out' : 'flip-in'}`}>
             {formStep === 1 && (
               <>
                 <h3 className="text-lg font-bold text-secondary mb-1">Get Help with Your Device</h3>
