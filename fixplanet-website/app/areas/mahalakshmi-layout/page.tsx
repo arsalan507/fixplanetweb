@@ -5,14 +5,12 @@ import { notFound } from 'next/navigation';
 import { MapPin, Clock, Phone, Star, CheckCircle2, Shield, Award, Zap } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
-import { getAreaBySlug, getAllAreaSlugs } from '@/data/bangalore-areas';
+import { getAreaBySlug } from '@/data/bangalore-areas';
 
-type Props = {
-  params: { slug: string };
-};
+const SLUG = 'mahalakshmi-layout';
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const area = getAreaBySlug(params.slug);
+export async function generateMetadata(): Promise<Metadata> {
+  const area = getAreaBySlug(SLUG);
 
   if (!area) {
     return {
@@ -42,25 +40,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export async function generateStaticParams() {
-  try {
-    const slugs = getAllAreaSlugs();
-    console.log(`[generateStaticParams] Generating ${slugs.length} area pages`);
-    return slugs.map((slug) => ({
-      slug: slug,
-    }));
-  } catch (error) {
-    console.error('[generateStaticParams] Error:', error);
-    return [];
-  }
-}
-
-// Force static generation at build time
-export const dynamic = 'force-static';
-export const dynamicParams = false;
-
-export default function AreaPage({ params }: Props) {
-  const area = getAreaBySlug(params.slug);
+export default function AreaPage() {
+  const area = getAreaBySlug(SLUG);
   const phone = process.env.NEXT_PUBLIC_PHONE || '+91-8105955009';
 
   if (!area) {
