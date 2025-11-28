@@ -117,17 +117,6 @@ const Footer: React.FC = () => {
               FIXplanet is an independent service provider specializing in Apple products. We are not affiliated with, authorized by, or endorsed by Apple Inc.
               iPhone, iPad, MacBook, Apple Watch, and all related marks are trademarks of Apple Inc., registered in the U.S. and other countries.
             </p>
-            <p className="mt-3 text-gray-400">
-              Powered by{' '}
-              <a
-                href="https://kineticxhub.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-teal-accent hover:underline"
-              >
-                KineticxHub
-              </a>
-            </p>
           </div>
         </div>
       </div>
