@@ -36,18 +36,8 @@ export default function iPhoneScreenCrackedPage() {
             </p>
 
             {/* Hero CTA Form */}
-            <div className="grid md:grid-cols-3 gap-4 bg-white/10 backdrop-blur-sm p-6 rounded-lg">
-              <input
-                type="tel"
-                placeholder="Your phone number"
-                className="px-4 py-3 rounded-lg text-navy-primary"
-              />
-              <input
-                type="text"
-                placeholder="Your Bangalore location"
-                className="px-4 py-3 rounded-lg text-navy-primary"
-              />
-              <Button href="/contact" size="lg" fullWidth>
+            <div className="flex justify-center">
+              <Button href="/contact" size="lg" className="px-12">
                 Get Free Quote Now
               </Button>
             </div>
