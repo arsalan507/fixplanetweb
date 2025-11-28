@@ -71,7 +71,7 @@ export default function PricingPage() {
   };
 
   const calculateEstimate = () => {
-    if (!device || !model || issues.length === 0 || !location) {
+    if (!device || !model || issues.length === 0) {
       alert('Please fill in all required fields');
       return;
     }
@@ -213,18 +213,8 @@ export default function PricingPage() {
                   </div>
                 )}
 
-                {/* Step 4: Location */}
-                {issues.length > 0 && (
-                  <Input
-                    label="Step 4: Your Location in Bangalore"
-                    placeholder="e.g., Koramangala, Indiranagar"
-                    value={location}
-                    onChange={(e) => setLocation(e.target.value)}
-                  />
-                )}
-
                 {/* Calculate Button */}
-                {location && (
+                {issues.length > 0 && (
                   <Button onClick={calculateEstimate} size="lg" fullWidth>
                     Calculate Estimate
                   </Button>
