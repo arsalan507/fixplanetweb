@@ -46,8 +46,6 @@ export default function iPhoneScreenReplacementBangalorePage() {
   const whatsapp = process.env.NEXT_PUBLIC_WHATSAPP || '918105955009';
   const email = process.env.NEXT_PUBLIC_EMAIL || 'hello@fixplanet.in';
 
-  const [selectedModel, setSelectedModel] = useState('');
-
   return (
     <>
       {/* Schema Markup - Add to head */}
@@ -172,11 +170,11 @@ export default function iPhoneScreenReplacementBangalorePage() {
                   <Calculator className="mr-2" size={20} />
                   Get Instant Quote
                 </Button>
-                <Button href={`tel:${phone}`} variant="outline" size="lg" className="!border-white !text-white hover:!bg-white/10">
+                <Button href={`tel:${phone}`} variant="ghost" size="lg" className="!border-white !text-white hover:!bg-white/10">
                   <Phone className="mr-2" size={20} />
                   Call: {phone}
                 </Button>
-                <Button href={`https://wa.me/${whatsapp}`} variant="outline" size="lg" className="!border-white !text-white hover:!bg-white/10">
+                <Button href={`https://wa.me/${whatsapp}`} variant="ghost" size="lg" className="!border-white !text-white hover:!bg-white/10">
                   <MessageCircle className="mr-2" size={20} />
                   WhatsApp
                 </Button>
@@ -211,7 +209,7 @@ export default function iPhoneScreenReplacementBangalorePage() {
               </div>
               <div className="flex gap-3">
                 <Button href="/pricing" size="md">Get Quote</Button>
-                <Button href={`tel:${phone}`} variant="outline" size="md">Call Now</Button>
+                <Button href={`tel:${phone}`} variant="ghost" size="md">Call Now</Button>
               </div>
             </div>
           </div>
@@ -800,7 +798,7 @@ export default function iPhoneScreenReplacementBangalorePage() {
             </div>
 
             <div className="mt-8 text-center">
-              <Button href="/bangalore-locations" variant="outline">
+              <Button href="/bangalore-locations" variant="ghost">
                 View All 172+ Service Areas →
               </Button>
             </div>
@@ -943,7 +941,7 @@ export default function iPhoneScreenReplacementBangalorePage() {
             <Button href="/pricing" size="lg" className="!bg-teal-accent !text-navy-primary hover:!bg-teal-accent/90">
               Get Instant Quote
             </Button>
-            <Button href={`tel:${phone}`} variant="outline" size="lg" className="!border-white !text-white hover:!bg-white/10">
+            <Button href={`tel:${phone}`} variant="ghost" size="lg" className="!border-white !text-white hover:!bg-white/10">
               <Phone className="mr-2" size={20} />
               Call: {phone}
             </Button>
