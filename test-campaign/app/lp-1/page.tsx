@@ -68,14 +68,11 @@ const deviceIssues = {
 
 export default function Home() {
   const router = useRouter();
-  const [formStep, setFormStep] = useState(1); // 1: device selection, 2: contact info
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isFlipping, setIsFlipping] = useState(false);
 
   // Form data
   const [selectedDevice, setSelectedDevice] = useState('');
   const [selectedModel, setSelectedModel] = useState('');
-  const [selectedIssue, setSelectedIssue] = useState('');
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
 
@@ -85,27 +82,16 @@ export default function Home() {
   const handleDeviceChange = (device: string) => {
     setSelectedDevice(device);
     setSelectedModel(''); // Reset model when device changes
-    setSelectedIssue(''); // Reset issue when device changes
   };
 
-  const handleStepOne = () => {
-    if (selectedDevice && selectedModel && selectedIssue) {
-      setIsFlipping(true);
-      setTimeout(() => {
-        setFormStep(2);
-        setIsFlipping(false);
-      }, 600);
-    }
-  };
-
-  const handleFinalSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     const data = {
       device: selectedDevice,
       model: selectedModel,
-      issue: selectedIssue,
+      issue: 'General Service Request', // Default issue since we removed the field
       name,
       phone,
       source: 'LP-1 Landing Page',
@@ -154,53 +140,14 @@ export default function Home() {
         </div>
       </header>
 
-      <style jsx>{`
-        @keyframes flipOut {
-          from {
-            transform: rotateY(0deg);
-            opacity: 1;
-          }
-          to {
-            transform: rotateY(90deg);
-            opacity: 0;
-          }
-        }
-
-        @keyframes flipIn {
-          from {
-            transform: rotateY(-90deg);
-            opacity: 0;
-          }
-          to {
-            transform: rotateY(0deg);
-            opacity: 1;
-          }
-        }
-
-        .flip-out {
-          animation: flipOut 0.6s ease-in-out;
-        }
-
-        .flip-in {
-          animation: flipIn 0.6s ease-in-out;
-        }
-      `}</style>
-
       {/* MOBILE VERSION */}
       <div className="block lg:hidden">
         {/* Heading - Mobile - Optimized to show form above fold */}
-        <div className="px-4 pt-3 pb-1">
+        <div className="px-4 pt-3 pb-2">
           <h2 className="text-lg font-bold text-secondary leading-tight mb-2">
             Premium iPhone® & MacBook® Parts<br />
             <span className="text-primary">+ On-Site Installation Assistance — Bangalore Only</span>
           </h2>
-
-          {/* Important Disclaimer - Mobile - Compact */}
-          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-2 mb-2">
-            <p className="text-[10px] text-gray-800 leading-snug">
-              <strong>⚠️ Important:</strong> FIXplanet provides independent on-site component installation assistance using premium OEM-grade parts. We are not an Apple Authorized Service Provider (AASP). Using third-party components may affect the manufacturer's warranty.
-            </p>
-          </div>
         </div>
 
         {/* Hero Image - Mobile - Reduced size to show form above fold */}
@@ -213,139 +160,107 @@ export default function Home() {
         </div>
 
         {/* Form - Mobile */}
-        <div className="px-4 pb-4">
-          <div id="quote-form" className={`bg-white rounded-2xl shadow-xl p-4 border-t-4 border-primary ${isFlipping ? 'flip-out' : 'flip-in'}`}>
-            {formStep === 1 && (
-              <>
-                <h3 className="text-lg font-bold text-secondary mb-1">Book Installation Visit (Bangalore Only)</h3>
-                <p className="text-gray-600 mb-4 text-xs">Tell us what needs attention</p>
+        <div className="px-4 pb-3">
+          <div id="quote-form" className="bg-white rounded-2xl shadow-xl p-4 border-t-4 border-primary">
+            <h3 className="text-lg font-bold text-secondary mb-1">Book Installation Visit</h3>
+            <p className="text-gray-600 mb-4 text-xs">Quick form - get a call in 15-30 minutes</p>
 
-                <div className="space-y-3">
-                  <div>
-                    <label htmlFor="device-mobile" className="block text-xs font-semibold text-gray-700 mb-1">
-                      Device Type *
-                    </label>
-                    <select
-                      id="device-mobile"
-                      value={selectedDevice}
-                      onChange={(e) => handleDeviceChange(e.target.value)}
-                      required
-                      className="w-full px-3 py-2 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none bg-white text-sm"
-                    >
-                      <option value="">Select device type</option>
-                      <option value="iPhone">iPhone</option>
-                      <option value="MacBook">MacBook</option>
-                      <option value="iPad">iPad</option>
-                      <option value="iWatch">iWatch</option>
-                    </select>
-                  </div>
+            <form onSubmit={handleSubmit} className="space-y-3">
+              <div>
+                <label htmlFor="name-mobile" className="block text-xs font-semibold text-gray-700 mb-1">
+                  Your Name *
+                </label>
+                <input
+                  type="text"
+                  id="name-mobile"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
+                  className="w-full px-3 py-2 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none text-sm"
+                  placeholder="Enter your name"
+                />
+              </div>
 
-                  {selectedDevice && (
-                    <div>
-                      <label htmlFor="model-mobile" className="block text-xs font-semibold text-gray-700 mb-1">
-                        Model *
-                      </label>
-                      <select
-                        id="model-mobile"
-                        value={selectedModel}
-                        onChange={(e) => setSelectedModel(e.target.value)}
-                        required
-                        className="w-full px-3 py-2 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none bg-white text-sm"
-                      >
-                        <option value="">Select model</option>
-                        {deviceModels[selectedDevice as keyof typeof deviceModels]?.map((model) => (
-                          <option key={model} value={model}>{model}</option>
-                        ))}
-                      </select>
-                    </div>
-                  )}
+              <div>
+                <label htmlFor="phone-mobile" className="block text-xs font-semibold text-gray-700 mb-1">
+                  Contact Number *
+                </label>
+                <input
+                  type="tel"
+                  id="phone-mobile"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  required
+                  pattern="[0-9]{10}"
+                  className="w-full px-3 py-2 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none text-sm"
+                  placeholder="10-digit mobile number"
+                />
+              </div>
 
-                  {selectedDevice && selectedModel && (
-                    <div>
-                      <label htmlFor="issue-mobile" className="block text-xs font-semibold text-gray-700 mb-1">
-                        What needs attention? *
-                      </label>
-                      <select
-                        id="issue-mobile"
-                        value={selectedIssue}
-                        onChange={(e) => setSelectedIssue(e.target.value)}
-                        required
-                        className="w-full px-3 py-2 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none bg-white text-sm"
-                      >
-                        <option value="">Select issue</option>
-                        {deviceIssues[selectedDevice as keyof typeof deviceIssues]?.map((issue) => (
-                          <option key={issue} value={issue}>{issue}</option>
-                        ))}
-                      </select>
-                    </div>
-                  )}
+              <div>
+                <label htmlFor="device-mobile" className="block text-xs font-semibold text-gray-700 mb-1">
+                  Device Type *
+                </label>
+                <select
+                  id="device-mobile"
+                  value={selectedDevice}
+                  onChange={(e) => handleDeviceChange(e.target.value)}
+                  required
+                  className="w-full px-3 py-2 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none bg-white text-sm"
+                >
+                  <option value="">Select device type</option>
+                  <option value="iPhone">iPhone</option>
+                  <option value="MacBook">MacBook</option>
+                  <option value="iPad">iPad</option>
+                  <option value="iWatch">iWatch</option>
+                </select>
+              </div>
 
-                  <button
-                    onClick={handleStepOne}
-                    disabled={!selectedDevice || !selectedModel || !selectedIssue}
-                    className="w-full bg-accent text-white py-2.5 rounded-lg text-base font-bold hover:bg-orange-600 transition disabled:bg-gray-400 disabled:cursor-not-allowed"
+              {selectedDevice && (
+                <div>
+                  <label htmlFor="model-mobile" className="block text-xs font-semibold text-gray-700 mb-1">
+                    Model *
+                  </label>
+                  <select
+                    id="model-mobile"
+                    value={selectedModel}
+                    onChange={(e) => setSelectedModel(e.target.value)}
+                    required
+                    className="w-full px-3 py-2 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none bg-white text-sm"
                   >
-                    Request Visit →
-                  </button>
+                    <option value="">Select model</option>
+                    {deviceModels[selectedDevice as keyof typeof deviceModels]?.map((model) => (
+                      <option key={model} value={model}>{model}</option>
+                    ))}
+                  </select>
                 </div>
-              </>
-            )}
+              )}
 
-            {formStep === 2 && (
-              <>
-                <h3 className="text-lg font-bold text-secondary mb-1">Almost There!</h3>
-                <p className="text-gray-600 mb-4 text-xs">Enter your contact details</p>
+              <button
+                type="submit"
+                disabled={isSubmitting || !selectedDevice || !selectedModel}
+                className="w-full bg-accent text-white py-2.5 rounded-lg text-base font-bold hover:bg-orange-600 transition disabled:bg-gray-400 disabled:cursor-not-allowed"
+              >
+                {isSubmitting ? 'Submitting...' : 'Get Free Quote'}
+              </button>
 
-                <form onSubmit={handleFinalSubmit} className="space-y-3">
-                  <div>
-                    <label htmlFor="name-mobile" className="block text-xs font-semibold text-gray-700 mb-1">
-                      Your Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="name-mobile"
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
-                      required
-                      className="w-full px-3 py-2 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none text-sm"
-                      placeholder="Enter your name"
-                    />
-                  </div>
+              <p className="text-xs text-gray-500 text-center">
+                We will call within 15–30 minutes. Pay after installation.
+              </p>
 
-                  <div>
-                    <label htmlFor="phone-mobile" className="block text-xs font-semibold text-gray-700 mb-1">
-                      Contact Number *
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone-mobile"
-                      value={phone}
-                      onChange={(e) => setPhone(e.target.value)}
-                      required
-                      pattern="[0-9]{10}"
-                      className="w-full px-3 py-2 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none text-sm"
-                      placeholder="10-digit mobile number"
-                    />
-                  </div>
+              <p className="text-xs text-gray-500 text-center">
+                By submitting, you agree to our <a href="/privacy" className="underline">Privacy Policy</a> and <a href="/terms" className="underline">Terms</a>
+              </p>
+            </form>
+          </div>
+        </div>
 
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full bg-accent text-white py-2.5 rounded-lg text-base font-bold hover:bg-orange-600 transition disabled:bg-gray-400"
-                  >
-                    {isSubmitting ? 'Submitting...' : 'Submit Request'}
-                  </button>
-
-                  <p className="text-xs text-gray-500 text-center">
-                    We will call within 15–30 minutes to confirm details. Pay after installation.
-                  </p>
-
-                  <p className="text-xs text-gray-500 text-center">
-                    By submitting, you agree to our <a href="/privacy" className="underline">Privacy Policy</a> and <a href="/terms" className="underline">Terms</a>
-                  </p>
-                </form>
-              </>
-            )}
+        {/* Important Disclaimer - Mobile - Below Form */}
+        <div className="px-4 pb-3">
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 rounded">
+            <p className="text-xs text-gray-800 leading-relaxed">
+              <strong>⚠️ Important:</strong> FIXplanet provides independent on-site component installation assistance using premium OEM-grade parts. We are not an Apple Authorized Service Provider (AASP). Using third-party components may affect the manufacturer's warranty.
+            </p>
           </div>
         </div>
 
@@ -462,138 +377,97 @@ export default function Home() {
 
             {/* RIGHT SIDE - Form (Sticky) */}
             <div className="lg:sticky lg:top-24">
-              <div id="quote-form" className={`bg-white rounded-2xl shadow-2xl p-8 border-t-4 border-primary ${isFlipping ? 'flip-out' : 'flip-in'}`}>
-                {formStep === 1 && (
-                  <>
-                    <h3 className="text-2xl font-bold text-secondary mb-2">Book Technician Visit</h3>
-                    <p className="text-gray-600 mb-6">Bangalore Only - Tell us what needs attention</p>
+              <div id="quote-form" className="bg-white rounded-2xl shadow-2xl p-8 border-t-4 border-primary">
+                <h3 className="text-2xl font-bold text-secondary mb-2">Book Technician Visit</h3>
+                <p className="text-gray-600 mb-6">Quick form - get a call in 15-30 minutes</p>
 
-                    <div className="space-y-5">
-                      <div>
-                        <label htmlFor="device" className="block text-sm font-semibold text-gray-700 mb-2">
-                          Device Type *
-                        </label>
-                        <select
-                          id="device"
-                          value={selectedDevice}
-                          onChange={(e) => handleDeviceChange(e.target.value)}
-                          required
-                          className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none text-lg bg-white"
-                        >
-                          <option value="">Select device type</option>
-                          <option value="iPhone">iPhone</option>
-                          <option value="MacBook">MacBook</option>
-                          <option value="iPad">iPad</option>
-                          <option value="iWatch">iWatch</option>
-                        </select>
-                      </div>
+                <form onSubmit={handleSubmit} className="space-y-5">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
+                      Your Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      required
+                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none text-lg"
+                      placeholder="Enter your name"
+                    />
+                  </div>
 
-                      {selectedDevice && (
-                        <div>
-                          <label htmlFor="model" className="block text-sm font-semibold text-gray-700 mb-2">
-                            Model *
-                          </label>
-                          <select
-                            id="model"
-                            value={selectedModel}
-                            onChange={(e) => setSelectedModel(e.target.value)}
-                            required
-                            className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none text-lg bg-white"
-                          >
-                            <option value="">Select model</option>
-                            {deviceModels[selectedDevice as keyof typeof deviceModels]?.map((model) => (
-                              <option key={model} value={model}>{model}</option>
-                            ))}
-                          </select>
-                        </div>
-                      )}
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
+                      Contact Number *
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
+                      required
+                      pattern="[0-9]{10}"
+                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none text-lg"
+                      placeholder="10-digit mobile number"
+                    />
+                  </div>
 
-                      {selectedDevice && selectedModel && (
-                        <div>
-                          <label htmlFor="issue" className="block text-sm font-semibold text-gray-700 mb-2">
-                            What needs attention? *
-                          </label>
-                          <select
-                            id="issue"
-                            value={selectedIssue}
-                            onChange={(e) => setSelectedIssue(e.target.value)}
-                            required
-                            className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none text-lg bg-white"
-                          >
-                            <option value="">Select issue</option>
-                            {deviceIssues[selectedDevice as keyof typeof deviceIssues]?.map((issue) => (
-                              <option key={issue} value={issue}>{issue}</option>
-                            ))}
-                          </select>
-                        </div>
-                      )}
+                  <div>
+                    <label htmlFor="device" className="block text-sm font-semibold text-gray-700 mb-2">
+                      Device Type *
+                    </label>
+                    <select
+                      id="device"
+                      value={selectedDevice}
+                      onChange={(e) => handleDeviceChange(e.target.value)}
+                      required
+                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none text-lg bg-white"
+                    >
+                      <option value="">Select device type</option>
+                      <option value="iPhone">iPhone</option>
+                      <option value="MacBook">MacBook</option>
+                      <option value="iPad">iPad</option>
+                      <option value="iWatch">iWatch</option>
+                    </select>
+                  </div>
 
-                      <button
-                        onClick={handleStepOne}
-                        disabled={!selectedDevice || !selectedModel || !selectedIssue}
-                        className="w-full bg-accent text-white py-4 rounded-lg text-xl font-bold hover:bg-orange-600 transition disabled:bg-gray-400 disabled:cursor-not-allowed"
+                  {selectedDevice && (
+                    <div>
+                      <label htmlFor="model" className="block text-sm font-semibold text-gray-700 mb-2">
+                        Model *
+                      </label>
+                      <select
+                        id="model"
+                        value={selectedModel}
+                        onChange={(e) => setSelectedModel(e.target.value)}
+                        required
+                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none text-lg bg-white"
                       >
-                        Request Visit →
-                      </button>
+                        <option value="">Select model</option>
+                        {deviceModels[selectedDevice as keyof typeof deviceModels]?.map((model) => (
+                          <option key={model} value={model}>{model}</option>
+                        ))}
+                      </select>
                     </div>
-                  </>
-                )}
+                  )}
 
-                {formStep === 2 && (
-                  <>
-                    <h3 className="text-2xl font-bold text-secondary mb-2">Almost There!</h3>
-                    <p className="text-gray-600 mb-6">Enter your contact details</p>
+                  <button
+                    type="submit"
+                    disabled={isSubmitting || !selectedDevice || !selectedModel}
+                    className="w-full bg-accent text-white py-4 rounded-lg text-xl font-bold hover:bg-orange-600 transition disabled:bg-gray-400 disabled:cursor-not-allowed"
+                  >
+                    {isSubmitting ? 'Submitting...' : 'Get Free Quote'}
+                  </button>
 
-                    <form onSubmit={handleFinalSubmit} className="space-y-5">
-                      <div>
-                        <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
-                          Your Name *
-                        </label>
-                        <input
-                          type="text"
-                          id="name"
-                          value={name}
-                          onChange={(e) => setName(e.target.value)}
-                          required
-                          className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none text-lg"
-                          placeholder="Enter your name"
-                        />
-                      </div>
+                  <p className="text-xs text-gray-500 text-center">
+                    We will call within 15–30 minutes. Pay after installation.
+                  </p>
 
-                      <div>
-                        <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
-                          Contact Number *
-                        </label>
-                        <input
-                          type="tel"
-                          id="phone"
-                          value={phone}
-                          onChange={(e) => setPhone(e.target.value)}
-                          required
-                          pattern="[0-9]{10}"
-                          className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none text-lg"
-                          placeholder="10-digit mobile number"
-                        />
-                      </div>
-
-                      <button
-                        type="submit"
-                        disabled={isSubmitting}
-                        className="w-full bg-accent text-white py-4 rounded-lg text-xl font-bold hover:bg-orange-600 transition disabled:bg-gray-400 disabled:cursor-not-allowed"
-                      >
-                        {isSubmitting ? 'Submitting...' : 'Submit Request'}
-                      </button>
-
-                      <p className="text-xs text-gray-500 text-center">
-                        We will call within 15–30 minutes to confirm details. Pay after installation.
-                      </p>
-
-                      <p className="text-xs text-gray-500 text-center">
-                        By submitting, you agree to our <a href="/privacy" className="underline">Privacy Policy</a> and <a href="/terms" className="underline">Terms</a>
-                      </p>
-                    </form>
-                  </>
-                )}
+                  <p className="text-xs text-gray-500 text-center">
+                    By submitting, you agree to our <a href="/privacy" className="underline">Privacy Policy</a> and <a href="/terms" className="underline">Terms</a>
+                  </p>
+                </form>
               </div>
             </div>
           </div>
