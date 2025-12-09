@@ -167,6 +167,7 @@ export async function POST(request: Request) {
         headers: {
           'Content-Type': 'application/json',
           'X-API-Key': process.env.CRM_API_KEY!,
+          'x-vercel-protection-bypass': process.env.CRM_API_KEY!,
         },
         body: JSON.stringify({
           device,
