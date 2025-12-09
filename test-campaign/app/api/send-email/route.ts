@@ -161,10 +161,6 @@ export async function POST(request: Request) {
     // Sync lead to CRM
     try {
       console.log('📤 Syncing lead to CRM...');
-      console.log('CRM_API_URL:', process.env.CRM_API_URL);
-      console.log('CRM_API_KEY length:', process.env.CRM_API_KEY?.length);
-      console.log('CRM_API_KEY starts with:', process.env.CRM_API_KEY?.substring(0, 10));
-      console.log('CRM_API_KEY ends with:', process.env.CRM_API_KEY?.substring(process.env.CRM_API_KEY.length - 10));
 
       const crmResponse = await fetch(process.env.CRM_API_URL!, {
         method: 'POST',
@@ -184,9 +180,7 @@ export async function POST(request: Request) {
         }),
       });
 
-      console.log('CRM response status:', crmResponse.status);
       const crmResult = await crmResponse.json();
-      console.log('CRM response:', JSON.stringify(crmResult));
 
       if (crmResult.success) {
         console.log('✅ Lead synced to CRM:', crmResult.lead_id);
