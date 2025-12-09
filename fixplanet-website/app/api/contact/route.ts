@@ -264,6 +264,44 @@ export async function POST(request: NextRequest) {
       console.log('Customer confirmation email sent successfully:', customerEmailData?.id);
     }
 
+    // Sync lead to CRM
+    try {
+      console.log('📤 Syncing lead to CRM...');
+
+      const crmResponse = await fetch(process.env.CRM_API_URL!, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-API-Key': process.env.CRM_API_KEY!,
+        },
+        body: JSON.stringify({
+          device: deviceType,
+          model: deviceModel || '',
+          issue: issueDescription || '',
+          name,
+          phone,
+          email,
+          location: location || '',
+          source: leadSourceLabel,
+          landingPage: formSource,
+          preferredDateTime: preferredDateTime || '',
+          serviceTier: serviceTier || 'standard',
+        }),
+      });
+
+      const crmResult = await crmResponse.json();
+
+      if (crmResult.success) {
+        console.log('✅ Lead synced to CRM:', crmResult.lead_id);
+      } else {
+        console.error('❌ CRM sync failed:', crmResult.error);
+        // Don't fail the whole request - email was already sent
+      }
+    } catch (crmError) {
+      console.error('❌ Error syncing to CRM:', crmError);
+      // Don't fail the whole request - email was already sent
+    }
+
     return NextResponse.json(
       {
         success: true,
