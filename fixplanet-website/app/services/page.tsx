@@ -276,6 +276,64 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Featured Service: iPhone Screen Replacement */}
+      <section className="bg-white py-16 border-b-4 border-teal-accent">
+        <div className="container-custom">
+          <div className="bg-gradient-to-r from-teal-accent/10 to-navy-primary/10 rounded-2xl p-8 md:p-12">
+            <div className="flex items-center gap-3 mb-4">
+              <Star className="w-8 h-8 text-teal-accent fill-teal-accent" />
+              <span className="text-sm font-bold text-teal-accent uppercase tracking-wide">
+                #1 Most Requested Service
+              </span>
+            </div>
+            <h2 className="text-3xl md:text-5xl font-bold text-navy-primary mb-4">
+              iPhone Screen Replacement in Bangalore
+            </h2>
+            <p className="text-xl text-gray-dark mb-6 max-w-3xl">
+              Cracked iPhone screen? Get same-day professional replacement at your doorstep. Watch us work. Pay only when satisfied. 12-month warranty included.
+            </p>
+            <div className="grid md:grid-cols-4 gap-6 mb-8">
+              <div className="flex items-center gap-3">
+                <Clock className="w-6 h-6 text-teal-accent flex-shrink-0" />
+                <div>
+                  <div className="font-semibold text-navy-primary">1-2 Hours</div>
+                  <div className="text-sm text-gray-dark">At Your Location</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <Shield className="w-6 h-6 text-teal-accent flex-shrink-0" />
+                <div>
+                  <div className="font-semibold text-navy-primary">12 Months</div>
+                  <div className="text-sm text-gray-dark">Full Warranty</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <Eye className="w-6 h-6 text-teal-accent flex-shrink-0" />
+                <div>
+                  <div className="font-semibold text-navy-primary">Watch Process</div>
+                  <div className="text-sm text-gray-dark">Full Transparency</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <Award className="w-6 h-6 text-teal-accent flex-shrink-0" />
+                <div>
+                  <div className="font-semibold text-navy-primary">OEM Quality</div>
+                  <div className="text-sm text-gray-dark">Premium Screens</div>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button href="/services/iphone-screen-replacement-bangalore" size="lg">
+                Learn More About Screen Replacement
+              </Button>
+              <Button href="/pricing" variant="ghost" size="lg">
+                Get Instant Quote
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Device Services Sections */}
       {devices.map((device, index) => (
         <section
