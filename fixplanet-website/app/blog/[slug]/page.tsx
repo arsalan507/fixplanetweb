@@ -6,6 +6,7 @@ import { notFound } from 'next/navigation';
 import { Calendar, Clock, ArrowLeft, Phone } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import { getBlogPostBySlug, getAllBlogSlugs } from '@/data/blog-posts';
+import BlogLeadForm from '@/components/blog/BlogLeadForm';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -205,28 +206,44 @@ export default async function BlogPostPage({ params }: Props) {
               }}
             />
 
-            {/* Call to Action */}
+            {/* Lead Capture Form - Mid Article */}
+            <div className="my-12">
+              <BlogLeadForm
+                source={`Blog: ${post.title}`}
+                title="Need Expert Help with Your Device?"
+                description="Get same-day doorstep service across Bangalore with 12-month warranty"
+              />
+            </div>
+
+            {/* Call to Action with Contact Options */}
             <div className="mt-12 bg-gradient-to-r from-navy-primary to-charcoal text-white rounded-xl p-8 md:p-12 text-center">
               <h2 className="text-2xl md:text-3xl font-bold mb-4">
-                Need Expert Help with Your Device?
+                Ready to Get Your Device Fixed?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                FIXplanet provides doorstep service across Bangalore with 12-month warranty
+                Same-day doorstep service • 12-month warranty • OEM-grade components
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button href="/contact" size="lg">
-                  Get Free Quote
-                </Button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
                 <Button
                   href="tel:+91-8105955009"
+                  size="lg"
+                  className="!bg-teal-accent !text-white hover:!bg-teal-600"
+                >
+                  <Phone className="mr-2" size={20} />
+                  Call +91 8105955009
+                </Button>
+                <Button
+                  href="https://wa.me/918105955009"
                   variant="ghost"
                   size="lg"
                   className="!text-white !border-white hover:!bg-white hover:!text-navy-primary"
                 >
-                  <Phone className="mr-2" size={20} />
-                  Call Now
+                  WhatsApp Us
                 </Button>
               </div>
+              <p className="text-sm text-gray-300">
+                Or scroll up to fill the form and we'll call you back within 15-30 minutes
+              </p>
             </div>
 
             {/* Share Section */}
