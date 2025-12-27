@@ -191,6 +191,19 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
       </section>
 
+      {/* Lead Capture Form - Top of Article */}
+      <section className="py-8 bg-white">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            <BlogLeadForm
+              source={`Blog: ${post.title}`}
+              title="Get Your Free Quote"
+              description="Fill in your details and we'll call you back within 15-30 minutes"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Content */}
       <section className="py-12 bg-gray-light">
         <div className="container-custom">
@@ -206,24 +219,24 @@ export default async function BlogPostPage({ params }: Props) {
               }}
             />
 
-            {/* Lead Capture Form - Mid Article */}
-            <div className="my-12">
+            {/* Lead Capture Form - Bottom of Article */}
+            <div className="mt-12">
               <BlogLeadForm
                 source={`Blog: ${post.title}`}
-                title="Need Expert Help with Your Device?"
-                description="Get same-day doorstep service across Bangalore with 12-month warranty"
+                title="Ready to Get Your Device Fixed?"
+                description="Same-day doorstep service • 12-month warranty • OEM-grade components"
               />
             </div>
 
             {/* Call to Action with Contact Options */}
-            <div className="mt-12 bg-gradient-to-r from-navy-primary to-charcoal text-white rounded-xl p-8 md:p-12 text-center">
+            <div className="mt-8 bg-gradient-to-r from-navy-primary to-charcoal text-white rounded-xl p-8 md:p-12 text-center">
               <h2 className="text-2xl md:text-3xl font-bold mb-4">
-                Ready to Get Your Device Fixed?
+                Prefer to Call or WhatsApp?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Same-day doorstep service • 12-month warranty • OEM-grade components
+                Get instant support from our team
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
                   href="tel:+91-8105955009"
                   size="lg"
@@ -241,9 +254,6 @@ export default async function BlogPostPage({ params }: Props) {
                   WhatsApp Us
                 </Button>
               </div>
-              <p className="text-sm text-gray-300">
-                Or scroll up to fill the form and we'll call you back within 15-30 minutes
-              </p>
             </div>
 
             {/* Share Section */}
