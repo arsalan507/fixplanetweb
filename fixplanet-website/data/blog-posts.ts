@@ -26,7 +26,7 @@ export const blogPosts: BlogPost[] = [
     readTime: '8 min read',
     publishedDate: '2024-10-15',
     image: '/images/blog/iphone-battery-health.png',
-    featured: true,
+    featured: false,
     metaDescription: 'Complete guide to iPhone battery health in Bangalore. Learn when to replace, cost comparison, and tips to extend battery life in tropical climate.',
     keywords: ['iPhone battery health', 'iPhone battery replacement Bangalore', 'battery degradation', 'iPhone battery tips', 'battery life extension'],
     content: `
