@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Clock, Shield, Star, CheckCircle2 } from 'lucide-react';
+import { Clock, Shield, Star, CheckCircle2, Eye, Award } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
 
