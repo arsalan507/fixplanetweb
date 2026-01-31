@@ -25,15 +25,16 @@ export default function Home() {
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
-              {/* Mobile Hero SVG - Shows on mobile, hidden on desktop */}
+              {/* Mobile Hero - Shows on mobile, hidden on desktop */}
               <div className="block md:hidden mb-6">
                 <Image
-                  src="/images/hero-mobile.svg"
+                  src="/images/hero-mobile.png"
                   alt="FIXplanet Apple Device Repair Service"
-                  width={300}
-                  height={200}
-                  className="mx-auto"
+                  width={400}
+                  height={300}
+                  className="mx-auto rounded-lg"
                   priority
+                  sizes="(max-width: 768px) 100vw"
                 />
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy-primary mb-6 leading-tight">
@@ -55,11 +56,12 @@ export default function Home() {
             </div>
             <div className="relative h-[400px] lg:h-[500px] rounded-lg overflow-hidden shadow-xl">
               <Image
-                src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&h=600&fit=crop"
+                src="/images/hero-desktop.jpg"
                 alt="Professional Apple device care service in Bangalore"
                 fill
                 className="object-cover"
                 priority
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
           </div>

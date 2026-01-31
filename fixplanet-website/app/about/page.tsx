@@ -59,7 +59,7 @@ export default function AboutPage() {
             </div>
             <div className="relative h-[400px] lg:h-[500px] rounded-lg overflow-hidden shadow-xl">
               <Image
-                src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop"
+                src="/images/about-team.jpg"
                 alt="FIXplanet team at work"
                 fill
                 className="object-cover"
