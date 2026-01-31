@@ -41,7 +41,7 @@ export default function AboutPage() {
               </h2>
               <div className="prose prose-lg text-gray-dark space-y-4">
                 <p>
-                  When Raghav&apos;s MacBook failed the day before a critical startup pitch in 2019, he faced an
+                  When our team&apos;s MacBook failed the day before a critical startup pitch, we faced an
                   impossible choice: Apple&apos;s week-long wait or a risky unknown repair shop. Neither option worked
                   for someone who needed their device tomorrow—not eventually.
                 </p>
@@ -214,41 +214,38 @@ export default function AboutPage() {
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-navy-primary mb-4">
-              Meet the Experts
+              Our Team
             </h2>
-            <p className="text-lg text-gray-dark">
-              Experienced professionals dedicated to your device care
+            <p className="text-lg text-gray-dark max-w-2xl mx-auto">
+              A dedicated team of certified Apple device specialists with 7+ years of hands-on experience,
+              committed to delivering premium doorstep repair across Bangalore.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
               {
-                name: 'Raghav Kumar',
-                role: 'Founder & Lead Technician',
-                credentials: '7+ years experience, Logic board specialist, Electronics Engineering degree',
-                initials: 'RK',
+                icon: Award,
+                title: 'Expert Technicians',
+                description: '10+ certified engineers with 5+ years average experience. Logic board specialists and component-level repair experts.',
               },
               {
-                name: 'Priya Menon',
-                role: 'Service Manager',
-                credentials: 'Customer care expert, Operations coordinator, MBA in Service Management',
-                initials: 'PM',
+                icon: Clock,
+                title: 'Operations Team',
+                description: 'Dedicated service coordinators ensuring 15-minute response times and seamless doorstep scheduling across 172+ areas.',
               },
               {
-                name: 'Arjun Singh',
-                role: 'Senior Technician',
-                credentials: 'MacBook specialist, 1000+ successful screen replacements, Apple ecosystem expert',
-                initials: 'AS',
+                icon: Heart,
+                title: 'Customer Care',
+                description: 'Post-service support team available via WhatsApp and phone. We follow up to ensure every repair meets our standards.',
               },
-            ].map((member) => (
-              <Card key={member.name} padding="lg" className="text-center">
-                <div className="w-24 h-24 bg-teal-accent/10 rounded-full flex items-center justify-center text-3xl font-bold text-teal-accent mx-auto mb-4">
-                  {member.initials}
+            ].map((item) => (
+              <Card key={item.title} hover padding="lg" className="text-center">
+                <div className="w-20 h-20 bg-teal-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <item.icon className="text-teal-accent" size={36} />
                 </div>
-                <h3 className="text-xl font-semibold text-navy-primary mb-1">{member.name}</h3>
-                <div className="text-teal-accent font-medium mb-3">{member.role}</div>
-                <p className="text-sm text-gray-dark">{member.credentials}</p>
+                <h3 className="text-xl font-semibold text-navy-primary mb-3">{item.title}</h3>
+                <p className="text-gray-dark">{item.description}</p>
               </Card>
             ))}
           </div>
@@ -297,7 +294,7 @@ export default function AboutPage() {
               <div className="text-gray-300">Average Rating</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-teal-accent mb-2">8+</div>
+              <div className="text-4xl font-bold text-teal-accent mb-2">172+</div>
               <div className="text-gray-300">Bangalore Areas</div>
             </div>
             <div>
