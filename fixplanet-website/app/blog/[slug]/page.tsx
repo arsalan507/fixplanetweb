@@ -83,6 +83,29 @@ export default async function BlogPostPage({ params }: Props) {
           return `<h4 class="text-xl font-semibold text-navy-primary mb-2 mt-4">${line.slice(5)}</h4>`;
         }
 
+        // Handle markdown images ![alt](src)
+        if (line.match(/^!\[.*?\]\(.*?\)/)) {
+          const match = line.match(/^!\[(.*?)\]\((.*?)\)/);
+          if (match) {
+            return `<div class="my-8 rounded-xl overflow-hidden shadow-lg"><img src="${match[2]}" alt="${match[1]}" class="w-full h-auto" loading="lazy" /></div>`;
+          }
+        }
+
+        // Handle markdown links [text](url)
+        line = line.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-teal-accent hover:underline font-medium">$1</a>');
+
+        // Handle markdown tables
+        if (line.trim().startsWith('|') && line.trim().endsWith('|')) {
+          const cells = line.split('|').filter(c => c.trim() !== '');
+          if (cells.every(c => c.trim().match(/^[-:]+$/))) {
+            return '';
+          }
+          const isHeader = line.includes('---');
+          const tag = 'td';
+          const cellsHtml = cells.map(c => `<${tag} class="border border-gray-medium px-4 py-2">${c.trim()}</${tag}>`).join('');
+          return `<tr>${cellsHtml}</tr>`;
+        }
+
         // Handle bold
         line = line.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
 
@@ -119,8 +142,43 @@ export default async function BlogPostPage({ params }: Props) {
       .join('\n');
   };
 
+  // Structured data for SEO
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.metaDescription,
+    image: `https://www.fixplanet.in${post.image}`,
+    datePublished: post.publishedDate,
+    dateModified: post.publishedDate,
+    author: {
+      '@type': 'Organization',
+      name: 'FIXplanet',
+      url: 'https://www.fixplanet.in',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'FIXplanet',
+      url: 'https://www.fixplanet.in',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://www.fixplanet.in/images/logo.png',
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://www.fixplanet.in/blog/${slug}`,
+    },
+  };
+
   return (
     <div>
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-navy-primary to-charcoal text-white py-12">
         <div className="container-custom">
@@ -238,15 +296,15 @@ export default async function BlogPostPage({ params }: Props) {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
-                  href="tel:+91-8105955009"
+                  href="tel:+91-9880740443"
                   size="lg"
                   className="!bg-teal-accent !text-white hover:!bg-teal-600"
                 >
                   <Phone className="mr-2" size={20} />
-                  Call +91 8105955009
+                  Call +91 9880740443
                 </Button>
                 <Button
-                  href="https://wa.me/918105955009"
+                  href="https://wa.me/919880740443"
                   variant="ghost"
                   size="lg"
                   className="!text-white !border-white hover:!bg-white hover:!text-navy-primary"

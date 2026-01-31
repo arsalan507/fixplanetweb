@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { getAllAreaSlugs } from '@/data/bangalore-areas';
+import { getAllBlogSlugs } from '@/data/blog-posts';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.fixplanet.in';
@@ -79,7 +80,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // Area pages (140+ Bangalore locations)
+  // Blog listing page + all blog posts
+  const blogSlugs = getAllBlogSlugs();
+  const blogPages = [
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    ...blogSlugs.map((slug) => ({
+      url: `${baseUrl}/blog/${slug}`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    })),
+  ];
+
+  // Area pages (172 Bangalore locations)
   const areaSlugs = getAllAreaSlugs();
   const areaPages = areaSlugs.map((slug) => ({
     url: `${baseUrl}/areas/${slug}`,
@@ -88,5 +106,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...mainPages, ...servicePages, ...areaPages];
+  return [...mainPages, ...servicePages, ...blogPages, ...areaPages];
 }
