@@ -973,7 +973,7 @@ Beyond obvious cracks, watch for these symptoms that indicate the display assemb
 
 **Important:** Even hairline cracks worsen rapidly. Bangalore's humidity and dust can infiltrate through micro-fractures within days, causing internal corrosion. Address screen damage within a week to prevent costly escalation to logic board or camera damage.
 
-> **Need a quick assessment?** Call [+91 9880740443](tel:+919880740443) -- our technicians can diagnose over the phone whether you need a full screen replacement or a simpler fix.
+> **Need a quick assessment?** Call [+91 8105955009](tel:+918105955009) -- our technicians can diagnose over the phone whether you need a full screen replacement or a simpler fix.
 
 ---
 
@@ -1123,7 +1123,7 @@ Pricing is the first thing most people search for. Here is a transparent, model-
 
 **Your savings:** 40-60% compared to official Apple service centers, with 4x longer warranty and zero downtime.
 
-> **Get an exact quote for your model:** Call [+91 9880740443](tel:+919880740443) or [WhatsApp us](https://wa.me/919880740443) for instant pricing.
+> **Get an exact quote for your model:** Call [+91 8105955009](tel:+918105955009) or [WhatsApp us](https://wa.me/918105955009) for instant pricing.
 
 ---
 
@@ -1148,7 +1148,7 @@ Knowing what to expect removes uncertainty. Here is exactly what happens whether
 **Timeline: 90-120 minutes, start to finish**
 
 **Step 1 -- Book Your Service (2 minutes)**
-- Call [+91 9880740443](tel:+919880740443) or [WhatsApp](https://wa.me/919880740443)
+- Call [+91 8105955009](tel:+918105955009) or [WhatsApp](https://wa.me/918105955009)
 - Or [book online](/services/iphone-screen-replacement-bangalore)
 - Choose a time slot that works for you -- morning, afternoon, evening, or weekend
 - A technician carrying the correct screen for your model is assigned to your area
@@ -1309,7 +1309,7 @@ From Koramangala to Yelahanka, Whitefield to Rajajinagar, Sarjapur Road to Hebba
 
 ![FIXplanet doorstep repair service](/images/blog/fixplanet-doorstep-service.png)
 
-> **Ready to get your screen fixed today?** Call [+91 9880740443](tel:+919880740443) or [WhatsApp us](https://wa.me/919880740443) for same-day doorstep service.
+> **Ready to get your screen fixed today?** Call [+91 8105955009](tel:+918105955009) or [WhatsApp us](https://wa.me/918105955009) for same-day doorstep service.
 
 ---
 
@@ -1483,7 +1483,7 @@ With quality OEM screens, this warning typically does not appear. With cheap aft
 
 ### What areas in Bangalore does FIXplanet cover for doorstep screen replacement?
 
-FIXplanet serves 172+ neighborhoods across Bangalore with no distance charges. Major areas include: Koramangala (all blocks), Indiranagar, HSR Layout, Whitefield, Marathahalli, Electronic City (Phase 1 and 2), Bellandur, Sarjapur Road, JP Nagar, Jayanagar, BTM Layout, Banashankari, Malleshwaram, Rajajinagar, Hebbal, Yelahanka, MG Road, Brigade Road, Domlur, HAL Layout, Old Airport Road, Bannerghatta Road, Hennur, Thanisandra, and many more. Call [+91 9880740443](tel:+919880740443) to confirm service in your specific area.
+FIXplanet serves 172+ neighborhoods across Bangalore with no distance charges. Major areas include: Koramangala (all blocks), Indiranagar, HSR Layout, Whitefield, Marathahalli, Electronic City (Phase 1 and 2), Bellandur, Sarjapur Road, JP Nagar, Jayanagar, BTM Layout, Banashankari, Malleshwaram, Rajajinagar, Hebbal, Yelahanka, MG Road, Brigade Road, Domlur, HAL Layout, Old Airport Road, Bannerghatta Road, Hennur, Thanisandra, and many more. Call [+91 8105955009](tel:+918105955009) to confirm service in your specific area.
 
 ### How long does iPhone screen replacement take?
 
@@ -1513,8 +1513,8 @@ Whether you are at a tech park in Whitefield, a startup office in Koramangala, y
 
 FIXplanet brings expert technicians with genuine OEM parts right to your doorstep -- whether you are in Whitefield, Koramangala, Electronic City, or anywhere in Bangalore.
 
-Call [+91 9880740443](tel:+919880740443) for same-day doorstep service
-[WhatsApp us](https://wa.me/919880740443) for the fastest response
+Call [+91 8105955009](tel:+918105955009) for same-day doorstep service
+[WhatsApp us](https://wa.me/918105955009) for the fastest response
 [Book online](/services/iphone-screen-replacement-bangalore) -- choose your time slot
 
 Same-day appointments available | 12-month warranty on all parts and service
@@ -1841,7 +1841,7 @@ Transparent pricing helps you budget properly and avoid being overcharged. Here 
 The traditional approach — driving to a service centre in Koramangala or Indiranagar, dropping off your iPad, and waiting 5-7 days — does not suit Bangalore's busy professionals. Doorstep repair eliminates this friction entirely.
 
 ### Step 1: Book Your Service
-Call or WhatsApp +91 9880740443. Describe the issue, your iPad model, and preferred time. Receive an instant price estimate before committing to anything.
+Call or WhatsApp +91 8105955009. Describe the issue, your iPad model, and preferred time. Receive an instant price estimate before committing to anything.
 
 ### Step 2: Technician Arrives at Your Location
 A certified technician reaches your home, office, or co-working space anywhere in Bangalore — HSR Layout, Electronic City, Marathahalli, Jayanagar, or Malleshwaram. All tools and OEM-grade replacement parts arrive with them.
@@ -1858,7 +1858,7 @@ Test every function — screen responsiveness, Apple Pencil input, charging, spe
 <div class="cta-box" style="background: linear-gradient(135deg, #0F1F35, #0A7D7F); padding: 24px; border-radius: 12px; text-align: center; margin: 32px 0;">
   <h3 style="color: white; margin-bottom: 8px;">Need iPad Repair in Bangalore?</h3>
   <p style="color: #E1E8ED; margin-bottom: 16px;">Get a free diagnosis and quote. Same-day doorstep service available.</p>
-  <p style="color: #B8935E; font-weight: bold;">📞 Call/WhatsApp: +91 9880740443</p>
+  <p style="color: #B8935E; font-weight: bold;">📞 Call/WhatsApp: +91 8105955009</p>
 </div>
 
 ## Why OEM-Grade Parts Matter for iPad Repair
@@ -1938,7 +1938,7 @@ Verified reviews from real customers across Bangalore. Our reputation is built o
 <div class="cta-box" style="background: linear-gradient(135deg, #0F1F35, #0A7D7F); padding: 24px; border-radius: 12px; text-align: center; margin: 32px 0;">
   <h3 style="color: white; margin-bottom: 8px;">Need iPad Repair in Bangalore?</h3>
   <p style="color: #E1E8ED; margin-bottom: 16px;">Get a free diagnosis and quote. Same-day doorstep service available.</p>
-  <p style="color: #B8935E; font-weight: bold;">📞 Call/WhatsApp: +91 9880740443</p>
+  <p style="color: #B8935E; font-weight: bold;">📞 Call/WhatsApp: +91 8105955009</p>
 </div>
 
 ## Frequently Asked Questions
@@ -2027,7 +2027,7 @@ The camera app closes immediately upon opening, or freezes and becomes unrespons
 <div class="cta-box" style="background: linear-gradient(135deg, #0F1F35, #0A7D7F); padding: 24px; border-radius: 12px; text-align: center; margin: 32px 0;">
   <h3 style="color: white; margin-bottom: 8px;">iPhone Camera Not Working?</h3>
   <p style="color: #E1E8ED; margin-bottom: 16px;">Get expert camera repair at your doorstep. Free diagnosis included.</p>
-  <p style="color: #B8935E; font-weight: bold;">📞 Call/WhatsApp: +91 9880740443</p>
+  <p style="color: #B8935E; font-weight: bold;">📞 Call/WhatsApp: +91 8105955009</p>
 </div>
 
 ## Software Fixes to Try Before Repair
@@ -2112,7 +2112,7 @@ The sapphire crystal lens cover can crack from impact. Internal condensation or 
 ## The Camera Repair Process
 
 ### Step 1: Book Your Appointment
-Call or WhatsApp +91 9880740443. Describe the issue and receive an instant price estimate.
+Call or WhatsApp +91 8105955009. Describe the issue and receive an instant price estimate.
 
 ### Step 2: Technician Arrives
 Our technician arrives at your home or office across Bangalore -- Marathahalli, Sarjapur Road, BTM Layout, Electronic City, or any of our 172+ service areas.
@@ -2143,7 +2143,7 @@ Over 1,000 devices repaired across Bangalore with a 4.9-star Google rating.
 <div class="cta-box" style="background: linear-gradient(135deg, #0F1F35, #0A7D7F); padding: 24px; border-radius: 12px; text-align: center; margin: 32px 0;">
   <h3 style="color: white; margin-bottom: 8px;">Blurry Photos? Camera Black Screen?</h3>
   <p style="color: #E1E8ED; margin-bottom: 16px;">Same-day camera repair at your doorstep in Bangalore. Free diagnosis. 12-month warranty.</p>
-  <p style="color: #B8935E; font-weight: bold;">📞 Call/WhatsApp: +91 9880740443</p>
+  <p style="color: #B8935E; font-weight: bold;">📞 Call/WhatsApp: +91 8105955009</p>
 </div>
 
 ## How to Protect Your iPhone Camera
@@ -2273,7 +2273,7 @@ Non-Apple-affiliated businesses that specialise in Apple device repairs. The bes
 <div class="cta-box" style="background: linear-gradient(135deg, #0F1F35, #0A7D7F); padding: 24px; border-radius: 12px; text-align: center; margin: 32px 0;">
 <h3 style="color: white; margin-bottom: 8px;">Want Premium Repair Without the Wait?</h3>
 <p style="color: #E1E8ED; margin-bottom: 16px;">FIXplanet offers Apple-quality repair at your doorstep. Same-day service, 12-month warranty.</p>
-<p style="color: #B8935E; font-weight: bold;">📞 Call/WhatsApp: +91 9880740443</p>
+<p style="color: #B8935E; font-weight: bold;">📞 Call/WhatsApp: +91 8105955009</p>
 </div>
 
 ## When to Choose Apple Authorized Service
@@ -2365,7 +2365,7 @@ For the majority of Bangalore iPhone users -- those with out-of-warranty devices
 <div class="cta-box" style="background: linear-gradient(135deg, #0F1F35, #0A7D7F); padding: 24px; border-radius: 12px; text-align: center; margin: 32px 0;">
 <h3 style="color: white; margin-bottom: 8px;">Ready to Get Your iPhone Repaired?</h3>
 <p style="color: #E1E8ED; margin-bottom: 16px;">FIXplanet brings expert technicians with OEM-grade parts to your doorstep. Same-day service, 12-month warranty.</p>
-<p style="color: #B8935E; font-weight: bold;">📞 Call/WhatsApp: +91 9880740443</p>
+<p style="color: #B8935E; font-weight: bold;">📞 Call/WhatsApp: +91 8105955009</p>
 </div>
 
 ---
@@ -2436,7 +2436,7 @@ Settings > General > Transfer or Reset iPhone > Reset All Settings. Does not era
 <div class="cta-box" style="background: linear-gradient(135deg, #0F1F35, #0A7D7F); padding: 24px; border-radius: 12px; text-align: center; margin: 32px 0;">
 <h3 style="color: white; margin-bottom: 8px;">Tried Everything and Still Not Charging?</h3>
 <p style="color: #E1E8ED; margin-bottom: 16px;">Our technicians diagnose charging issues at your doorstep across Bangalore. No fix, no fee.</p>
-<p style="color: #B8935E; font-weight: bold;">📞 Call/WhatsApp: +91 9880740443</p>
+<p style="color: #B8935E; font-weight: bold;">📞 Call/WhatsApp: +91 8105955009</p>
 </div>
 
 ## Signs You Need Professional Repair
@@ -2511,7 +2511,7 @@ Settings > General > Transfer or Reset iPhone > Reset All Settings. Does not era
 ## How FIXplanet Charging Port Repair Works
 
 ### Step 1: Book Your Appointment
-Call +91 9880740443 or WhatsApp us. Describe the issue and preferred time.
+Call +91 8105955009 or WhatsApp us. Describe the issue and preferred time.
 
 ### Step 2: Technician Arrives
 Certified technician arrives at your home or office — HSR Layout, Electronic City, Hebbal, Bellandur, or any of our 172+ service areas.
@@ -2528,7 +2528,7 @@ Tested for charging speed, data transfer, and secure cable fit. 12-month warrant
 <div class="cta-box" style="background: linear-gradient(135deg, #0F1F35, #0A7D7F); padding: 24px; border-radius: 12px; text-align: center; margin: 32px 0;">
 <h3 style="color: white; margin-bottom: 8px;">iPhone Not Charging?</h3>
 <p style="color: #E1E8ED; margin-bottom: 16px;">Don't risk DIY fixes. Get professional charging port repair at your doorstep.</p>
-<p style="color: #B8935E; font-weight: bold;">📞 Call/WhatsApp: +91 9880740443</p>
+<p style="color: #B8935E; font-weight: bold;">📞 Call/WhatsApp: +91 8105955009</p>
 </div>
 
 ## Why Choose FIXplanet
@@ -2604,7 +2604,7 @@ Before you panic, the good news is that many MacBook startup failures have strai
 <div class="cta-box" style="background: linear-gradient(135deg, #0F1F35, #0A7D7F); padding: 24px; border-radius: 12px; text-align: center; margin: 32px 0;">
 <h3 style="color: white; margin-bottom: 8px;">MacBook Won't Turn On?</h3>
 <p style="color: #E1E8ED; margin-bottom: 16px;">Our certified technicians can diagnose and fix it at your doorstep. Free diagnosis included.</p>
-<p style="color: #B8935E; font-weight: bold;">📞 Call/WhatsApp: +91 9880740443</p>
+<p style="color: #B8935E; font-weight: bold;">📞 Call/WhatsApp: +91 8105955009</p>
 </div>
 
 ## First Things First: Is It Really Dead?
@@ -2712,7 +2712,7 @@ Fans spin but screen stays black. See our [MacBook screen replacement guide](/bl
 <div class="cta-box" style="background: linear-gradient(135deg, #0F1F35, #0A7D7F); padding: 24px; border-radius: 12px; text-align: center; margin: 32px 0;">
 <h3 style="color: white; margin-bottom: 8px;">Need Expert MacBook Diagnosis?</h3>
 <p style="color: #E1E8ED; margin-bottom: 16px;">FIXplanet technicians diagnose the exact issue at your doorstep -- free of charge. No fix, no fee.</p>
-<p style="color: #B8935E; font-weight: bold;">📞 Call/WhatsApp: +91 9880740443</p>
+<p style="color: #B8935E; font-weight: bold;">📞 Call/WhatsApp: +91 8105955009</p>
 </div>
 
 ## Why Choose FIXplanet for MacBook Repair in Bangalore
@@ -2793,7 +2793,7 @@ This guide covers everything Bangalore iPhone users need to know about back glas
 <div class="cta-box" style="background: linear-gradient(135deg, #0F1F35, #0A7D7F); padding: 24px; border-radius: 12px; text-align: center; margin: 32px 0;">
 <h3 style="color: white; margin-bottom: 8px;">Cracked iPhone Back Glass?</h3>
 <p style="color: #E1E8ED; margin-bottom: 16px;">Get it fixed at your doorstep with OEM-grade parts. 12-month warranty included.</p>
-<p style="color: #B8935E; font-weight: bold;">📞 Call/WhatsApp: +91 9880740443</p>
+<p style="color: #B8935E; font-weight: bold;">📞 Call/WhatsApp: +91 8105955009</p>
 </div>
 
 ## Which iPhones Have Glass Backs?
@@ -2883,7 +2883,7 @@ Bangalore's construction dust and traffic pollution accelerate internal damage.
 ## The FIXplanet Repair Process
 
 ### Step 1: Book Your Appointment
-Call or WhatsApp +91 9880740443. Share your model and receive a price estimate.
+Call or WhatsApp +91 8105955009. Share your model and receive a price estimate.
 
 ### Step 2: Technician Arrives
 Home or office in JP Nagar, Jayanagar, Banashankari, Rajajinagar, Malleshwaram, or any of 172+ areas.
@@ -2906,7 +2906,7 @@ Precision tools, OEM-grade components, repair done in front of you.
 <div class="cta-box" style="background: linear-gradient(135deg, #0F1F35, #0A7D7F); padding: 24px; border-radius: 12px; text-align: center; margin: 32px 0;">
 <h3 style="color: white; margin-bottom: 8px;">Same-Day Back Glass Repair Across Bangalore</h3>
 <p style="color: #E1E8ED; margin-bottom: 16px;">JP Nagar, Jayanagar, Banashankari, Rajajinagar, Malleshwaram & 172+ areas covered.</p>
-<p style="color: #B8935E; font-weight: bold;">📞 Call/WhatsApp: +91 9880740443</p>
+<p style="color: #B8935E; font-weight: bold;">📞 Call/WhatsApp: +91 8105955009</p>
 </div>
 
 ## Why Choose FIXplanet

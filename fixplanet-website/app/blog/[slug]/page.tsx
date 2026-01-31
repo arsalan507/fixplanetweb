@@ -296,15 +296,15 @@ export default async function BlogPostPage({ params }: Props) {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
-                  href="tel:+91-9880740443"
+                  href="tel:+91-8105955009"
                   size="lg"
                   className="!bg-teal-accent !text-white hover:!bg-teal-600"
                 >
                   <Phone className="mr-2" size={20} />
-                  Call +91 9880740443
+                  Call +91 8105955009
                 </Button>
                 <Button
-                  href="https://wa.me/919880740443"
+                  href="https://wa.me/918105955009"
                   variant="ghost"
                   size="lg"
                   className="!text-white !border-white hover:!bg-white hover:!text-navy-primary"
