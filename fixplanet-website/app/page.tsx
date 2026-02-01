@@ -28,11 +28,11 @@ export default function Home() {
               {/* Mobile Hero - Shows on mobile, hidden on desktop */}
               <div className="block md:hidden mb-6">
                 <Image
-                  src="/images/hero-mobile.png"
+                  src="/images/hero-mobile-opt.png"
                   alt="FIXplanet Apple Device Repair Service"
-                  width={400}
-                  height={300}
-                  className="mx-auto rounded-lg"
+                  width={300}
+                  height={200}
+                  className="mx-auto"
                   priority
                   sizes="(max-width: 768px) 100vw"
                 />
