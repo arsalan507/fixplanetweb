@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import { MapPin, Clock, Phone, Star, CheckCircle2, Shield, Award, Zap } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
+import { ServiceAreaSchema, BreadcrumbSchema } from '@/components/ui/Schema';
 import { getAreaBySlug } from '@/data/bangalore-areas';
 
 const SLUG = 'marathahalli';
@@ -19,23 +20,29 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 
   return {
-    title: `Expert Apple Repair in ${area.name}, Bangalore - 2-Hour Service | FIXplanet`,
+    title: 'iPhone Repair Marathahalli \u2014 From \u20B92,500 | 45-Min Doorstep | FIXplanet',
     description: area.metaDescription,
+    alternates: {
+      canonical: 'https://www.fixplanet.in/areas/marathahalli',
+    },
     keywords: [
-      `Apple repair ${area.name}`,
-      `iPhone screen replacement ${area.name}`,
-      `MacBook repair ${area.name}`,
-      `iPad service ${area.name}`,
-      `Apple Watch repair ${area.name}`,
-      `doorstep Apple service ${area.name}`,
-      `${area.name} Apple care`,
-      `same day iPhone repair ${area.name}`,
+      'iPhone repair Marathahalli',
+      'iPhone screen replacement Marathahalli',
+      'MacBook repair Marathahalli',
+      'MacBook repair Outer Ring Road',
+      'iPad repair Marathahalli',
+      'Apple repair near ITPL',
+      'doorstep iPhone repair Marathahalli Bangalore',
+      'same day MacBook service Marathahalli',
+      'Apple Watch repair Marathahalli',
+      'phone repair Marathahalli Bridge',
     ],
     openGraph: {
-      title: `Expert Apple Repair in ${area.name} | FIXplanet`,
+      title: 'iPhone Repair Marathahalli \u2014 From \u20B92,500 | 45-Min Doorstep | FIXplanet',
       description: area.metaDescription,
       type: 'website',
       locale: 'en_IN',
+      url: 'https://www.fixplanet.in/areas/marathahalli',
     },
   };
 }
@@ -50,6 +57,13 @@ export default function AreaPage() {
 
   return (
     <div>
+      <ServiceAreaSchema areaName={area.name} responseTime={area.responseTime} landmarks={area.landmarks} />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: 'https://www.fixplanet.in/' },
+        { name: 'Service Areas', url: 'https://www.fixplanet.in/bangalore-locations' },
+        { name: area.name, url: 'https://www.fixplanet.in/areas/marathahalli' },
+      ]} />
+
       {/* Hero Section - FIXplanet Brand Colors */}
       <section className="bg-gradient-to-b from-navy-primary to-charcoal text-white py-16">
         <div className="container-custom">

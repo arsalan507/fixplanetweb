@@ -24,7 +24,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: 'Comprehensive guide to understanding iPhone battery degradation, when to replace, cost comparison, and tips to extend battery life in Bangalore\'s climate.',
     category: 'Device Care Tips',
     readTime: '8 min read',
-    publishedDate: '2024-10-15',
+    publishedDate: '2026-03-10',
     image: '/images/blog/iphone-battery-health.png',
     featured: false,
     metaDescription: 'Complete guide to iPhone battery health in Bangalore. Learn when to replace, cost comparison, and tips to extend battery life in tropical climate.',
@@ -76,7 +76,7 @@ Beyond the health percentage, watch for these symptoms:
 **Pros**: Genuine Apple parts, warranty protection
 **Cons**: Expensive, longer wait times, data backup required
 
-### FIXplanet Battery Replacement (Doorstep Service)
+### [FIXplanet Battery Replacement](/pricing) (Doorstep Service)
 - **Same models**: 30-40% lower cost
 - **Genuine quality batteries**: 12-month warranty
 - **Same-day service**: At your location in Bangalore
@@ -118,7 +118,7 @@ Beyond the health percentage, watch for these symptoms:
 Unlike traditional service centers, we bring expert service to your doorstep:
 
 1. **Book online or call**: 30-second booking process
-2. **We come to you**: Koramangala, Indiranagar, Whitefield, HSR - all covered
+2. **We come to you**: [Koramangala](/areas/koramangala), [Indiranagar](/areas/indiranagar), [Whitefield](/areas/whitefield), [HSR](/areas/hsr-layout) - all covered
 3. **30-minute replacement**: Done while you watch
 4. **12-month warranty**: Full coverage on parts and labor
 5. **No data loss**: Your photos and apps stay safe
@@ -142,7 +142,7 @@ A: 12 months on battery and workmanship. Same as Apple's warranty period.
 
 ## Conclusion
 
-Battery health below 80% isn't the end of your iPhone's life - it's just time for a refresh. With Bangalore's climate and our heavy usage patterns, most iPhones need battery replacement after 18-24 months.
+Battery health below 80% isn't the end of your iPhone's life - it's just time for a refresh. With Bangalore's climate and our heavy usage patterns, most iPhones need [battery replacement](/pricing) after 18-24 months. If you're also noticing screen issues, check out our [iPhone screen replacement guide](/blog/iphone-screen-replacement-bangalore-complete-guide).
 
 Don't let degraded battery health slow you down. FIXplanet offers quick, affordable, doorstep battery replacement across Bangalore with genuine quality parts and 12-month warranty.
 
@@ -150,7 +150,7 @@ Don't let degraded battery health slow you down. FIXplanet offers quick, afforda
 
 ---
 
-*Last updated: October 15, 2024*
+*Last updated: March 10, 2026*
 *Written by FIXplanet Battery Care Team*
     `,
   },
@@ -160,14 +160,14 @@ Don't let degraded battery health slow you down. FIXplanet offers quick, afforda
     excerpt: 'Everything you need to know about MacBook screen damage, repair vs replacement decisions, cost breakdown by model, and how to prevent future damage.',
     category: 'Troubleshooting Guides',
     readTime: '10 min read',
-    publishedDate: '2024-10-10',
+    publishedDate: '2026-03-12',
     image: '/images/blog/macbook-screen-cracked.png',
     metaDescription: 'Complete MacBook screen replacement guide for Bangalore. Cost breakdown, repair vs replace decisions, and how to prevent display damage.',
     keywords: ['MacBook screen replacement Bangalore', 'MacBook cracked display', 'MacBook screen repair cost', 'display replacement guide'],
     content: `
 # MacBook Screen Cracked? Complete Guide to Display Replacement in Bangalore
 
-A cracked MacBook screen is every professional's nightmare, especially in Bangalore where MacBooks are essential tools for tech workers, designers, and entrepreneurs. This comprehensive guide covers everything you need to know about MacBook display damage and replacement.
+A cracked MacBook screen is every professional's nightmare, especially in Bangalore where MacBooks are essential tools for tech workers, designers, and entrepreneurs. This comprehensive guide covers everything you need to know about [MacBook display damage and replacement](/services#macbook).
 
 ## Types of MacBook Screen Damage
 
@@ -382,7 +382,7 @@ FIXplanet uses only OEM-equivalent displays with all original features intact.
 
 ## What to Expect During Service
 
-When our technician arrives at your location in Bangalore:
+When our technician arrives at your location in Bangalore via our [doorstep service](/contact):
 
 1. **Inspection**: Thorough check of damage extent
 2. **Quote**: Transparent pricing, no hidden costs
@@ -444,7 +444,7 @@ A: Yes - from Koramangala to Yelahanka, Whitefield to Rajajinagar. Check our [se
 
 ## Conclusion
 
-A cracked MacBook screen doesn't have to derail your productivity or drain your wallet. With proper understanding of the process and access to quality doorstep service in Bangalore, you can have your MacBook restored to perfect condition quickly and affordably.
+A cracked MacBook screen doesn't have to derail your productivity or drain your wallet. With proper understanding of the process and access to quality [doorstep service](/contact) in Bangalore, you can have your MacBook restored to perfect condition quickly and affordably. If your MacBook won't start at all, see our [MacBook not turning on guide](/blog/macbook-not-turning-on-fix-bangalore).
 
 Don't let screen damage worsen - cracks spread, and additional damage increases repair costs. FIXplanet offers same-day screen replacement at your location across Bangalore, with OEM-quality parts and 12-month warranty.
 
@@ -452,7 +452,7 @@ Don't let screen damage worsen - cracks spread, and additional damage increases 
 
 ---
 
-*Last updated: October 10, 2024*
+*Last updated: March 12, 2026*
 *Written by FIXplanet MacBook Care Specialists*
     `,
   },
@@ -462,7 +462,7 @@ Don't let screen damage worsen - cracks spread, and additional damage increases 
     excerpt: 'Immediate actions to take after water damage, what NOT to do, recovery success rates, and when to seek professional help in Bangalore.',
     category: 'Troubleshooting Guides',
     readTime: '6 min read',
-    publishedDate: '2024-10-05',
+    publishedDate: '2026-03-15',
     image: '/images/blog/iphone-water-damage.png',
     metaDescription: 'Emergency guide for iPhone water damage in Bangalore. Immediate steps, what not to do, recovery rates, and professional water damage repair.',
     keywords: ['iPhone water damage Bangalore', 'iPhone dropped in water', 'water damage repair', 'iPhone water recovery'],
@@ -656,7 +656,7 @@ Based on FIXplanet's 1000+ water damage cases in Bangalore:
 **4. Targeted Repairs**
 - Replace corroded connectors
 - Micro-soldering for damaged circuits
-- Battery replacement (usually necessary)
+- [Battery replacement](/pricing) (usually necessary)
 - Speaker/microphone replacement if needed
 
 **5. Thorough Testing**
@@ -839,7 +839,7 @@ A: Possibly. Face ID module is sensitive to moisture. Professional diagnosis rec
 ### FIXplanet Water Damage Emergency Service
 - **Phone**: +91-8105955009 (24/7 for emergencies)
 - **WhatsApp**: Fastest response for urgent cases
-- **Doorstep Service**: Available across Bangalore
+- **[Doorstep Service](/contact)**: Available across Bangalore
 - **Response Time**: 30-90 minutes depending on location
 
 ### Self-Help Resources Bangalore
@@ -849,12 +849,12 @@ A: Possibly. Face ID module is sensitive to moisture. Professional diagnosis rec
 - Decathlon (for waterproof cases)
 
 **Backup Services:**
-- Apple Service Centre (for data recovery): Koramangala, Indiranagar
+- Apple Service Centre (for data recovery): [Koramangala](/areas/koramangala), [Indiranagar](/areas/indiranagar)
 - iCloud.com: Immediate access to backed-up data
 
 ## Conclusion
 
-Water damage doesn't have to mean the end of your iPhone. With quick action, proper drying, and professional help when needed, most water-damaged iPhones can be saved.
+Water damage doesn't have to mean the end of your iPhone. With quick action, proper drying, and [professional help](/services#iphone) when needed, most water-damaged iPhones can be saved.
 
 Remember the golden rules:
 1. **Act within 60 seconds**
@@ -869,7 +869,7 @@ FIXplanet provides emergency water damage response across Bangalore with ultraso
 
 ---
 
-*Last updated: October 5, 2024*
+*Last updated: March 15, 2026*
 *Written by FIXplanet Water Damage Recovery Team*
     `,
   },
@@ -879,7 +879,7 @@ FIXplanet provides emergency water damage response across Bangalore with ultraso
     excerpt: 'The definitive 2026 guide to iPhone screen replacement in Bangalore. Compare OEM vs Original screens, model-wise pricing from iPhone 8 to iPhone 16, doorstep repair process, DIY risks, and how to choose the best service. Updated January 2026.',
     category: 'Troubleshooting Guides',
     readTime: '15 min read',
-    publishedDate: '2026-01-30',
+    publishedDate: '2026-03-20',
     image: '/images/blog/iphone-screen-replacement-guide.png',
     featured: false,
     metaDescription: 'iPhone screen replacement in Bangalore 2026: OEM screens from ₹3,500. Same-day doorstep service, 12-month warranty, 172+ areas covered. Book now.',
@@ -898,9 +898,9 @@ FIXplanet provides emergency water damage response across Bangalore with ultraso
     content: `
 # iPhone Screen Replacement in Bangalore: The Complete 2026 Guide
 
-**Last Updated: January 2026 | Reading Time: 15 minutes**
+**Last Updated: March 2026 | Reading Time: 15 minutes**
 
-You just heard that sickening crack. Your iPhone hit the floor at your Koramangala coworking space, slipped from your hand on a crowded Namma Metro ride, or took a tumble off your desk at an Outer Ring Road tech park. Now you are staring at a spider-web of cracks across a screen you depend on for everything -- work calls, UPI payments, Slack messages, and navigation through Bangalore traffic.
+You just heard that sickening crack. Your iPhone hit the floor at your [Koramangala](/areas/koramangala) coworking space, slipped from your hand on a crowded Namma Metro ride, or took a tumble off your desk at an Outer Ring Road tech park. Now you are staring at a spider-web of cracks across a screen you depend on for everything -- work calls, UPI payments, Slack messages, and navigation through Bangalore traffic.
 
 A cracked iPhone screen is one of the most common repair issues we see across Bengaluru, and if you are reading this, you need clear answers: How much will it cost? What are the screen quality options? Should you go to an Apple service center, an independent repair service, or attempt a DIY fix? And can someone just come to your location and get it done today?
 
@@ -1281,7 +1281,7 @@ Not all repair services in Bengaluru are equal. Here is how to evaluate them:
 ### The FIXplanet Difference
 
 **60-Minute Response Across All of Bangalore**
-Whether you are in Whitefield, Koramangala, Electronic City Phase 1, HSR Layout, Indiranagar, Marathahalli, or JP Nagar -- our technicians reach you within 60 minutes. Emergency same-day appointments available for urgent cases.
+Whether you are in [Whitefield](/areas/whitefield), Koramangala, [Electronic City](/areas/electronic-city), [HSR Layout](/areas/hsr-layout), [Indiranagar](/areas/indiranagar), [Marathahalli](/areas/marathahalli), or JP Nagar -- our technicians reach you within 60 minutes. Emergency same-day appointments available for urgent cases.
 
 **Complete Transparency -- Watch Every Step**
 Unlike shops where your phone disappears behind a counter, FIXplanet technicians work right in front of you. You see every screw removed, every cable connected, every test performed.
@@ -1421,7 +1421,7 @@ After investing in a screen replacement, protect your investment with these prac
 - Use a case with raised edges and lip protection
 - Keep phone in a waterproof pouch during heavy rain commutes
 - Dry your hands thoroughly before handling your phone
-- If your phone gets wet, do not charge it until fully dry -- [read our water damage guide](/blog/iphone-back-glass-repair-bangalore) for emergency steps
+- If your phone gets wet, do not charge it until fully dry -- [read our water damage guide](/blog/iphone-water-damage-emergency-steps) for emergency steps
 
 ### At Work -- Tech Parks, Offices, and Coworking Spaces
 - Never place your phone near the edge of a desk or table
@@ -1521,7 +1521,7 @@ Same-day appointments available | 12-month warranty on all parts and service
 
 ---
 
-*Last updated: January 30, 2026*
+*Last updated: March 20, 2026*
 *Written by FIXplanet iPhone Repair Specialists, Bangalore*
     `,
   },
@@ -1531,7 +1531,7 @@ Same-day appointments available | 12-month warranty on all parts and service
     excerpt: 'Your complete guide to iPhone repair in Bangalore: costs, turnaround times, common problems, and why doorstep repair is changing the game for busy professionals.',
     category: 'Troubleshooting Guides',
     readTime: '8 min read',
-    publishedDate: '2024-12-27',
+    publishedDate: '2026-03-08',
     image: '/images/blog/iphone-screen-replacement-guide.png',
     featured: true,
     metaDescription: 'Complete guide to iPhone repair in Bangalore 2026. Same-day doorstep service, transparent pricing, 12-month warranty. Screen, battery, back glass repair covered.',
@@ -1548,7 +1548,7 @@ Same-day appointments available | 12-month warranty on all parts and service
     content: `
 # iPhone Repair in Bangalore: Complete Guide to Same-Day Doorstep Service [2026]
 
-**Last Updated: December 2026 | Reading Time: 8 minutes**
+**Last Updated: March 2026 | Reading Time: 8 minutes**
 
 Your iPhone screen just cracked. Or maybe the battery drains faster than your morning coffee disappears. Either way, you need reliable iPhone repair in Bangalore—fast, affordable, and without the hassle of traveling across the city.
 
@@ -1571,7 +1571,7 @@ Based on thousands of repairs across the city, these are the most frequent issue
 
 ### 1. iPhone Screen Replacement
 
-Cracked screens account for nearly 60% of all iPhone repairs. Bangalore's fast-paced lifestyle—rushing between meetings in Koramangala or navigating crowded metros in Indiranagar—means phones take a beating.
+Cracked screens account for nearly 60% of all [iPhone repairs](/services#iphone). Bangalore's fast-paced lifestyle—rushing between meetings in [Koramangala](/areas/koramangala) or navigating crowded metros in [Indiranagar](/areas/indiranagar)—means phones take a beating.
 
 **What to expect:**
 - Repair time of 45-90 minutes
@@ -1580,7 +1580,7 @@ Cracked screens account for nearly 60% of all iPhone repairs. Bangalore's fast-p
 
 ### 2. iPhone Battery Replacement
 
-Bangalore's heat accelerates battery degradation. If your iPhone shows "Service" in Battery Health or dies before lunch, a battery replacement restores full-day performance.
+Bangalore's heat accelerates battery degradation. If your iPhone shows "Service" in Battery Health or dies before lunch, a [battery replacement](/pricing) restores full-day performance. Read our detailed [iPhone battery health guide](/blog/iphone-battery-health-bangalore) for tips on extending battery life.
 
 **Signs you need a new battery:**
 - Battery Health below 80%
@@ -1596,7 +1596,7 @@ iPhone 8 and later models feature glass backs that shatter on impact. Unlike scr
 
 ### 4. iPhone Water Damage Recovery
 
-Despite IP68 ratings, water damage remains common. Spills, rain exposure, and pool accidents require immediate professional attention. Success rates drop significantly after 24 hours.
+Despite IP68 ratings, water damage remains common. Spills, rain exposure, and pool accidents require immediate professional attention. Success rates drop significantly after 24 hours. See our [iPhone water damage emergency guide](/blog/iphone-water-damage-emergency-steps) for what to do immediately.
 
 ### 5. iPhone Charging Port Repair
 
@@ -1727,7 +1727,7 @@ A cracked screen or dying battery shouldn't disrupt your day. Quality iPhone rep
     excerpt: 'Complete guide to iPad repair in Bangalore. Covers screen replacement, battery issues, charging problems, and more with same-day doorstep service, OEM-grade parts, and 12-month warranty across 172+ areas.',
     category: 'Troubleshooting Guides',
     readTime: '10 min read',
-    publishedDate: '2026-01-30',
+    publishedDate: '2026-03-20',
     image: '/images/blog/ipad-repair-bangalore.png',
     featured: false,
     metaDescription: 'iPad repair in Bangalore with same-day doorstep service. Screen replacement, battery swap, charging port fix. OEM parts, 12-month warranty. 172+ areas covered.',
@@ -1838,13 +1838,13 @@ Transparent pricing helps you budget properly and avoid being overcharged. Here 
 
 ## iPad Doorstep Repair in Bangalore: How It Works
 
-The traditional approach — driving to a service centre in Koramangala or Indiranagar, dropping off your iPad, and waiting 5-7 days — does not suit Bangalore's busy professionals. Doorstep repair eliminates this friction entirely.
+The traditional approach — driving to a service centre in [Koramangala](/areas/koramangala) or [Indiranagar](/areas/indiranagar), dropping off your iPad, and waiting 5-7 days — does not suit Bangalore's busy professionals. Doorstep repair eliminates this friction entirely.
 
 ### Step 1: Book Your Service
-Call or WhatsApp +91 8105955009. Describe the issue, your iPad model, and preferred time. Receive an instant price estimate before committing to anything.
+Call or WhatsApp +91 8105955009. Describe the issue, your iPad model, and preferred time. Receive an instant [price estimate](/pricing) before committing to anything.
 
 ### Step 2: Technician Arrives at Your Location
-A certified technician reaches your home, office, or co-working space anywhere in Bangalore — HSR Layout, Electronic City, Marathahalli, Jayanagar, or Malleshwaram. All tools and OEM-grade replacement parts arrive with them.
+A certified technician reaches your home, office, or co-working space anywhere in Bangalore — [HSR Layout](/areas/hsr-layout), [Electronic City](/areas/electronic-city), [Marathahalli](/areas/marathahalli), Jayanagar, or Malleshwaram. All tools and OEM-grade replacement parts arrive with them.
 
 ### Step 3: Free Diagnosis and Transparent Quote
 Before any work begins, the technician diagnoses the exact issue and provides a clear quote. No surprises, no pressure. You approve before a single screw is turned.
@@ -1980,7 +1980,7 @@ A: Yes, and sooner rather than later. Cracks compromise the structural integrity
     excerpt: 'Complete guide to iPhone camera repair in Bangalore. Troubleshoot blurry photos, black camera screens, and shaky video. Learn costs by model, DIY software fixes, and how to get same-day doorstep camera replacement.',
     category: 'Troubleshooting Guides',
     readTime: '9 min read',
-    publishedDate: '2026-01-30',
+    publishedDate: '2026-03-20',
     image: '/images/blog/iphone-camera-repair-bangalore.png',
     featured: false,
     metaDescription: 'iPhone camera not working? Expert camera repair in Bangalore with same-day doorstep service. Costs from ₹3,500. 12-month warranty. OEM parts. Free diagnosis.',
@@ -1997,7 +1997,7 @@ A: Yes, and sooner rather than later. Cracks compromise the structural integrity
     content: `
 # iPhone Camera Repair in Bangalore: Fix Blurry Photos, Black Screen & More
 
-Your iPhone camera is arguably the most-used feature on your device. Whether you are capturing sunsets from Nandi Hills, snapping food photos at a Koramangala cafe, or joining a video call from your Whitefield office, a malfunctioning camera disrupts daily life in ways few other hardware issues can.
+Your iPhone camera is arguably the most-used feature on your device. Whether you are capturing sunsets from Nandi Hills, snapping food photos at a [Koramangala](/areas/koramangala) cafe, or joining a video call from your [Whitefield](/areas/whitefield) office, a malfunctioning camera disrupts daily life in ways few other hardware issues can.
 
 If your iPhone camera has stopped working, shows a black screen, takes blurry photos, or produces shaky video, this guide covers everything you need to know about iPhone camera repair in Bangalore -- from software fixes you can try right now to professional repair options with same-day doorstep service.
 
@@ -2062,7 +2062,7 @@ The iPhone rear camera module contains multiple lenses, autofocus motors, OIS ac
 
 **Common causes:**
 - Drop impact (even without visible external damage)
-- Liquid exposure (Bangalore monsoon season is a major culprit)
+- Liquid exposure (Bangalore monsoon season is a major culprit — see our [water damage guide](/blog/iphone-water-damage-emergency-steps))
 - OIS motor burnout from extensive video recording
 
 ### Front Camera / TrueDepth System Failure
@@ -2115,7 +2115,7 @@ The sapphire crystal lens cover can crack from impact. Internal condensation or 
 Call or WhatsApp +91 8105955009. Describe the issue and receive an instant price estimate.
 
 ### Step 2: Technician Arrives
-Our technician arrives at your home or office across Bangalore -- Marathahalli, Sarjapur Road, BTM Layout, Electronic City, or any of our 172+ service areas.
+Our technician arrives at your home or office across Bangalore -- [Marathahalli](/areas/marathahalli), Sarjapur Road, BTM Layout, [Electronic City](/areas/electronic-city), or any of our 172+ service areas.
 
 ### Step 3: Free Diagnosis
 The technician tests both cameras, checks autofocus, OIS, and flash functionality, and provides a transparent quote.
@@ -2191,7 +2191,7 @@ A: Older models produce more noise in low light. However, if low-light performan
     excerpt: 'An honest, balanced comparison of Apple authorized service centres and premium independent repair services in Bangalore. Learn when to choose each option based on cost, convenience, warranty status, and turnaround time.',
     category: 'Device Care Tips',
     readTime: '11 min read',
-    publishedDate: '2026-01-30',
+    publishedDate: '2026-03-20',
     image: '/images/blog/apple-authorized-vs-independent-repair.png',
     featured: false,
     metaDescription: 'Apple authorized service centre vs independent repair in Bangalore. Compare cost, turnaround, warranty, and convenience to find the best iPhone repair option.',
@@ -2236,8 +2236,8 @@ Non-Apple-affiliated businesses that specialise in Apple device repairs. The bes
 - Standardised pricing, no negotiation
 
 **Premium Independent (FIXplanet):**
-- iPhone screen replacement: ₹4,500 to ₹16,000 (OEM-grade)
-- Battery replacement: ₹3,500 to ₹7,000
+- [iPhone screen replacement](/services#iphone): ₹4,500 to ₹16,000 (OEM-grade)
+- [Battery replacement](/pricing): ₹3,500 to ₹7,000
 - Transparent upfront quotes
 
 ### Turnaround Time
@@ -2313,7 +2313,7 @@ Doorstep service eliminates Bangalore traffic, service centre queues, and two tr
 
 **12-Month Warranty:** 4x longer than Apple's post-repair warranty.
 
-**Doorstep Service Across 172+ Bangalore Areas:** Indiranagar, Koramangala, Jayanagar, MG Road, HSR Layout, Whitefield, Electronic City, Marathahalli -- a certified technician comes to your location.
+**[Doorstep Service](/contact) Across 172+ Bangalore Areas:** [Indiranagar](/areas/indiranagar), [Koramangala](/areas/koramangala), Jayanagar, MG Road, [HSR Layout](/areas/hsr-layout), [Whitefield](/areas/whitefield), Electronic City, [Marathahalli](/areas/marathahalli) -- a certified technician comes to your location.
 
 **Transparent, Fixed Pricing:** Upfront quote, no hidden charges.
 
@@ -2379,7 +2379,7 @@ For the majority of Bangalore iPhone users -- those with out-of-warranty devices
     excerpt: 'Complete guide to iPhone charging port repair in Bangalore. Learn DIY troubleshooting steps, when you need professional repair, Lightning vs USB-C differences, costs by model, and same-day doorstep service options.',
     category: 'Troubleshooting Guides',
     readTime: '8 min read',
-    publishedDate: '2026-01-30',
+    publishedDate: '2026-03-20',
     image: '/images/blog/iphone-charging-port-repair.png',
     featured: false,
     metaDescription: 'iPhone not charging? Expert charging port repair in Bangalore with same-day doorstep service. Lightning & USB-C fixes from ₹1,500. 12-month warranty.',
@@ -2502,7 +2502,7 @@ Settings > General > Transfer or Reset iPhone > Reset All Settings. Does not era
 
 ## Why Bangalore's Climate Is Tough on Charging Ports
 
-**Monsoon Humidity (June-September):** Humidity exceeds 80%, accelerating pin corrosion. Commuters on Sarjapur Road and Outer Ring Road expose their iPhones to damp air daily.
+**Monsoon Humidity (June-September):** Humidity exceeds 80%, accelerating pin corrosion. Commuters on Sarjapur Road and Outer Ring Road expose their iPhones to damp air daily. If moisture gets inside, see our [water damage emergency guide](/blog/iphone-water-damage-emergency-steps).
 
 **Construction Dust:** Metro expansion and building construction generate fine dust. Areas like Whitefield, Bellandur, and Electronic City see significant construction activity.
 
@@ -2514,7 +2514,7 @@ Settings > General > Transfer or Reset iPhone > Reset All Settings. Does not era
 Call +91 8105955009 or WhatsApp us. Describe the issue and preferred time.
 
 ### Step 2: Technician Arrives
-Certified technician arrives at your home or office — HSR Layout, Electronic City, Hebbal, Bellandur, or any of our 172+ service areas.
+Certified technician arrives at your home or office — [HSR Layout](/areas/hsr-layout), [Electronic City](/areas/electronic-city), Hebbal, Bellandur, or any of our 172+ service areas.
 
 ### Step 3: Diagnosis and Quote
 Port inspected under magnification, tested with calibrated cables. Clear quote before any work begins.
@@ -2533,13 +2533,13 @@ Tested for charging speed, data transfer, and secure cable fit. 12-month warrant
 
 ## Why Choose FIXplanet
 
-**Same-Day Doorstep Service** across HSR Layout, Electronic City, Sarjapur Road, Hebbal, Bellandur, and 172+ areas.
+**Same-Day [Doorstep Service](/contact)** across HSR Layout, Electronic City, Sarjapur Road, Hebbal, Bellandur, and 172+ areas.
 
 **OEM-Grade Components** matching Apple's original specifications.
 
 **12-Month Warranty** on parts and workmanship.
 
-**Transparent Pricing** — no diagnostic fees, no surprise charges.
+**[Transparent Pricing](/pricing)** — no diagnostic fees, no surprise charges.
 
 **1,000+ Devices Restored, 4.9-Star Google Rating.**
 
@@ -2580,7 +2580,7 @@ A: Yes. A non-functional port also means no data transfer, no wired CarPlay, and
     excerpt: 'Step-by-step troubleshooting for MacBook that will not start, shows a black screen, or is dead and not charging. Covers Intel and Apple Silicon models with cost estimates and professional repair options in Bangalore.',
     category: 'Troubleshooting Guides',
     readTime: '10 min read',
-    publishedDate: '2026-01-30',
+    publishedDate: '2026-03-20',
     image: '/images/blog/macbook-not-turning-on-fix.png',
     featured: false,
     metaDescription: 'MacBook not turning on in Bangalore? Step-by-step fix guide for black screen, dead battery, and startup failures. Same-day doorstep repair with 12-month warranty.',
@@ -2597,7 +2597,7 @@ A: Yes. A non-functional port also means no data transfer, no wired CarPlay, and
     content: `
 # MacBook Not Turning On? Complete Fix Guide for Bangalore [2026]
 
-You press the power button and nothing happens. No chime, no Apple logo, no fan noise -- just a dead, black screen. If your MacBook is not turning on, you are not alone. This is one of the most common MacBook issues we diagnose across Bangalore, from Whitefield tech parks to Marathahalli apartments.
+You press the power button and nothing happens. No chime, no Apple logo, no fan noise -- just a dead, black screen. If your MacBook is not turning on, you are not alone. This is one of the most common [MacBook issues](/services#macbook) we diagnose across Bangalore, from [Whitefield](/areas/whitefield) tech parks to [Marathahalli](/areas/marathahalli) apartments.
 
 Before you panic, the good news is that many MacBook startup failures have straightforward fixes you can try at home.
 
@@ -2718,7 +2718,7 @@ Fans spin but screen stays black. See our [MacBook screen replacement guide](/bl
 ## Why Choose FIXplanet for MacBook Repair in Bangalore
 
 ### Doorstep Service Across Bangalore
-Whitefield, ITPL, Marathahalli, Outer Ring Road, Brookefield, Koramangala, Indiranagar, HSR Layout, Electronic City, JP Nagar, Hebbal, Yelahanka, and 172+ areas.
+[Whitefield](/areas/whitefield), ITPL, [Marathahalli](/areas/marathahalli), Outer Ring Road, Brookefield, [Koramangala](/areas/koramangala), [Indiranagar](/areas/indiranagar), [HSR Layout](/areas/hsr-layout), Electronic City, JP Nagar, Hebbal, Yelahanka, and 172+ areas.
 
 ### Free Diagnosis, No Obligation
 Transparent quote with parts and labour breakdown. No hidden charges.
@@ -2770,7 +2770,7 @@ A: Time is critical. Contact us within an hour of the spill. Success rates drop 
     excerpt: 'Complete guide to iPhone back glass repair in Bangalore. Learn why rear glass is harder to fix than screens, compare repair costs by model, and book same-day doorstep service with OEM-grade parts.',
     category: 'Troubleshooting Guides',
     readTime: '8 min read',
-    publishedDate: '2026-01-30',
+    publishedDate: '2026-03-20',
     image: '/images/blog/iphone-back-glass-repair-bangalore.png',
     featured: false,
     metaDescription: 'iPhone back glass repair in Bangalore from ₹3,500. Same-day doorstep service, OEM-grade parts, 12-month warranty. Covers iPhone 8 to 16.',
@@ -2786,7 +2786,7 @@ A: Time is critical. Contact us within an hour of the spill. Success rates drop 
     content: `
 # iPhone Back Glass Repair in Bangalore: Cost, Methods & Same-Day Doorstep Service
 
-Cracked iPhone back glass is one of the most underestimated repair needs in Bangalore. Unlike a shattered screen, a broken rear panel might still let you use your phone normally -- so most people delay the repair. That delay, however, can cost you far more than the glass itself.
+Cracked iPhone back glass is one of the most underestimated [repair needs](/services#iphone) in Bangalore. Unlike a [shattered screen](/blog/iphone-screen-replacement-bangalore-complete-guide), a broken rear panel might still let you use your phone normally -- so most people delay the repair. That delay, however, can cost you far more than the glass itself.
 
 This guide covers everything Bangalore iPhone users need to know about back glass damage.
 
@@ -2886,7 +2886,7 @@ Bangalore's construction dust and traffic pollution accelerate internal damage.
 Call or WhatsApp +91 8105955009. Share your model and receive a price estimate.
 
 ### Step 2: Technician Arrives
-Home or office in JP Nagar, Jayanagar, Banashankari, Rajajinagar, Malleshwaram, or any of 172+ areas.
+Home or office in JP Nagar, Jayanagar, Banashankari, Rajajinagar, Malleshwaram, or any of [172+ areas](/contact).
 
 ### Step 3: Diagnosis and Quote
 Damage inspected, repair approach confirmed, final quote provided. No hidden charges.
@@ -2911,13 +2911,13 @@ Precision tools, OEM-grade components, repair done in front of you.
 
 ## Why Choose FIXplanet
 
-**Doorstep Convenience** -- No SP Road repair shop trips. No Bangalore traffic.
+**[Doorstep Convenience](/contact)** -- No SP Road repair shop trips. No Bangalore traffic.
 
 **OEM-Grade Parts Only** -- Every panel matches original specifications.
 
 **12-Month Warranty** -- 4x longer than most repair shops.
 
-**Transparent Pricing** -- No "additional damage found" surprises.
+**[Transparent Pricing](/pricing)** -- No "additional damage found" surprises.
 
 **1,000+ Devices Restored, 4.9-Star Rating**
 
