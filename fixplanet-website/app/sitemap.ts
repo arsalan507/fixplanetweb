@@ -69,13 +69,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // Service pages (high priority for Google Ads landing pages)
+  // Service pages (high priority for Google Ads landing pages + SEO)
   const servicePages = [
     {
       url: `${baseUrl}/iphone-screen-cracked`,
       lastModified: currentDate,
       changeFrequency: 'weekly' as const,
       priority: 1.0,
+    },
+    {
+      url: `${baseUrl}/services/iphone-storage-upgrade`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/services/apple-watch-repair-bangalore`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/services/airpods-repair-bangalore`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
     },
   ];
 
