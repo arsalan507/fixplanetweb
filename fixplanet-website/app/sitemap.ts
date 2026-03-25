@@ -1,5 +1,4 @@
 import { MetadataRoute } from 'next';
-import { getAllAreaSlugs } from '@/data/bangalore-areas';
 import { getAllBlogSlugs } from '@/data/blog-posts';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -97,9 +96,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   ];
 
-  // Area pages (172 Bangalore locations)
-  const areaSlugs = getAllAreaSlugs();
-  const areaPages = areaSlugs.map((slug) => ({
+  // Area pages — only high-value areas with actual GSC impressions
+  const highValueAreaSlugs = [
+    'marathahalli',
+    'cunningham-road',
+    'whitefield',
+    'whitefield-main-road',
+    'basaveshwaranagar',
+    'avalahalli',
+    'koramangala',
+    'mg-road',
+    'anekal',
+    'hennur-road',
+    'bel-road',
+    'begur',
+    'amruthahalli',
+    'indiranagar',
+    'hsr-layout',
+    'electronic-city',
+    'jayanagar',
+    'jp-nagar',
+    'bellandur',
+    'brookefield',
+    'malleshwaram',
+    'hebbal',
+    'yelahanka',
+    'btm-layout',
+    'sarjapur-road',
+    'anjanapura',
+  ];
+  const areaPages = highValueAreaSlugs.map((slug) => ({
     url: `${baseUrl}/areas/${slug}`,
     lastModified: currentDate,
     changeFrequency: 'monthly' as const,

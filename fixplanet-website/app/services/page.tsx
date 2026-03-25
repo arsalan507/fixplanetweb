@@ -6,9 +6,12 @@ import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
 
 export const metadata: Metadata = {
-  title: 'Apple Device Services in Bangalore | iPhone, MacBook, iPad Care',
-  description: 'Complete Apple device care in Bangalore. iPhone screen replacement, MacBook battery, iPad repair, Apple Watch service. OEM-grade parts, 12-month warranty, same-day doorstep service.',
-  keywords: ['iPhone repair services Bangalore', 'MacBook services', 'iPad repair', 'Apple Watch repair', 'screen replacement', 'battery replacement'],
+  title: 'iPhone, MacBook, iPad Repair Bangalore — Same-Day Doorstep Service',
+  description: 'iPhone screen ₹3,500-₹12,000. MacBook display ₹12,000-₹45,000. iPad & Apple Watch repair. OEM parts, 12-month warranty, same-day doorstep service. Call +91 8105955009.',
+  keywords: ['iPhone repair Bangalore', 'MacBook repair Bangalore', 'iPad repair Bangalore', 'Apple Watch repair Bangalore', 'iPhone screen replacement cost', 'MacBook battery replacement Bangalore'],
+  alternates: {
+    canonical: 'https://www.fixplanet.in/services',
+  },
 };
 
 interface Service {

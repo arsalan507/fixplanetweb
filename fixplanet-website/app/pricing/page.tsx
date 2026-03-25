@@ -266,6 +266,181 @@ export default function PricingPage() {
           </div>
         </div>
       </section>
+
+      {/* Static Pricing Tables — visible to Google crawler */}
+      <section className="py-16 bg-white">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-navy-primary mb-8 text-center">
+              iPhone Repair Prices in Bangalore (2026)
+            </h2>
+
+            <div className="overflow-x-auto mb-12">
+              <table className="w-full border-collapse">
+                <thead>
+                  <tr className="bg-navy-primary text-white">
+                    <th className="p-4 text-left">Service</th>
+                    <th className="p-4 text-left">Price Range</th>
+                    <th className="p-4 text-left">Turnaround</th>
+                    <th className="p-4 text-left">Warranty</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-gray-medium">
+                    <td className="p-4 font-medium">iPhone Screen Replacement</td>
+                    <td className="p-4 text-teal-accent font-semibold">₹3,500 - ₹12,000</td>
+                    <td className="p-4">1-2 hours</td>
+                    <td className="p-4">12 months</td>
+                  </tr>
+                  <tr className="border-b border-gray-medium bg-gray-light">
+                    <td className="p-4 font-medium">iPhone Battery Replacement</td>
+                    <td className="p-4 text-teal-accent font-semibold">₹2,500 - ₹5,500</td>
+                    <td className="p-4">1-2 hours</td>
+                    <td className="p-4">12 months</td>
+                  </tr>
+                  <tr className="border-b border-gray-medium">
+                    <td className="p-4 font-medium">iPhone Back Glass Replacement</td>
+                    <td className="p-4 text-teal-accent font-semibold">₹4,500 - ₹9,000</td>
+                    <td className="p-4">2-3 hours</td>
+                    <td className="p-4">12 months</td>
+                  </tr>
+                  <tr className="border-b border-gray-medium bg-gray-light">
+                    <td className="p-4 font-medium">Water Damage Recovery</td>
+                    <td className="p-4 text-teal-accent font-semibold">₹3,000 - ₹15,000</td>
+                    <td className="p-4">24-72 hours</td>
+                    <td className="p-4">6 months</td>
+                  </tr>
+                  <tr className="border-b border-gray-medium">
+                    <td className="p-4 font-medium">Charging Port Replacement</td>
+                    <td className="p-4 text-teal-accent font-semibold">₹2,000 - ₹4,000</td>
+                    <td className="p-4">1-2 hours</td>
+                    <td className="p-4">12 months</td>
+                  </tr>
+                  <tr className="border-b border-gray-medium bg-gray-light">
+                    <td className="p-4 font-medium">Camera Repair</td>
+                    <td className="p-4 text-teal-accent font-semibold">₹3,500 - ₹8,000</td>
+                    <td className="p-4">2-4 hours</td>
+                    <td className="p-4">12 months</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h2 className="text-3xl font-bold text-navy-primary mb-8 text-center">
+              MacBook Repair Prices in Bangalore (2026)
+            </h2>
+
+            <div className="overflow-x-auto mb-12">
+              <table className="w-full border-collapse">
+                <thead>
+                  <tr className="bg-navy-primary text-white">
+                    <th className="p-4 text-left">Service</th>
+                    <th className="p-4 text-left">Price Range</th>
+                    <th className="p-4 text-left">Turnaround</th>
+                    <th className="p-4 text-left">Warranty</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-gray-medium">
+                    <td className="p-4 font-medium">MacBook Display Replacement</td>
+                    <td className="p-4 text-teal-accent font-semibold">₹12,000 - ₹45,000</td>
+                    <td className="p-4">24-48 hours</td>
+                    <td className="p-4">12 months</td>
+                  </tr>
+                  <tr className="border-b border-gray-medium bg-gray-light">
+                    <td className="p-4 font-medium">MacBook Battery Replacement</td>
+                    <td className="p-4 text-teal-accent font-semibold">₹8,500 - ₹18,000</td>
+                    <td className="p-4">24-48 hours</td>
+                    <td className="p-4">12 months</td>
+                  </tr>
+                  <tr className="border-b border-gray-medium">
+                    <td className="p-4 font-medium">Keyboard Replacement</td>
+                    <td className="p-4 text-teal-accent font-semibold">₹8,000 - ₹22,000</td>
+                    <td className="p-4">2-5 days</td>
+                    <td className="p-4">12 months</td>
+                  </tr>
+                  <tr className="border-b border-gray-medium bg-gray-light">
+                    <td className="p-4 font-medium">Logic Board Repair</td>
+                    <td className="p-4 text-teal-accent font-semibold">₹8,000 - ₹40,000</td>
+                    <td className="p-4">3-7 days</td>
+                    <td className="p-4">6 months</td>
+                  </tr>
+                  <tr className="border-b border-gray-medium">
+                    <td className="p-4 font-medium">Trackpad Replacement</td>
+                    <td className="p-4 text-teal-accent font-semibold">₹5,000 - ₹12,000</td>
+                    <td className="p-4">24-48 hours</td>
+                    <td className="p-4">12 months</td>
+                  </tr>
+                  <tr className="border-b border-gray-medium bg-gray-light">
+                    <td className="p-4 font-medium">SSD/RAM Upgrade</td>
+                    <td className="p-4 text-teal-accent font-semibold">Variable</td>
+                    <td className="p-4">24-48 hours</td>
+                    <td className="p-4">12 months</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h2 className="text-3xl font-bold text-navy-primary mb-8 text-center">
+              iPad & Apple Watch Repair Prices
+            </h2>
+
+            <div className="overflow-x-auto mb-12">
+              <table className="w-full border-collapse">
+                <thead>
+                  <tr className="bg-navy-primary text-white">
+                    <th className="p-4 text-left">Device & Service</th>
+                    <th className="p-4 text-left">Price Range</th>
+                    <th className="p-4 text-left">Turnaround</th>
+                    <th className="p-4 text-left">Warranty</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-gray-medium">
+                    <td className="p-4 font-medium">iPad Screen Replacement</td>
+                    <td className="p-4 text-teal-accent font-semibold">₹5,000 - ₹15,000</td>
+                    <td className="p-4">2-4 hours</td>
+                    <td className="p-4">12 months</td>
+                  </tr>
+                  <tr className="border-b border-gray-medium bg-gray-light">
+                    <td className="p-4 font-medium">iPad Battery Replacement</td>
+                    <td className="p-4 text-teal-accent font-semibold">₹4,000 - ₹8,000</td>
+                    <td className="p-4">24 hours</td>
+                    <td className="p-4">12 months</td>
+                  </tr>
+                  <tr className="border-b border-gray-medium">
+                    <td className="p-4 font-medium">Apple Watch Screen</td>
+                    <td className="p-4 text-teal-accent font-semibold">₹3,000 - ₹8,000</td>
+                    <td className="p-4">24-48 hours</td>
+                    <td className="p-4">12 months</td>
+                  </tr>
+                  <tr className="border-b border-gray-medium bg-gray-light">
+                    <td className="p-4 font-medium">Apple Watch Battery</td>
+                    <td className="p-4 text-teal-accent font-semibold">₹2,500 - ₹5,000</td>
+                    <td className="p-4">24-48 hours</td>
+                    <td className="p-4">12 months</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div className="text-center bg-gray-light rounded-lg p-8">
+              <p className="text-gray-dark mb-4">
+                Prices vary by exact model and condition. Use the calculator above for a specific estimate,
+                or call us for an instant quote.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button href="/contact" size="lg">
+                  Get Exact Quote
+                </Button>
+                <Button href={`tel:${process.env.NEXT_PUBLIC_PHONE || '+91 8105955009'}`} variant="ghost" size="lg">
+                  Call +91 8105955009
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

@@ -22,11 +22,11 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://www.fixplanet.in'),
   title: {
-    default: 'FIXplanet - Premium Apple Device Care in Bangalore | Same-Day Service',
-    template: '%s | FIXplanet Bangalore',
+    default: 'iPhone Repair Bangalore — From ₹2,500 | 60-Min Doorstep | FIXplanet',
+    template: '%s | FIXplanet',
   },
-  description: 'Bangalore\'s trusted independent Apple specialists. Same-day doorstep service for iPhone, MacBook, iPad & Apple Watch. 12-month warranty. Serving Koramangala, Indiranagar & Whitefield.',
-  keywords: ['Apple device care Bangalore', 'iPhone screen replacement Bangalore', 'MacBook battery replacement', 'iPad screen Koramangala', 'Apple Watch Indiranagar', 'doorstep service', 'same day service'],
+  description: 'iPhone screen replacement from ₹3,500. MacBook repair from ₹8,500. Same-day doorstep service across Bangalore. 12-month warranty on all repairs. Call +91 8105955009.',
+  keywords: ['iPhone repair Bangalore', 'iPhone screen replacement Bangalore', 'MacBook repair Bangalore', 'iPad repair Bangalore', 'Apple repair near me', 'doorstep phone repair Bangalore'],
   authors: [{ name: 'FIXplanet' }],
   creator: 'FIXplanet',
   publisher: 'FIXplanet',
@@ -44,8 +44,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_IN',
     url: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.fixplanet.in',
-    title: 'FIXplanet - Premium Apple Device Care in Bangalore',
-    description: 'Same-day doorstep Apple device care. 12-month warranty. Trusted by 1,000+ customers in Bangalore.',
+    title: 'iPhone Repair Bangalore — From ₹2,500 | Same-Day Doorstep | FIXplanet',
+    description: 'iPhone screen replacement from ₹3,500. MacBook repair from ₹8,500. Same-day doorstep service. 12-month warranty. Call +91 8105955009.',
     siteName: 'FIXplanet',
     images: [
       {
@@ -58,8 +58,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'FIXplanet - Premium Apple Device Care in Bangalore',
-    description: 'Same-day doorstep Apple device care. 12-month warranty.',
+    title: 'iPhone Repair Bangalore — From ₹2,500 | Same-Day Doorstep | FIXplanet',
+    description: 'iPhone screen from ₹3,500. MacBook from ₹8,500. Same-day doorstep service. 12-month warranty.',
     images: ['/images/og-image.jpg'],
   },
   robots: {

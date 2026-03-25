@@ -7,9 +7,12 @@ import Card from '@/components/ui/Card';
 import { bangaloreAreas, getAreasByZone } from '@/data/bangalore-areas';
 
 export const metadata: Metadata = {
-  title: 'Service Areas in Bangalore | FIXplanet Apple Device Care',
-  description: 'FIXplanet serves 140+ Bangalore areas. Same-day doorstep Apple device service across all major neighborhoods. Check if we serve your area.',
-  keywords: ['Apple repair Bangalore', 'iPhone repair locations', 'MacBook service areas', 'Bangalore Apple care', 'doorstep service Bangalore'],
+  title: 'iPhone Repair Near You — All Bangalore Areas | FIXplanet Doorstep Service',
+  description: 'FIXplanet serves 100+ Bangalore areas. Koramangala, Marathahalli, Whitefield, Indiranagar, HSR Layout & more. 30-60 min doorstep iPhone, MacBook repair. Call +91 8105955009.',
+  keywords: ['iPhone repair near me Bangalore', 'phone repair shop near me', 'mobile repair near me', 'Apple repair Bangalore areas', 'doorstep repair Bangalore'],
+  alternates: {
+    canonical: 'https://www.fixplanet.in/bangalore-locations',
+  },
 };
 
 export default function BangaloreLocationsPage() {

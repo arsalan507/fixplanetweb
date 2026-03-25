@@ -8,9 +8,12 @@ import Button from '@/components/ui/Button';
 import { getFeaturedPost, getRegularPosts } from '@/data/blog-posts';
 
 export const metadata: Metadata = {
-  title: 'Apple Device Care Insights & Tips | FIXplanet Blog',
-  description: 'Expert tips, troubleshooting guides, and industry insights for Apple device care in Bangalore. Learn from FIXplanet\'s specialists.',
-  keywords: ['Apple care tips', 'iPhone troubleshooting', 'MacBook maintenance', 'device care guide', 'Bangalore tech'],
+  title: 'iPhone & MacBook Repair Tips Bangalore — FIXplanet Blog',
+  description: 'Expert guides on iPhone screen replacement, MacBook troubleshooting, iPad repair costs. Bangalore-specific pricing, service tips, and DIY fixes from repair specialists.',
+  keywords: ['iPhone repair guide Bangalore', 'MacBook troubleshooting', 'iPhone screen replacement cost', 'Apple repair tips', 'MacBook not turning on fix'],
+  alternates: {
+    canonical: 'https://www.fixplanet.in/blog',
+  },
 };
 
 export default function BlogPage() {

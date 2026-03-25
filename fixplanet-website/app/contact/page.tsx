@@ -14,7 +14,7 @@ import Card from '@/components/ui/Card';
 const contactSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
   phone: z.string().min(10, 'Please enter a valid phone number'),
-  email: z.string().email('Please enter a valid email'),
+  email: z.string().email('Please enter a valid email').optional().or(z.literal('')),
   deviceType: z.string().min(1, 'Please select a device type'),
   deviceModel: z.string().optional(),
 });
@@ -102,8 +102,31 @@ export default function ContactPage() {
       <section className="py-16 bg-gray-light">
         <div className="container-custom">
           <div className="grid lg:grid-cols-3 gap-8">
-            {/* Contact Form */}
+            {/* WhatsApp CTA + Contact Form */}
             <div className="lg:col-span-2">
+              {/* WhatsApp Quick CTA */}
+              <a
+                href={`https://wa.me/${whatsapp}?text=Hi%20FIXplanet,%20I%20need%20help%20with%20my%20device`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block mb-6 rounded-xl bg-gradient-to-r from-green-500 to-green-600 p-6 text-white shadow-lg hover:shadow-xl transition-all hover:scale-[1.01]"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="flex-shrink-0 bg-white/20 rounded-full p-3">
+                    <MessageCircle size={32} className="text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-lg md:text-xl font-bold">Quick? Chat on WhatsApp</p>
+                    <p className="text-white/90 text-sm md:text-base">Get a quote in 2 minutes</p>
+                  </div>
+                  <div className="flex-shrink-0 hidden sm:block">
+                    <span className="bg-white text-green-600 font-bold px-5 py-2.5 rounded-full text-sm">
+                      Chat Now
+                    </span>
+                  </div>
+                </div>
+              </a>
+
               <Card padding="lg">
                 <h2 className="text-2xl font-bold text-navy-primary mb-6">
                   Book Your Service Now
@@ -141,12 +164,11 @@ export default function ContactPage() {
                   </div>
 
                   <Input
-                    label="Email"
+                    label="Email (optional)"
                     type="email"
                     placeholder="your@email.com"
                     {...register('email')}
                     error={errors.email?.message}
-                    required
                   />
 
                   <div className="grid md:grid-cols-2 gap-6">

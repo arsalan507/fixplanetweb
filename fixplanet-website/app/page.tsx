@@ -8,9 +8,12 @@ import Card from '@/components/ui/Card';
 import { LocalBusinessSchema } from '@/components/ui/Schema';
 
 export const metadata: Metadata = {
-  title: 'FIXplanet - Premium Apple Device Care in Bangalore | Same-Day Service',
-  description: 'Bangalore\'s trusted independent Apple specialists. Same-day doorstep service for iPhone, MacBook, iPad & Apple Watch. 12-month warranty. Serving Koramangala, Indiranagar & Whitefield.',
-  keywords: ['Apple repair Bangalore', 'iPhone screen replacement', 'MacBook repair', 'doorstep service', 'same day repair'],
+  title: 'iPhone Repair Bangalore — From ₹2,500 | 60-Min Doorstep | FIXplanet',
+  description: 'iPhone screen replacement from ₹3,500. MacBook repair from ₹8,500. Same-day doorstep service across Bangalore. 12-month warranty on all repairs. Call +91 8105955009.',
+  keywords: ['iPhone repair Bangalore', 'iPhone screen replacement Bangalore', 'MacBook repair Bangalore', 'doorstep phone repair', 'same day iPhone repair', 'Apple repair near me'],
+  alternates: {
+    canonical: 'https://www.fixplanet.in',
+  },
 };
 
 export default function Home() {
