@@ -41,12 +41,6 @@ export const LocalBusinessSchema: React.FC<LocalBusinessSchemaProps> = ({
       opens: '09:00',
       closes: '21:00',
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      bestRating: '5',
-      ratingCount: '1000',
-    },
     areaServed: {
       '@type': 'City',
       name: 'Bangalore',
@@ -281,12 +275,6 @@ export const ServiceAreaSchema: React.FC<ServiceAreaSchemaProps> = ({
       dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
       opens: '09:00',
       closes: '21:00',
-    },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      bestRating: '5',
-      ratingCount: '1000',
     },
   };
 

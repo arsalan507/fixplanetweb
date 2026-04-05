@@ -2984,6 +2984,501 @@ A: Every model from iPhone 8 through iPhone 16 series, including all Pro, Pro Ma
 *FIXplanet is an independent service provider specialising in Apple products. We are not affiliated with or endorsed by Apple Inc. iPhone, iPad, MacBook, Apple Watch, and all related marks are trademarks of Apple Inc.*
     `,
   },
+  {
+    slug: 'iphone-screen-replacement-cost-bangalore-2026',
+    title: 'iPhone Screen Replacement Cost in Bangalore (2026) — All Models Price List',
+    excerpt: 'Complete model-by-model iPhone screen replacement pricing in Bangalore for 2026. Compare Apple Store vs independent repair costs. Doorstep service available.',
+    category: 'Pricing Guide',
+    readTime: '7 min read',
+    publishedDate: '2026-04-06',
+    image: '/images/blog/iphone-screen-cost.png',
+    featured: true,
+    metaDescription: 'iPhone screen replacement cost in Bangalore 2026. iPhone 16 Pro Max: ₹11,500. iPhone 15: ₹8,500. iPhone 14: ₹6,500. Same-day doorstep service with 12-month warranty. All models covered.',
+    keywords: ['iPhone screen replacement cost Bangalore', 'iPhone screen replacement price', 'iPhone 16 screen replacement cost', 'iPhone 15 screen repair price Bangalore', 'iPhone screen replacement cost India 2026'],
+    content: `
+# iPhone Screen Replacement Cost in Bangalore (2026) — Complete Price List
+
+Cracked your iPhone screen? Before you pay ₹25,000+ at an Apple Store, check what it actually costs at an independent repair service in Bangalore. This guide covers every iPhone model with real pricing, updated for April 2026.
+
+## iPhone Screen Replacement Cost — Model-by-Model (Bangalore 2026)
+
+| iPhone Model | Apple Store Price | FIXplanet Price | You Save |
+|---|---|---|---|
+| iPhone 16 Pro Max | ₹25,500 | ₹11,500 | ₹14,000 (55%) |
+| iPhone 16 Pro | ₹25,500 | ₹10,500 | ₹15,000 (59%) |
+| iPhone 16 Plus | ₹22,500 | ₹9,500 | ₹13,000 (58%) |
+| iPhone 16 | ₹22,500 | ₹8,500 | ₹14,000 (62%) |
+| iPhone 15 Pro Max | ₹25,500 | ₹10,500 | ₹15,000 (59%) |
+| iPhone 15 Pro | ₹22,500 | ₹9,500 | ₹13,000 (58%) |
+| iPhone 15 Plus | ₹19,900 | ₹8,500 | ₹11,400 (57%) |
+| iPhone 15 | ₹19,900 | ₹7,500 | ₹12,400 (62%) |
+| iPhone 14 Pro Max | ₹19,900 | ₹8,500 | ₹11,400 (57%) |
+| iPhone 14 Pro | ₹19,900 | ₹7,500 | ₹12,400 (62%) |
+| iPhone 14 Plus | ₹16,900 | ₹6,500 | ₹10,400 (62%) |
+| iPhone 14 | ₹16,900 | ₹6,000 | ₹10,900 (64%) |
+| iPhone 13 Pro Max | ₹16,900 | ₹6,500 | ₹10,400 (62%) |
+| iPhone 13 Pro | ₹16,900 | ₹6,000 | ₹10,900 (64%) |
+| iPhone 13 Mini | ₹14,900 | ₹5,500 | ₹9,400 (63%) |
+| iPhone 13 | ₹14,900 | ₹5,000 | ₹9,900 (66%) |
+| iPhone 12 Pro Max | ₹14,900 | ₹5,500 | ₹9,400 (63%) |
+| iPhone 12 Pro | ₹14,900 | ₹5,000 | ₹9,900 (66%) |
+| iPhone 12 Mini | ₹12,900 | ₹4,500 | ₹8,400 (65%) |
+| iPhone 12 | ₹12,900 | ₹4,500 | ₹8,400 (65%) |
+| iPhone 11 Pro Max | ₹12,900 | ₹4,500 | ₹8,400 (65%) |
+| iPhone 11 Pro | ₹12,900 | ₹4,000 | ₹8,900 (69%) |
+| iPhone 11 | ₹10,900 | ₹3,500 | ₹7,400 (68%) |
+
+*Prices include doorstep service, OEM-grade display, and 12-month warranty. Updated April 2026.*
+
+## What Affects iPhone Screen Replacement Cost?
+
+Three factors determine the final price:
+
+**1. iPhone Model**
+Newer models cost more because the display technology is more advanced. The iPhone 16 Pro Max uses a Super Retina XDR OLED with ProMotion — this panel alone costs more than an entire iPhone 11 screen assembly.
+
+**2. Screen Quality (OEM vs Original)**
+- **Original Apple display**: Highest quality, highest price. Only available at Apple Stores and authorised service centres.
+- **OEM-grade display**: Same specifications as original — same brightness, colour accuracy, and touch sensitivity. Used by most independent repair services including FIXplanet. 90% of customers cannot tell the difference.
+- **Compatible/Copy display**: Cheapest option. Lower brightness, colour shift, sometimes touch issues. Not recommended.
+
+**3. Service Type**
+- **Apple Store walk-in**: Most expensive. Requires appointment, backup, and 1-3 day wait.
+- **Independent shop walk-in**: Mid-range pricing. You go to them.
+- **Doorstep service**: Same pricing as shop, but the technician comes to your home or office. FIXplanet completes most screen replacements in 30-45 minutes at your location.
+
+## How Long Does iPhone Screen Replacement Take?
+
+| Service Type | Time |
+|---|---|
+| Apple Store | 1-3 business days |
+| Walk-in repair shop | 1-3 hours |
+| FIXplanet doorstep | 30-45 minutes at your location |
+
+With doorstep service, you watch the entire repair happen. No dropping off your phone. No waiting without your device.
+
+## Do You Lose Data During Screen Replacement?
+
+No. Screen replacement does not affect your data, apps, photos, or settings. Your phone stays exactly as it was — just with a new screen.
+
+The only exception: if your phone has severe damage beyond the screen (like a damaged logic board), additional diagnosis may be needed.
+
+## Is iPhone Screen Replacement Worth It?
+
+Quick math: An iPhone 15 costs ₹79,900 new. Screen replacement at FIXplanet costs ₹7,500. That is less than 10% of the phone's value for a phone that works like new again.
+
+Replace the screen if:
+- Your phone is less than 3 years old
+- Everything else works fine (camera, battery, speakers)
+- The crack is affecting usability or spreading
+
+Consider upgrading instead if:
+- Your phone is 4+ years old
+- Battery health is below 75%
+- You are already experiencing other hardware issues
+
+## What Warranty Do You Get?
+
+FIXplanet provides a 12-month warranty on every screen replacement. If the replacement screen develops any defect — dead pixels, touch issues, discolouration — it gets replaced free of charge.
+
+Apple provides a 90-day warranty on their repairs.
+
+## How to Book iPhone Screen Replacement in Bangalore
+
+1. **Call or WhatsApp**: [+91 8105955009](tel:+918105955009)
+2. Tell us your iPhone model and describe the damage
+3. Get an instant quote (prices match this guide)
+4. Choose a time slot — same-day service available
+5. Our technician arrives at your location with the screen, tools, and ESD kit
+6. Repair completed in 30-45 minutes. You watch the entire process.
+7. Test the phone, pay only after you are satisfied
+
+We serve all Bangalore areas including Koramangala, Indiranagar, HSR Layout, Whitefield, Marathahalli, Electronic City, Jayanagar, JP Nagar, BTM Layout, and Bellandur.
+
+## Frequently Asked Questions
+
+**How much does iPhone 15 screen replacement cost in Bangalore?**
+iPhone 15 screen replacement costs ₹7,500 at FIXplanet with doorstep service and 12-month warranty. Apple Store charges ₹19,900 for the same repair.
+
+**Is OEM screen same as original iPhone screen?**
+OEM-grade screens match original specifications for brightness, colour accuracy, and touch response. They are manufactured to the same standards but not by Apple directly. Most users cannot distinguish between OEM and original displays.
+
+**Can I get my iPhone screen replaced at home in Bangalore?**
+Yes. FIXplanet provides doorstep iPhone screen replacement across all Bangalore areas. A certified technician comes to your home or office and completes the repair in 30-45 minutes.
+
+**What if the new screen has issues after replacement?**
+FIXplanet covers all screen replacements with a 12-month warranty. If you experience any display defect within 12 months, we replace it free of charge.
+
+**Do you use original Apple screens?**
+We use OEM-grade displays that match Apple's original specifications. Original Apple displays are only available through Apple's authorised service network and cost significantly more.
+
+## Related Guides
+
+- [iPhone Battery Health Below 80%? Here's What to Do](/blog/iphone-battery-health-bangalore)
+- [iPhone Back Glass Repair in Bangalore](/blog/iphone-back-glass-repair-bangalore)
+- [Apple Authorised vs Independent Repair — Honest Comparison](/blog/apple-authorized-vs-independent-repair-bangalore)
+
+---
+
+*Published by FIXplanet, Bangalore. Last updated April 2026. Prices subject to change based on parts availability.*
+    `,
+  },
+  {
+    slug: 'iphone-battery-replacement-cost-bangalore-2026',
+    title: 'iPhone Battery Replacement Cost in Bangalore (2026) — All Models Compared',
+    excerpt: 'Model-wise iPhone battery replacement pricing for Bangalore 2026. Same-day doorstep service. Compare Apple Store vs FIXplanet costs.',
+    category: 'Pricing Guide',
+    readTime: '6 min read',
+    publishedDate: '2026-04-06',
+    image: '/images/blog/iphone-battery-cost.png',
+    featured: false,
+    metaDescription: 'iPhone battery replacement cost Bangalore 2026. iPhone 16: ₹4,500. iPhone 15: ₹4,000. iPhone 14: ₹3,500. Same-day doorstep service. 12-month warranty. All models.',
+    keywords: ['iPhone battery replacement cost Bangalore', 'iPhone battery replacement price India', 'iPhone 15 battery replacement cost', 'iPhone battery replacement near me Bangalore', 'iPhone battery change price 2026'],
+    content: `
+# iPhone Battery Replacement Cost in Bangalore (2026) — All Models
+
+Your iPhone battery health dropped below 80%? Your phone shuts down at 25%? It is time for a battery replacement. Here is exactly what it costs in Bangalore, model by model.
+
+## iPhone Battery Replacement Price List — Bangalore 2026
+
+| iPhone Model | Apple Store Price | FIXplanet Price | You Save |
+|---|---|---|---|
+| iPhone 16 Pro Max | ₹9,900 | ₹5,500 | ₹4,400 (44%) |
+| iPhone 16 Pro | ₹9,900 | ₹5,000 | ₹4,900 (49%) |
+| iPhone 16 Plus | ₹9,900 | ₹4,500 | ₹5,400 (55%) |
+| iPhone 16 | ₹9,900 | ₹4,500 | ₹5,400 (55%) |
+| iPhone 15 Pro Max | ₹9,900 | ₹4,500 | ₹5,400 (55%) |
+| iPhone 15 Pro | ₹9,900 | ₹4,000 | ₹5,900 (60%) |
+| iPhone 15 Plus | ₹7,900 | ₹4,000 | ₹3,900 (49%) |
+| iPhone 15 | ₹7,900 | ₹3,500 | ₹4,400 (56%) |
+| iPhone 14 Pro Max | ₹7,900 | ₹4,000 | ₹3,900 (49%) |
+| iPhone 14 Pro | ₹7,900 | ₹3,500 | ₹4,400 (56%) |
+| iPhone 14 Plus | ₹7,900 | ₹3,500 | ₹4,400 (56%) |
+| iPhone 14 | ₹7,900 | ₹3,000 | ₹4,900 (62%) |
+| iPhone 13 Pro Max | ₹7,900 | ₹3,500 | ₹4,400 (56%) |
+| iPhone 13 Pro | ₹7,900 | ₹3,000 | ₹4,900 (62%) |
+| iPhone 13 Mini | ₹7,900 | ₹3,000 | ₹4,900 (62%) |
+| iPhone 13 | ₹7,900 | ₹2,800 | ₹5,100 (65%) |
+| iPhone 12 Pro Max | ₹7,900 | ₹3,000 | ₹4,900 (62%) |
+| iPhone 12/12 Pro | ₹5,900 | ₹2,800 | ₹3,100 (53%) |
+| iPhone 12 Mini | ₹5,900 | ₹2,800 | ₹3,100 (53%) |
+| iPhone 11 Pro Max | ₹5,900 | ₹2,800 | ₹3,100 (53%) |
+| iPhone 11 Pro | ₹5,900 | ₹2,500 | ₹3,400 (58%) |
+| iPhone 11 | ₹5,900 | ₹2,500 | ₹3,400 (58%) |
+
+*Prices include doorstep service, premium battery, and 12-month warranty. Updated April 2026.*
+
+## When Should You Replace Your iPhone Battery?
+
+Check your battery health: Settings → Battery → Battery Health & Charging.
+
+**Replace now if:**
+- Battery health is below 80%
+- Phone shows "Service" or "Significantly Degraded" message
+- Phone shuts down unexpectedly at 20-30%
+- Battery drains from 100% to 0% in less than 6 hours of normal use
+- Phone gets hot during regular use or charging
+
+**You can wait if:**
+- Battery health is 81-90% with no performance issues
+- Phone lasts through your day on a single charge
+- No unexpected shutdowns
+
+## How Long Does Battery Replacement Take?
+
+At FIXplanet, battery replacement takes 20-30 minutes at your doorstep. Our technician opens your iPhone using precision tools, disconnects the old battery, installs the new one, recalibrates, and tests everything before handing it back.
+
+No appointment queues. No leaving your phone overnight. No data loss.
+
+## Will Battery Replacement Make My iPhone Faster?
+
+Yes, if your battery health was below 80%. Apple automatically throttles CPU performance when battery health is low to prevent unexpected shutdowns. After replacement, this throttling is removed and your phone runs at full speed again.
+
+Many customers say their phone "feels brand new" after battery replacement. It is often the single most impactful repair you can do.
+
+## How to Check If You Need Battery Replacement
+
+1. Open **Settings** on your iPhone
+2. Tap **Battery**
+3. Tap **Battery Health & Charging**
+4. Check **Maximum Capacity** — below 80% means replacement recommended
+5. Check **Peak Performance Capability** — if it says anything other than "Your battery is currently supporting normal peak performance," you need a replacement
+
+## iPhone Battery Life After Replacement
+
+A new battery restores your iPhone to 100% maximum capacity. You can expect:
+
+- **iPhone 16 series**: 18-22 hours of usage per charge
+- **iPhone 15 series**: 16-20 hours
+- **iPhone 14 series**: 15-18 hours
+- **iPhone 13 series**: 14-17 hours
+- **iPhone 12 series**: 12-15 hours
+- **iPhone 11 series**: 11-14 hours
+
+These numbers match what you got when the phone was new.
+
+## How to Book Battery Replacement in Bangalore
+
+Call or WhatsApp [+91 8105955009](tel:+918105955009). Share your iPhone model and battery health percentage. Get an instant quote. Pick a time slot — same-day available. Technician arrives at your home or office in Koramangala, Indiranagar, Whitefield, HSR Layout, Marathahalli, JP Nagar, Electronic City, or any other Bangalore area.
+
+## Frequently Asked Questions
+
+**How much does iPhone 14 battery replacement cost in Bangalore?**
+iPhone 14 battery replacement costs ₹3,000 at FIXplanet with doorstep service and 12-month warranty. Apple charges ₹7,900.
+
+**Does iPhone battery replacement affect my data?**
+No. Battery replacement does not touch your storage or data. All your apps, photos, and settings remain exactly as they are.
+
+**How long does the replacement battery last?**
+A quality replacement battery typically provides 2-3 years of good performance (500+ charge cycles before dropping below 80% health again).
+
+**Can I get my iPhone battery replaced at home in Bangalore?**
+Yes. FIXplanet provides doorstep battery replacement across all Bangalore areas. The technician brings the battery and all required tools to your location.
+
+## Related Guides
+
+- [iPhone Screen Replacement Cost Bangalore 2026](/blog/iphone-screen-replacement-cost-bangalore-2026)
+- [iPhone Back Glass Repair in Bangalore](/blog/iphone-back-glass-repair-bangalore)
+- [iPhone Repair in Bangalore — Doorstep Service Guide](/blog/iphone-repair-bangalore-doorstep-service-guide)
+
+---
+
+*Published by FIXplanet, Bangalore. Last updated April 2026.*
+    `,
+  },
+  {
+    slug: 'iphone-storage-upgrade-bangalore',
+    title: 'iPhone Storage Upgrade in Bangalore — Yes, It Is Possible. Here Is How.',
+    excerpt: 'Did you know your iPhone storage can be upgraded? Go from 64GB to 256GB or 128GB to 512GB. Available in Bangalore with doorstep service.',
+    category: 'Services',
+    readTime: '5 min read',
+    publishedDate: '2026-04-06',
+    image: '/images/blog/iphone-storage-upgrade.png',
+    featured: false,
+    metaDescription: 'iPhone storage upgrade in Bangalore. Upgrade from 64GB to 256GB or 128GB to 512GB. Chip-level upgrade starting ₹4,500. Same-day doorstep service by FIXplanet.',
+    keywords: ['iPhone storage upgrade Bangalore', 'iPhone storage upgrade India', 'iPhone storage increase', 'iPhone 13 storage upgrade', 'upgrade iPhone storage 64GB to 256GB'],
+    content: `
+# iPhone Storage Upgrade in Bangalore — Yes, It Is Actually Possible
+
+Most people think iPhone storage cannot be changed after purchase. They are wrong.
+
+A chip-level storage upgrade replaces the NAND flash memory chip inside your iPhone with a higher-capacity one. Your 64GB iPhone can become 256GB. Your 128GB can become 512GB. Even 1TB is possible on supported models.
+
+FIXplanet is one of the few services in Bangalore that offers this upgrade.
+
+## How Does iPhone Storage Upgrade Work?
+
+The process involves:
+
+1. **Removing the existing NAND chip** from the logic board using specialised micro-soldering equipment
+2. **Reading and backing up the chip data** including your IMEI, serial number, and device configuration
+3. **Programming a new, higher-capacity NAND chip** with your device data
+4. **Soldering the new chip** onto the logic board
+5. **Restoring your iPhone** with the new storage capacity showing in Settings
+
+This is a chip-level repair that requires micro-soldering skills, specialised equipment (hot air rework station, microscope, NAND programmer), and deep knowledge of Apple's storage architecture.
+
+## iPhone Storage Upgrade Pricing — Bangalore 2026
+
+| Upgrade Path | Price |
+|---|---|
+| 64GB → 128GB | ₹4,500 |
+| 64GB → 256GB | ₹5,500 |
+| 128GB → 256GB | ₹5,000 |
+| 128GB → 512GB | ₹7,500 |
+| 256GB → 512GB | ₹7,000 |
+| 256GB → 1TB | ₹12,000 |
+| 512GB → 1TB | ₹10,000 |
+
+*Prices vary by iPhone model. Some older models (iPhone X and below) may have limited upgrade paths. Contact us for your specific model.*
+
+## Which iPhone Models Support Storage Upgrade?
+
+| Model | Supported? | Notes |
+|---|---|---|
+| iPhone 11 series | Yes | All variants |
+| iPhone 12 series | Yes | All variants |
+| iPhone 13 series | Yes | All variants |
+| iPhone 14 series | Yes | All variants |
+| iPhone 15 series | Yes | All variants |
+| iPhone 16 series | Yes | All variants |
+| iPhone X / XR / XS | Limited | Older NAND technology, check availability |
+| iPhone 8 and below | No | Not cost-effective |
+
+## Why Upgrade Storage Instead of Buying a New iPhone?
+
+The maths is simple:
+
+- **New iPhone 15 (256GB)**: ₹79,900
+- **Your iPhone 15 (128GB) + storage upgrade to 256GB**: ₹5,000
+
+You keep your existing phone, all your data stays intact, and you get double the storage for less than 7% of a new phone's cost.
+
+This makes sense when:
+- Your phone works perfectly but storage is full
+- You shoot a lot of 4K video or ProRes
+- You have too many apps and do not want to keep deleting things
+- You bought the base model and regret not getting more storage
+
+## Is Storage Upgrade Safe? Will I Lose Data?
+
+The upgrade process requires a full backup and restore. Here is what happens:
+
+1. **Before upgrade**: Full backup of your iPhone (iCloud or local)
+2. **During upgrade**: Data is temporarily removed as the chip is swapped
+3. **After upgrade**: Your iPhone is restored from the backup with all data intact
+
+**Important**: You will lose data if you do not have a backup. Always ensure your iCloud backup is complete or do a local backup via iTunes/Finder before the appointment.
+
+## How Long Does Storage Upgrade Take?
+
+Storage upgrade takes 2-4 hours depending on the iPhone model and upgrade path. This is longer than a screen or battery replacement because of the micro-soldering work involved.
+
+For doorstep service, our technician will need a clean, well-lit workspace at your location. Alternatively, we can pick up and deliver for this specific service.
+
+## Book iPhone Storage Upgrade in Bangalore
+
+Call or WhatsApp [+91 8105955009](tel:+918105955009). Tell us your current iPhone model and storage, and what capacity you want. We will confirm availability and schedule the upgrade.
+
+Available across Bangalore — Koramangala, Indiranagar, HSR Layout, Whitefield, Marathahalli, Electronic City, Jayanagar, and all other areas.
+
+## Frequently Asked Questions
+
+**Will Apple know my storage was upgraded?**
+The new storage capacity will show correctly in Settings → General → iPhone Storage. Apple's diagnostics may detect the non-original NAND chip, which could affect Apple Store servicing for other issues.
+
+**Does storage upgrade void my Apple warranty?**
+If your iPhone is still under Apple warranty, a storage upgrade will void it. We recommend this for out-of-warranty devices only.
+
+**Can I upgrade iPhone storage without losing data?**
+A backup and restore is required. As long as you have a complete backup (iCloud or iTunes), all your data, apps, and settings are restored after the upgrade.
+
+**How much storage should I get?**
+If you are upgrading, go at least 2x your current capacity. If you are at 64GB and always running out, go to 256GB — not 128GB. The price difference is small but the convenience is significant.
+
+## Related Guides
+
+- [iPhone Screen Replacement Cost Bangalore 2026](/blog/iphone-screen-replacement-cost-bangalore-2026)
+- [iPhone Battery Replacement Cost Bangalore 2026](/blog/iphone-battery-replacement-cost-bangalore-2026)
+- [Apple Authorised vs Independent Repair](/blog/apple-authorized-vs-independent-repair-bangalore)
+
+---
+
+*Published by FIXplanet, Bangalore. Last updated April 2026.*
+    `,
+  },
+  {
+    slug: 'macbook-repair-cost-bangalore-2026',
+    title: 'MacBook Repair Cost in Bangalore (2026) — Display, Battery, Logic Board Prices',
+    excerpt: 'Complete MacBook repair pricing for Bangalore 2026. Display replacement from ₹12,000. Battery from ₹8,500. All models covered with doorstep service.',
+    category: 'Pricing Guide',
+    readTime: '6 min read',
+    publishedDate: '2026-04-06',
+    image: '/images/blog/macbook-repair-cost.png',
+    featured: false,
+    metaDescription: 'MacBook repair cost Bangalore 2026. Display replacement ₹12,000-₹45,000. Battery ₹8,500-₹15,000. Logic board from ₹15,000. Doorstep service. 12-month warranty.',
+    keywords: ['MacBook repair cost Bangalore', 'MacBook screen replacement cost India', 'MacBook battery replacement Bangalore', 'MacBook display replacement price', 'MacBook repair near me Bangalore 2026'],
+    content: `
+# MacBook Repair Cost in Bangalore (2026) — Complete Price Guide
+
+MacBook repairs at Apple Stores in Bangalore can cost anywhere from ₹15,000 to ₹85,000. Here is what independent repair actually costs — with the same quality parts and a better warranty.
+
+## MacBook Display Replacement Cost — Bangalore 2026
+
+| MacBook Model | Apple Store Price | FIXplanet Price | You Save |
+|---|---|---|---|
+| MacBook Pro 16" M3 Pro/Max | ₹72,000+ | ₹42,000 | ₹30,000+ |
+| MacBook Pro 14" M3 Pro/Max | ₹65,000+ | ₹38,000 | ₹27,000+ |
+| MacBook Pro 16" M2 Pro/Max | ₹65,000+ | ₹35,000 | ₹30,000+ |
+| MacBook Pro 14" M2 Pro/Max | ₹58,000+ | ₹32,000 | ₹26,000+ |
+| MacBook Pro 14" M1 Pro/Max | ₹52,000+ | ₹28,000 | ₹24,000+ |
+| MacBook Air 15" M3 | ₹45,000+ | ₹25,000 | ₹20,000+ |
+| MacBook Air 13" M3/M2 | ₹38,000+ | ₹20,000 | ₹18,000+ |
+| MacBook Air 13" M1 | ₹32,000+ | ₹15,000 | ₹17,000+ |
+| MacBook Pro 13" (Intel) | ₹28,000+ | ₹12,000 | ₹16,000+ |
+
+## MacBook Battery Replacement Cost — Bangalore 2026
+
+| MacBook Model | Apple Store Price | FIXplanet Price |
+|---|---|---|
+| MacBook Pro 16" (M1/M2/M3) | ₹17,900 | ₹14,000 |
+| MacBook Pro 14" (M1/M2/M3) | ₹14,900 | ₹12,000 |
+| MacBook Air 15" M3 | ₹14,900 | ₹11,000 |
+| MacBook Air 13" (M1/M2/M3) | ₹12,900 | ₹9,500 |
+| MacBook Pro 13" (Intel/M1) | ₹11,900 | ₹8,500 |
+| MacBook Air (Intel) | ₹9,900 | ₹7,500 |
+
+## MacBook Logic Board Repair Cost
+
+Apple replaces the entire logic board for any chip-level issue — costing ₹45,000 to ₹85,000. Independent repair services can often fix the specific component on the board for a fraction of the cost.
+
+| Issue | Apple Price | FIXplanet Price |
+|---|---|---|
+| Liquid damage (component-level fix) | ₹45,000-₹85,000 (board swap) | ₹15,000-₹25,000 |
+| No power / no display | ₹45,000-₹65,000 (board swap) | ₹12,000-₹20,000 |
+| USB-C port not working | ₹25,000+ | ₹5,000-₹8,000 |
+| Keyboard replacement | ₹18,000-₹35,000 | ₹8,000-₹15,000 |
+| Trackpad replacement | ₹12,000-₹20,000 | ₹5,000-₹10,000 |
+| SSD upgrade/replacement | Not offered | ₹8,000-₹15,000 |
+
+## Why MacBook Repair Is So Expensive at Apple
+
+Apple does not do component-level repair. If one capacitor fails on your logic board, they replace the entire board — including the CPU, RAM, and SSD that are soldered onto it. You pay for parts that were working fine.
+
+Independent repair technicians with micro-soldering skills can diagnose the exact failed component and replace just that part. This is why the price difference is so large for logic board issues.
+
+## How FIXplanet MacBook Repair Works
+
+1. **Contact us**: Call or WhatsApp [+91 8105955009](tel:+918105955009)
+2. **Describe the issue**: Screen cracked, not turning on, battery dying fast, liquid damage, etc.
+3. **Free diagnosis**: We diagnose the exact issue before quoting a price
+4. **Transparent quote**: You get the exact cost before any work begins. No surprises.
+5. **Repair at your location**: For screen and battery replacements, we come to your home or office. For logic board repairs, pickup and delivery is available.
+6. **12-month warranty**: Every repair covered for a full year.
+
+## When to Repair vs When to Replace Your MacBook
+
+**Repair makes sense when:**
+- Repair cost is less than 40% of a new MacBook's price
+- Your MacBook is less than 5 years old
+- Performance meets your needs (M1 and later are still very capable)
+- Only one thing is wrong (screen, battery, or a specific port)
+
+**Replace when:**
+- Multiple components are failing
+- Your MacBook is 7+ years old (Intel models before 2020)
+- Repair cost exceeds 50% of replacement cost
+- You need significantly more performance
+
+## MacBook Repair Locations in Bangalore
+
+FIXplanet provides MacBook repair across all Bangalore areas including Koramangala, Indiranagar, HSR Layout, Whitefield, Marathahalli, Electronic City, Jayanagar, JP Nagar, Bellandur, and Sarjapur Road.
+
+## Frequently Asked Questions
+
+**How much does MacBook screen replacement cost in Bangalore?**
+MacBook display replacement starts at ₹12,000 for older Intel models and goes up to ₹42,000 for the latest MacBook Pro 16" M3. This is 40-55% less than Apple Store pricing.
+
+**Can a MacBook with liquid damage be repaired?**
+Yes, in most cases. If caught early (within 48 hours of the spill), component-level repair can save the logic board. FIXplanet charges ₹15,000-₹25,000 for liquid damage repair vs Apple's ₹45,000-₹85,000 board replacement.
+
+**How long does MacBook repair take?**
+Screen and battery replacement: same day (2-4 hours). Logic board repair: 2-5 days depending on the complexity of the issue and parts availability.
+
+**Do you provide pickup and delivery for MacBook repair?**
+Yes. For repairs that take longer than a few hours, we provide free pickup and delivery across Bangalore.
+
+## Related Guides
+
+- [MacBook Not Turning On? Complete Fix Guide](/blog/macbook-not-turning-on-fix-bangalore)
+- [iPhone Screen Replacement Cost Bangalore 2026](/blog/iphone-screen-replacement-cost-bangalore-2026)
+- [Apple Authorised vs Independent Repair](/blog/apple-authorized-vs-independent-repair-bangalore)
+
+---
+
+*Published by FIXplanet, Bangalore. Last updated April 2026.*
+    `,
+  },
 ];
 
 // Helper functions

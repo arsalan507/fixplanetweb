@@ -81,12 +81,7 @@ export default function iPhoneScreenReplacementBangalorePage() {
                 "opens": "09:00",
                 "closes": "21:00"
               },
-              "priceRange": "₹₹",
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.9",
-                "reviewCount": "150"
-              }
+              "priceRange": "₹₹"
             },
             "areaServed": {
               "@type": "City",
