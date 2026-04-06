@@ -121,6 +121,9 @@ export default function AreaPage() {
                     We Come to Your Location in {area.name}
                   </h2>
                   <p className="text-gray-dark mb-4">{area.description}</p>
+                  <p className="text-sm text-gray-dark bg-teal-accent/5 border-l-2 border-teal-accent p-3 rounded-r-lg mb-4">
+                    FIXplanet serves all of Whitefield including ITPL Main Road, Whitefield Main Road, Kadugodi, EPIP Zone, Varthur, and areas near Phoenix Marketcity and VR Bengaluru. Average arrival time to Whitefield addresses is 25-35 minutes. Due to Whitefield&apos;s large IT corridor, the most requested service is MacBook repair (display and logic board) followed by iPhone screen replacements — many corporate professionals prefer doorstep service during lunch breaks.
+                  </p>
                 </div>
               </div>
 

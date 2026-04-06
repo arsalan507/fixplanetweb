@@ -107,6 +107,9 @@ export default function AreaPage() {
                     We Come to Your Location in {area.name}
                   </h2>
                   <p className="text-gray-dark mb-4">{area.description}</p>
+                  <p className="text-sm text-gray-dark bg-teal-accent/5 border-l-2 border-teal-accent p-3 rounded-r-lg mb-4">
+                    FIXplanet covers all HSR Layout sectors from Sector 1 through Sector 7, including 27th Main Road, Agara Lake area, and BDA Complex. Response time to HSR Layout is typically 15-20 minutes. The most common repairs here are iPhone 15/16 screen replacements and MacBook Air battery swaps — HSR Layout&apos;s tech startup density means professionals need fast turnaround to stay productive.
+                  </p>
                 </div>
               </div>
 

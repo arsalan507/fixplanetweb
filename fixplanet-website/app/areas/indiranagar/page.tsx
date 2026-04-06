@@ -107,6 +107,9 @@ export default function AreaPage() {
                     We Come to Your Location in {area.name}
                   </h2>
                   <p className="text-gray-dark mb-4">{area.description}</p>
+                  <p className="text-sm text-gray-dark bg-teal-accent/5 border-l-2 border-teal-accent p-3 rounded-r-lg mb-4">
+                    FIXplanet serves all of Indiranagar including 100 Feet Road, 12th Main, CMH Road, Defence Colony, and areas near Indiranagar Metro Station. Average arrival time is 20 minutes. Indiranagar&apos;s most requested services are iPhone screen replacements and MacBook Pro keyboard repairs — driven by the area&apos;s high concentration of freelancers and creative professionals working from cafes and co-working spaces.
+                  </p>
                 </div>
               </div>
 

@@ -142,6 +142,45 @@ export const LocalBusinessSchema: React.FC<LocalBusinessSchemaProps> = ({
   );
 };
 
+export const OrganizationSchema: React.FC = () => {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'FIXplanet',
+    url: 'https://www.fixplanet.in',
+    logo: 'https://www.fixplanet.in/images/logo-transparent.png',
+    description: 'FIXplanet is a doorstep Apple device repair service in Bangalore, India. Same-day iPhone, MacBook, iPad, and Apple Watch repairs with 12-month warranty.',
+    telephone: '+918105955009',
+    email: 'hello@fixplanet.in',
+    foundingLocation: {
+      '@type': 'Place',
+      name: 'Bangalore, Karnataka, India',
+    },
+    areaServed: {
+      '@type': 'City',
+      name: 'Bangalore',
+    },
+    sameAs: [
+      'https://www.instagram.com/fixplanet.in',
+      'https://www.facebook.com/fixplanet.in',
+    ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+918105955009',
+      contactType: 'customer service',
+      availableLanguage: ['English', 'Hindi', 'Kannada'],
+      areaServed: 'IN',
+    },
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+};
+
 interface ServiceSchemaProps {
   serviceType: string;
   description: string;

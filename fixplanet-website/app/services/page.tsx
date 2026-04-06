@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Clock, Shield, Star, CheckCircle2, Eye, Award } from 'lucide-react';
+import { Clock, Shield, Star, CheckCircle2, Eye, Award, Smartphone, Droplets, BatteryWarning, Zap, Camera, MessageCircle, X } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
 import ScrollReveal from '@/components/ui/ScrollReveal';
@@ -341,6 +341,92 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Common Problems Grid — fixcare.in inspired */}
+      <section className="py-16 bg-gray-light">
+        <div className="container-custom">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold text-navy-primary mb-3">
+              What&apos;s Wrong With Your Device?
+            </h2>
+            <p className="text-gray-dark text-lg">Select your issue — we fix all of these at your doorstep</p>
+          </div>
+          <ScrollReveal>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {[
+              { icon: Smartphone, label: 'Cracked Screen', tag: 'From ₹3,500' },
+              { icon: BatteryWarning, label: 'Battery Dying', tag: '45 min fix' },
+              { icon: Droplets, label: 'Water Damage', tag: 'Emergency' },
+              { icon: Zap, label: 'Won\'t Charge', tag: 'From ₹2,000' },
+              { icon: Camera, label: 'Camera Blurry', tag: 'From ₹3,500' },
+              { icon: Smartphone, label: 'Back Glass', tag: 'From ₹4,500' },
+            ].map((problem) => (
+              <a
+                key={problem.label}
+                href="https://wa.me/918105955009?text=Hi!%20My%20device%20has%20this%20issue"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white rounded-xl p-5 text-center shadow-card hover:shadow-card-hover transition-all card-3d group cursor-pointer"
+              >
+                <div className="w-14 h-14 bg-teal-accent/10 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-teal-accent/20 transition-colors">
+                  <problem.icon className="text-teal-accent" size={26} />
+                </div>
+                <div className="font-semibold text-navy-primary text-sm mb-1">{problem.label}</div>
+                <span className="badge badge-teal text-xs">{problem.tag}</span>
+              </a>
+            ))}
+          </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Standard vs OEM Comparison — fixcare.in inspired */}
+      <section className="py-16 bg-white">
+        <div className="container-custom max-w-4xl">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold text-navy-primary mb-3">
+              Standard vs Premium Parts — What&apos;s the Difference?
+            </h2>
+            <p className="text-gray-dark text-lg">Choose the right quality level for your budget</p>
+          </div>
+          <ScrollReveal>
+          <div className="overflow-x-auto rounded-2xl border border-gray-200">
+            <table className="w-full text-left">
+              <thead>
+                <tr className="bg-navy-primary text-white">
+                  <th className="p-4 font-semibold">Feature</th>
+                  <th className="p-4 font-semibold">Standard (OEM-Grade)</th>
+                  <th className="p-4 font-semibold text-teal-accent">Premium (Original)</th>
+                </tr>
+              </thead>
+              <tbody className="bg-white">
+                {[
+                  { feature: 'Display Quality', standard: 'Matching specifications', premium: 'Identical to Apple original' },
+                  { feature: 'True Tone', standard: 'Not supported', premium: 'Fully supported' },
+                  { feature: 'Color Accuracy', standard: '95% match', premium: '100% match' },
+                  { feature: 'Touch Sensitivity', standard: 'Excellent', premium: 'Identical to original' },
+                  { feature: 'Price Range', standard: '₹3,500 - ₹7,000', premium: '₹6,000 - ₹12,000' },
+                  { feature: 'Warranty', standard: '12 months', premium: '12 months' },
+                  { feature: 'Best For', standard: 'Budget-conscious users', premium: 'Professionals & creatives' },
+                ].map((row, i) => (
+                  <tr key={row.feature} className={`border-b border-gray-100 ${i % 2 === 1 ? 'bg-gray-50' : ''}`}>
+                    <td className="p-4 font-medium text-navy-primary">{row.feature}</td>
+                    <td className="p-4 text-gray-dark">{row.standard}</td>
+                    <td className="p-4 text-navy-primary font-medium">{row.premium}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-center text-sm text-gray-dark mt-4">
+            Both options come with 12-month warranty and our Fixed-or-Free guarantee. Not sure which to choose?{' '}
+            <a href="https://wa.me/918105955009?text=Hi!%20I%20need%20help%20choosing%20Standard%20vs%20Premium%20parts" target="_blank" rel="noopener noreferrer" className="text-teal-accent font-medium hover:underline">
+              Ask us on WhatsApp
+            </a>
+          </p>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* Device Services Sections */}
       {devices.map((device, index) => (
         <section
@@ -522,19 +608,31 @@ export default function ServicesPage() {
       <section className="py-16 bg-navy-primary text-white">
         <div className="container-custom text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Get Started?
+            Your Device Fixed Today — Or You Pay Nothing
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Get instant pricing for your device. No commitment required.
+            WhatsApp us your device issue. Get exact pricing in 2 minutes. Same-day doorstep service.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button href="/pricing" size="lg">
-              Get Instant Quote
-            </Button>
-            <Button href="/contact" variant="ghost" size="lg" className="!text-white !border-white hover:!bg-white hover:!text-navy-primary">
-              Contact Us
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <a
+              href="https://wa.me/918105955009?text=Hi!%20I%20need%20a%20repair%20quote"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-whatsapp inline-flex items-center justify-center font-medium rounded-lg px-8 py-4 text-lg text-white"
+            >
+              <MessageCircle className="mr-2" size={22} />
+              WhatsApp for Instant Quote
+            </a>
+            <Button href="/pricing" variant="ghost" size="lg" className="!text-white !border-white hover:!bg-white hover:!text-navy-primary">
+              Price Calculator
             </Button>
           </div>
+          <p className="text-sm text-gray-400">
+            Want worry-free coverage?{' '}
+            <Link href="/care-plan" className="text-teal-accent hover:underline font-medium">
+              Check our Annual Care Plan →
+            </Link>
+          </p>
         </div>
       </section>
     </div>

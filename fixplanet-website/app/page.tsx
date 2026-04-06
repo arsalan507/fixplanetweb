@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { Phone, Shield, Clock, Calculator, Star, CheckCircle2, Zap, Eye, Award, MessageCircle } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
-import { LocalBusinessSchema } from '@/components/ui/Schema';
+import { LocalBusinessSchema, OrganizationSchema } from '@/components/ui/Schema';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 import GuaranteeBox from '@/components/ui/GuaranteeBox';
 
@@ -25,6 +25,7 @@ export default function Home() {
   return (
     <>
       <LocalBusinessSchema />
+      <OrganizationSchema />
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-b from-white to-gray-light py-16 md:py-24">

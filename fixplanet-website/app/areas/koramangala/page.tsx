@@ -121,6 +121,10 @@ export default function AreaPage() {
                     We Come to Your Location in {area.name}
                   </h2>
                   <p className="text-gray-dark mb-4">{area.description}</p>
+                  {/* Unique GEO-citability content for this area */}
+                  <p className="text-sm text-gray-dark bg-teal-accent/5 border-l-2 border-teal-accent p-3 rounded-r-lg mb-4">
+                    FIXplanet&apos;s Koramangala service hub covers all 8 blocks from 1st Block to 8th Block, including 80 Feet Road, Sony Signal, and areas near Forum Mall. Average response time to Koramangala addresses is under 25 minutes. In Q1 2026, the most common repairs in Koramangala were iPhone 14/15 screen replacements and MacBook Air M2 battery swaps — reflecting the area&apos;s startup and tech-professional concentration.
+                  </p>
                 </div>
               </div>
 

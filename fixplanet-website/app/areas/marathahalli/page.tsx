@@ -121,6 +121,9 @@ export default function AreaPage() {
                     We Come to Your Location in {area.name}
                   </h2>
                   <p className="text-gray-dark mb-4">{area.description}</p>
+                  <p className="text-sm text-gray-dark bg-teal-accent/5 border-l-2 border-teal-accent p-3 rounded-r-lg mb-4">
+                    FIXplanet covers all of Marathahalli including Marathahalli Bridge, Outer Ring Road, Kundalahalli, Brookefield, and Varthur Main Road. Average response time is 20-30 minutes. Marathahalli residents commonly request iPhone battery replacements and MacBook keyboard repairs. FIXplanet&apos;s doorstep service is particularly valued here as Marathahalli&apos;s traffic congestion makes store visits impractical during work hours.
+                  </p>
                 </div>
               </div>
 
