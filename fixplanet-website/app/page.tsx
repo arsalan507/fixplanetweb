@@ -2,10 +2,12 @@ import React from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Phone, Shield, Clock, Calculator, Star, CheckCircle2, Zap, Eye, Award } from 'lucide-react';
+import { Phone, Shield, Clock, Calculator, Star, CheckCircle2, Zap, Eye, Award, MessageCircle } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
 import { LocalBusinessSchema } from '@/components/ui/Schema';
+import ScrollReveal from '@/components/ui/ScrollReveal';
+import GuaranteeBox from '@/components/ui/GuaranteeBox';
 
 export const metadata: Metadata = {
   title: 'iPhone Repair Bangalore — From ₹2,500 | 60-Min Doorstep | FIXplanet',
@@ -17,7 +19,8 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  const phone = process.env.NEXT_PUBLIC_PHONE || '+91-XXXX-XXXXXX';
+  const phone = process.env.NEXT_PUBLIC_PHONE || '+91 8105955009';
+  const whatsapp = process.env.NEXT_PUBLIC_WHATSAPP || '918105955009';
 
   return (
     <>
@@ -40,21 +43,35 @@ export default function Home() {
                   sizes="(max-width: 768px) 100vw"
                 />
               </div>
+              {/* Live Badge */}
+              <div className="mb-4">
+                <span className="badge badge-live text-sm">
+                  Same-day slots available
+                </span>
+              </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy-primary mb-6 leading-tight">
                 iPhone & MacBook Repair Bangalore — From ₹2,500
               </h1>
-              <p className="text-lg md:text-xl text-gray-dark mb-8 leading-relaxed">
+              <p className="text-lg md:text-xl text-gray-dark mb-4 leading-relaxed">
                 Same-day doorstep service. 30-60 minute response. 12-month warranty on all repairs.
                 We come to you in Koramangala, Indiranagar, Whitefield, HSR Layout & 140+ Bangalore areas.
+              </p>
+              <p className="text-base text-teal-accent font-semibold mb-8">
                 If we don&apos;t fix it, you don&apos;t pay.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button href="/pricing" size="lg">
-                  Get Instant Quote
-                </Button>
+                <a
+                  href={`https://wa.me/${whatsapp}?text=Hi!%20I%20need%20help%20with%20my%20device%20repair%20in%20Bangalore`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-whatsapp animate-pulse-green inline-flex items-center justify-center font-medium rounded-lg px-8 py-4 text-lg text-white min-h-[52px]"
+                >
+                  <MessageCircle className="mr-2" size={22} />
+                  WhatsApp Us Now
+                </a>
                 <Button href={`tel:${phone}`} variant="ghost" size="lg">
                   <Phone className="mr-2" size={20} />
-                  Call Now: {phone}
+                  Call: {phone}
                 </Button>
               </div>
             </div>
@@ -73,25 +90,29 @@ export default function Home() {
       </section>
 
       {/* Trust Bar */}
-      <section className="bg-white py-12 border-y border-gray-medium">
+      <section className="bg-navy-primary py-10">
         <div className="container-custom">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-teal-accent mb-2">1,000+</div>
-              <div className="text-gray-dark">Devices Restored</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-teal-accent mb-2">4.9★</div>
-              <div className="text-gray-dark">Google Rating</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-teal-accent mb-2">12-Month</div>
-              <div className="text-gray-dark">Warranty</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-teal-accent mb-2">Same-Day</div>
-              <div className="text-gray-dark">Service</div>
-            </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <ScrollReveal delay={0} className="text-center">
+              <div className="text-4xl font-bold text-white mb-1">1,000+</div>
+              <div className="text-gray-400 text-sm">Devices Restored</div>
+              <span className="badge badge-teal mt-2">Trusted</span>
+            </ScrollReveal>
+            <ScrollReveal delay={100} className="text-center">
+              <div className="text-4xl font-bold text-white mb-1">5.0★</div>
+              <div className="text-gray-400 text-sm">Google Rating</div>
+              <span className="badge badge-gold mt-2">Verified</span>
+            </ScrollReveal>
+            <ScrollReveal delay={200} className="text-center">
+              <div className="text-4xl font-bold text-teal-accent mb-1">12-Month</div>
+              <div className="text-gray-400 text-sm">Warranty</div>
+              <span className="badge badge-success mt-2">Industry Best</span>
+            </ScrollReveal>
+            <ScrollReveal delay={300} className="text-center">
+              <div className="text-4xl font-bold text-teal-accent mb-1">30-60 Min</div>
+              <div className="text-gray-400 text-sm">Response Time</div>
+              <span className="badge badge-live mt-2">Live Tracking</span>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -407,6 +428,15 @@ export default function Home() {
               <div className="text-sm">Bangalore&apos;s #1</div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Guarantee Section */}
+      <section className="py-16 bg-gray-light">
+        <div className="container-custom max-w-4xl">
+          <ScrollReveal>
+            <GuaranteeBox />
+          </ScrollReveal>
         </div>
       </section>
 

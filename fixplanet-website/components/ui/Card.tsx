@@ -20,11 +20,11 @@ const Card: React.FC<CardProps> = ({
     lg: 'p-8',
   };
 
-  const hoverClass = hover ? 'hover:shadow-card-hover transition-shadow duration-200' : '';
+  const hoverClass = hover ? 'card-3d' : '';
 
   return (
     <div
-      className={`bg-white rounded-lg shadow-card ${paddingClasses[padding]} ${hoverClass} ${className}`}
+      className={`bg-white rounded-xl shadow-card ${paddingClasses[padding]} ${hoverClass} ${className}`}
     >
       {children}
     </div>
