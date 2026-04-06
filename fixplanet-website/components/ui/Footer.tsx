@@ -45,6 +45,8 @@ const Footer: React.FC = () => {
               <li><Link href="/services#watch" className="text-gray-300 hover:text-teal-accent transition-colors">Apple Watch Care</Link></li>
               <li><Link href="/bangalore-locations" className="text-gray-300 hover:text-teal-accent transition-colors">Service Areas</Link></li>
               <li><Link href="/faq" className="text-gray-300 hover:text-teal-accent transition-colors">FAQ</Link></li>
+              <li><Link href="/care-plan" className="text-teal-accent hover:underline font-medium">Annual Care Plan</Link></li>
+              <li><Link href="/refer" className="text-teal-accent hover:underline font-medium">Refer & Earn ₹500</Link></li>
             </ul>
           </div>
 

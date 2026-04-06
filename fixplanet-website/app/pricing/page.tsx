@@ -70,46 +70,81 @@ export default function PricingPage() {
     ]
   };
 
-  const calculateEstimate = () => {
+  // Detailed per-issue pricing for more accurate estimates
+  const issuePricing: Record<string, Record<string, { min: number; max: number; warranty: string; turnaround: string }>> = {
+    'iPhone': {
+      'Original screen': { min: 3500, max: 7000, warranty: '12 months', turnaround: '1-2 hours' },
+      'Premium screen': { min: 6000, max: 12000, warranty: '12 months', turnaround: '1-2 hours' },
+      'Touch & glass': { min: 2500, max: 5000, warranty: '6 months', turnaround: '1-2 hours' },
+      'Battery': { min: 2500, max: 5500, warranty: '12 months', turnaround: '45-60 min' },
+      'Charging port': { min: 2000, max: 4000, warranty: '6 months', turnaround: '1-2 hours' },
+      'Ear speaker': { min: 1500, max: 3000, warranty: '6 months', turnaround: '1 hour' },
+      'Loud speaker': { min: 1500, max: 3000, warranty: '6 months', turnaround: '1 hour' },
+      'Backglass': { min: 4500, max: 9000, warranty: '6 months', turnaround: '2-3 hours' },
+      'Others': { min: 2000, max: 8000, warranty: '3-6 months', turnaround: 'After diagnosis' },
+    },
+    'MacBook': {
+      'Screen': { min: 12000, max: 45000, warranty: '12 months', turnaround: '24-48 hours' },
+      'Battery': { min: 8500, max: 18000, warranty: '12 months', turnaround: '2-4 hours' },
+      'Keyboard': { min: 8000, max: 22000, warranty: '6 months', turnaround: '24-48 hours' },
+      'Liquid damage': { min: 5000, max: 25000, warranty: '3 months', turnaround: '3-7 days' },
+      'Not powering on': { min: 5000, max: 40000, warranty: '3-6 months', turnaround: '3-7 days' },
+      'Others': { min: 5000, max: 20000, warranty: '3-6 months', turnaround: 'After diagnosis' },
+    },
+    'iPad': {
+      'Touch & glass': { min: 5000, max: 15000, warranty: '6 months', turnaround: '24 hours' },
+      'Screen': { min: 6000, max: 25000, warranty: '12 months', turnaround: '24-48 hours' },
+      'Battery': { min: 4500, max: 9000, warranty: '12 months', turnaround: '2-4 hours' },
+      'Charging port': { min: 2500, max: 5000, warranty: '6 months', turnaround: '2-3 hours' },
+      'Others': { min: 3000, max: 10000, warranty: '3-6 months', turnaround: 'After diagnosis' },
+    },
+    'iWatch': {
+      'Screen': { min: 3500, max: 12000, warranty: '6 months', turnaround: '2-4 hours' },
+      'Touch & glass': { min: 3000, max: 8000, warranty: '6 months', turnaround: '2-4 hours' },
+      'Battery': { min: 2500, max: 6000, warranty: '6 months', turnaround: '2-3 hours' },
+      'Others': { min: 2000, max: 5000, warranty: '3 months', turnaround: 'After diagnosis' },
+    },
+  };
+
+  // Auto-calculate when issues change (no button needed — reduce friction)
+  React.useEffect(() => {
     if (!device || !model || issues.length === 0) {
-      alert('Please fill in all required fields');
+      setEstimate(null);
       return;
     }
 
-    // Simplified pricing logic
-    let partsMin = 2000;
-    let partsMax = 5000;
-    let serviceBase = 500;
+    let totalMin = 0;
+    let totalMax = 0;
+    let bestWarranty = '3 months';
+    let bestTurnaround = 'After diagnosis';
+    const warrantyOrder = ['3 months', '3-6 months', '6 months', '12 months'];
 
-    if (device === 'iPhone') {
-      partsMin = 3500;
-      partsMax = 12000;
-    } else if (device === 'MacBook') {
-      partsMin = 8000;
-      partsMax = 45000;
-    } else if (device === 'iPad') {
-      partsMin = 4500;
-      partsMax = 25000;
+    for (const issue of issues) {
+      const pricing = issuePricing[device]?.[issue];
+      if (pricing) {
+        totalMin += pricing.min;
+        totalMax += pricing.max;
+        if (warrantyOrder.indexOf(pricing.warranty) > warrantyOrder.indexOf(bestWarranty)) {
+          bestWarranty = pricing.warranty;
+        }
+        if (pricing.turnaround !== 'After diagnosis') {
+          bestTurnaround = pricing.turnaround;
+        }
+      }
     }
-
-    // Multiply by number of issues
-    partsMin *= issues.length;
-    partsMax *= issues.length;
-
-    const total = Math.floor((partsMin + partsMax) / 2 + serviceBase);
 
     setEstimate({
       device,
       model,
       issues,
-      partsMin,
-      partsMax,
-      service: serviceBase,
-      total,
-      warranty: '6-12 months',
-      turnaround: '24-48 hours',
+      partsMin: totalMin,
+      partsMax: totalMax,
+      service: 0,
+      total: Math.floor((totalMin + totalMax) / 2),
+      warranty: bestWarranty,
+      turnaround: bestTurnaround,
     });
-  };
+  }, [device, model, issues]);
 
   return (
     <div>
@@ -213,36 +248,26 @@ export default function PricingPage() {
                   </div>
                 )}
 
-                {/* Calculate Button */}
-                {issues.length > 0 && (
-                  <Button onClick={calculateEstimate} size="lg" fullWidth>
-                    Calculate Estimate
-                  </Button>
-                )}
               </div>
             </Card>
 
-            {/* Results */}
+            {/* Results — auto-calculated, no button needed */}
             {estimate && (
               <Card padding="lg" className="mt-8 bg-gradient-to-br from-teal-accent to-navy-primary text-white">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="badge badge-gold">Instant Estimate</span>
+                  <span className="badge badge-live">Live Pricing</span>
+                </div>
                 <h3 className="text-2xl font-bold mb-6">Your Estimated Price</h3>
 
                 <div className="bg-white/10 rounded-lg p-6 mb-6">
                   <div className="text-4xl font-bold mb-2">
                     ₹{estimate.partsMin.toLocaleString()} - ₹{estimate.partsMax.toLocaleString()}
                   </div>
-                  <div className="text-lg opacity-90">Estimated Total</div>
+                  <div className="text-lg opacity-90">Estimated total — includes parts, labor &amp; doorstep visit</div>
                 </div>
 
                 <div className="space-y-3 mb-6">
-                  <div className="flex justify-between">
-                    <span>Parts & Components:</span>
-                    <span className="font-semibold">₹{estimate.partsMin.toLocaleString()} - ₹{estimate.partsMax.toLocaleString()}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Service Fee:</span>
-                    <span className="font-semibold">₹{estimate.service.toLocaleString()}</span>
-                  </div>
                   <div className="flex justify-between pt-3 border-t border-white/20">
                     <span>Turnaround Time:</span>
                     <span className="font-semibold">{estimate.turnaround}</span>
@@ -258,9 +283,15 @@ export default function PricingPage() {
                   This is an estimate. Final price confirmed after diagnosis.
                 </div>
 
-                <Button href="/contact" size="lg" fullWidth className="!bg-white !text-navy-primary hover:!bg-gray-100">
-                  Book This Service Now
-                </Button>
+                <a
+                  href={`https://wa.me/918105955009?text=${encodeURIComponent(`Hi FIXplanet! I need a repair quote:\n\nDevice: ${estimate.model}\nIssue: ${estimate.issues.join(', ')}\nEstimated: ₹${estimate.partsMin.toLocaleString()} - ₹${estimate.partsMax.toLocaleString()}\n\nPlease confirm exact pricing and availability.`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full text-center bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg px-6 py-4 text-lg transition-colors"
+                >
+                  WhatsApp — Confirm Exact Price
+                </a>
+                <p className="text-center text-sm text-white/70 mt-3">Or call +91 8105955009 for instant confirmation</p>
               </Card>
             )}
           </div>
