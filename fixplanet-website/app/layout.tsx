@@ -110,7 +110,7 @@ export default function RootLayout({
           </noscript>
         )}
         <Navigation />
-        <main className="min-h-screen pt-20 pb-16 md:pb-0">{children}</main>
+        <main className="min-h-screen pt-20 pb-20 md:pb-0">{children}</main>
         <Footer />
         {/* Sticky Mobile CTA Bar */}
         <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-navy-primary border-t border-gray-700 shadow-lg">

@@ -205,10 +205,9 @@ export default async function BlogPostPage({ params }: Props) {
           </Link>
 
           {/* Category Badge */}
-          <div className="mb-4">
-            <span className="bg-teal-accent text-white px-3 py-1 rounded-full text-sm font-medium">
-              {post.category}
-            </span>
+          <div className="mb-4 flex flex-wrap gap-2">
+            <span className="badge badge-teal">{post.category}</span>
+            <span className="badge badge-gold">12-Month Warranty on All Repairs</span>
           </div>
 
           {/* Title */}

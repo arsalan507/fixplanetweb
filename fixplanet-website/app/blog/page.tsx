@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Clock, Calendar, ArrowRight } from 'lucide-react';
 import Card from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
+import ScrollReveal from '@/components/ui/ScrollReveal';
 import { getFeaturedPost, getRegularPosts } from '@/data/blog-posts';
 
 export const metadata: Metadata = {
@@ -44,6 +45,7 @@ export default function BlogPage() {
             <div className="mb-6">
               <h2 className="text-2xl font-bold text-navy-primary">Featured Article</h2>
             </div>
+            <ScrollReveal>
             <Card hover padding="none" className="overflow-hidden">
               <div className="grid lg:grid-cols-2 gap-0">
                 <div className="relative h-64 lg:h-full">
@@ -54,7 +56,7 @@ export default function BlogPage() {
                     className="object-cover"
                   />
                   <div className="absolute top-4 left-4">
-                    <span className="bg-teal-accent text-white px-3 py-1 rounded-full text-sm font-medium">
+                    <span className="badge badge-teal">
                       {featuredPost.category}
                     </span>
                   </div>
@@ -75,8 +77,7 @@ export default function BlogPage() {
                         day: 'numeric',
                       })}
                     </span>
-                    <span className="flex items-center">
-                      <Clock size={16} className="mr-1" />
+                    <span className="badge badge-gold">
                       {featuredPost.readTime}
                     </span>
                   </div>
@@ -87,6 +88,7 @@ export default function BlogPage() {
                 </div>
               </div>
             </Card>
+            </ScrollReveal>
           </div>
         </section>
       )}

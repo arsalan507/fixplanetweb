@@ -10,6 +10,7 @@ import Button from '@/components/ui/Button';
 import Input from '@/components/ui/Input';
 import Select from '@/components/ui/Select';
 import Card from '@/components/ui/Card';
+import ScrollReveal from '@/components/ui/ScrollReveal';
 
 const contactSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
@@ -95,6 +96,19 @@ export default function ContactPage() {
           <p className="text-xl text-gray-300 max-w-3xl">
             60-minute response guarantee. Multiple ways to reach us.
           </p>
+        </div>
+      </section>
+
+      {/* Trust badges */}
+      <section className="bg-navy-primary py-4 border-b border-white/10">
+        <div className="container-custom">
+          <div className="flex flex-wrap items-center justify-center gap-6 text-white text-sm">
+            <span className="flex items-center gap-2"><span className="badge badge-live">LIVE</span> 60-min response guarantee</span>
+            <span className="text-white/40 hidden md:block">|</span>
+            <span className="badge badge-success">Free Diagnosis</span>
+            <span className="text-white/40 hidden md:block">|</span>
+            <span className="badge badge-gold">Same-Day Service Available</span>
+          </div>
         </div>
       </section>
 
@@ -218,8 +232,9 @@ export default function ContactPage() {
             </div>
 
             {/* Contact Methods */}
+            <ScrollReveal animation="fade-in-right">
             <div className="space-y-6">
-              <Card hover padding="lg">
+              <Card hover padding="lg" className="card-3d">
                 <Phone className="text-teal-accent mb-3" size={32} />
                 <h3 className="text-xl font-semibold mb-2 text-navy-primary">Call Us Now</h3>
                 <a href={`tel:${phone}`} className="text-lg font-medium text-teal-accent hover:underline">
@@ -228,7 +243,7 @@ export default function ContactPage() {
                 <p className="text-sm text-gray-dark mt-2">Available 9 AM - 9 PM, 7 days</p>
               </Card>
 
-              <Card hover padding="lg">
+              <Card hover padding="lg" className="card-3d">
                 <MessageCircle className="text-green-500 mb-3" size={32} />
                 <h3 className="text-xl font-semibold mb-2 text-navy-primary">Chat on WhatsApp</h3>
                 <a
@@ -242,7 +257,7 @@ export default function ContactPage() {
                 <p className="text-sm text-gray-dark mt-2">Fastest response, share device photos</p>
               </Card>
 
-              <Card hover padding="lg">
+              <Card hover padding="lg" className="card-3d">
                 <Mail className="text-teal-accent mb-3" size={32} />
                 <h3 className="text-xl font-semibold mb-2 text-navy-primary">Email Us</h3>
                 <a href={`mailto:${email}`} className="text-lg font-medium text-teal-accent hover:underline break-all">
@@ -259,6 +274,7 @@ export default function ContactPage() {
                 <p className="text-sm text-white/80 mt-2">Same-day service available</p>
               </Card>
             </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>

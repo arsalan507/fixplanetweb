@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Calculator, CheckCircle2, Clock, Shield } from 'lucide-react';
+import { Calculator, CheckCircle2, Clock, Shield, Star } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
 import Select from '@/components/ui/Select';
@@ -271,6 +271,14 @@ export default function PricingPage() {
       <section className="py-16 bg-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
+            {/* Trust strip */}
+            <div className="flex flex-wrap items-center justify-center gap-4 mb-12 p-4 bg-gray-light rounded-xl">
+              <span className="badge badge-success flex items-center gap-1"><Shield size={14} /> Fixed or Free Guarantee</span>
+              <span className="badge badge-gold flex items-center gap-1"><Star size={14} /> 12-Month Warranty</span>
+              <span className="badge badge-teal">Free Diagnosis</span>
+              <span className="badge badge-live">Same-Day Available</span>
+            </div>
+
             <h2 className="text-3xl font-bold text-navy-primary mb-8 text-center">
               iPhone Repair Prices in Bangalore (2026)
             </h2>

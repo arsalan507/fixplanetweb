@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { Clock, Shield, Star, CheckCircle2, Eye, Award } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
+import ScrollReveal from '@/components/ui/ScrollReveal';
+import GuaranteeBox from '@/components/ui/GuaranteeBox';
 
 export const metadata: Metadata = {
   title: 'iPhone, MacBook, iPad Repair Bangalore — Same-Day Doorstep Service',
@@ -282,10 +284,11 @@ export default function ServicesPage() {
       {/* Featured Service: iPhone Screen Replacement */}
       <section className="bg-white py-16 border-b-4 border-teal-accent">
         <div className="container-custom">
+          <ScrollReveal>
           <div className="bg-gradient-to-r from-teal-accent/10 to-navy-primary/10 rounded-2xl p-8 md:p-12">
             <div className="flex items-center gap-3 mb-4">
               <Star className="w-8 h-8 text-teal-accent fill-teal-accent" />
-              <span className="text-sm font-bold text-teal-accent uppercase tracking-wide">
+              <span className="badge badge-gold">
                 #1 Most Requested Service
               </span>
             </div>
@@ -334,6 +337,7 @@ export default function ServicesPage() {
               </Button>
             </div>
           </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -362,12 +366,18 @@ export default function ServicesPage() {
               </div>
             </div>
 
+            <ScrollReveal>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {device.services.map((service) => (
-                <Card key={service.name} hover padding="lg">
-                  <h3 className="text-xl font-semibold text-navy-primary mb-2">
-                    {service.name}
-                  </h3>
+              {device.services.map((service, serviceIndex) => (
+                <Card key={service.name} hover padding="lg" className="card-3d">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="text-xl font-semibold text-navy-primary">
+                      {service.name}
+                    </h3>
+                    {service.name === 'Screen Replacement' && <span className="badge badge-gold">Most Popular</span>}
+                    {service.name === 'Display Replacement' && <span className="badge badge-teal">High Ticket</span>}
+                    {service.name === 'Battery Replacement' && <span className="badge badge-success">Quick Fix</span>}
+                  </div>
                   <p className="text-gray-dark mb-4 text-sm">
                     {service.description}
                   </p>
@@ -391,6 +401,7 @@ export default function ServicesPage() {
                 </Card>
               ))}
             </div>
+            </ScrollReveal>
           </div>
         </section>
       ))}
@@ -407,8 +418,9 @@ export default function ServicesPage() {
             </p>
           </div>
 
+          <ScrollReveal>
           <div className="grid md:grid-cols-3 gap-8">
-            <Card hover padding="lg" className="relative">
+            <Card hover padding="lg" className="relative card-3d">
               <div className="text-center mb-6">
                 <h3 className="text-2xl font-bold text-navy-primary mb-2">Standard Service</h3>
                 <div className="text-gray-dark">Base pricing</div>
@@ -434,9 +446,9 @@ export default function ServicesPage() {
               <div className="text-center text-sm text-teal-accent font-medium">Best for most customers</div>
             </Card>
 
-            <Card hover padding="lg" className="relative border-2 border-teal-accent">
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-teal-accent text-white px-4 py-1 rounded-full text-sm font-medium">
-                Popular
+            <Card hover padding="lg" className="relative border-2 border-teal-accent card-3d">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                <span className="badge badge-gold">Most Popular</span>
               </div>
               <div className="text-center mb-6">
                 <h3 className="text-2xl font-bold text-navy-primary mb-2">Premium Service</h3>
@@ -463,7 +475,7 @@ export default function ServicesPage() {
               <div className="text-center text-sm text-teal-accent font-medium">Best for professionals</div>
             </Card>
 
-            <Card hover padding="lg">
+            <Card hover padding="lg" className="card-3d">
               <div className="text-center mb-6">
                 <h3 className="text-2xl font-bold text-navy-primary mb-2">Elite Service</h3>
                 <div className="text-navy-primary font-semibold">+60%</div>
@@ -493,6 +505,16 @@ export default function ServicesPage() {
               <div className="text-center text-sm text-teal-accent font-medium">Best for executives</div>
             </Card>
           </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Guarantee Section */}
+      <section className="py-16 bg-gray-light">
+        <div className="container-custom max-w-4xl">
+          <ScrollReveal>
+            <GuaranteeBox />
+          </ScrollReveal>
         </div>
       </section>
 

@@ -5,6 +5,8 @@ import Image from 'next/image';
 import { Shield, Eye, Zap, Award, Heart, CheckCircle2, Clock, Star } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
+import ScrollReveal from '@/components/ui/ScrollReveal';
+import GuaranteeBox from '@/components/ui/GuaranteeBox';
 
 export const metadata: Metadata = {
   title: 'About FIXplanet - Bangalore\'s Trusted Apple Care Specialists',
@@ -81,6 +83,7 @@ export default function AboutPage() {
             </p>
           </div>
 
+          <ScrollReveal>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -114,7 +117,7 @@ export default function AboutPage() {
                 description: 'Every device matters. Every customer matters. We aim for perfection in every service.',
               },
             ].map((value) => (
-              <Card key={value.title} hover padding="lg" className="text-center">
+              <Card key={value.title} hover padding="lg" className="text-center card-3d">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-accent/10 rounded-full mb-4">
                   <value.icon className="text-teal-accent" size={32} />
                 </div>
@@ -123,6 +126,7 @@ export default function AboutPage() {
               </Card>
             ))}
           </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -222,6 +226,7 @@ export default function AboutPage() {
             </p>
           </div>
 
+          <ScrollReveal>
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
               {
@@ -240,7 +245,7 @@ export default function AboutPage() {
                 description: 'Post-service support team available via WhatsApp and phone. We follow up to ensure every repair meets our standards.',
               },
             ].map((item) => (
-              <Card key={item.title} hover padding="lg" className="text-center">
+              <Card key={item.title} hover padding="lg" className="text-center card-3d">
                 <div className="w-20 h-20 bg-teal-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <item.icon className="text-teal-accent" size={36} />
                 </div>
@@ -249,6 +254,7 @@ export default function AboutPage() {
               </Card>
             ))}
           </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -278,6 +284,15 @@ export default function AboutPage() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Guarantee */}
+      <section className="py-12 bg-gray-light">
+        <div className="container-custom max-w-4xl">
+          <ScrollReveal>
+            <GuaranteeBox />
+          </ScrollReveal>
         </div>
       </section>
 

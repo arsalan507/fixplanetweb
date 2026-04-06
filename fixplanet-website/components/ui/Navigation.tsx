@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Menu, X, Phone, MessageCircle } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 import Button from './Button';
 
 const Navigation: React.FC = () => {
@@ -29,7 +29,6 @@ const Navigation: React.FC = () => {
   ];
 
   const phone = process.env.NEXT_PUBLIC_PHONE || '+91-XXXX-XXXXXX';
-  const whatsapp = process.env.NEXT_PUBLIC_WHATSAPP || '91XXXXXXXXXX';
 
   return (
     <>
@@ -123,15 +122,6 @@ const Navigation: React.FC = () => {
         )}
       </div>
     </nav>
-
-    {/* Floating WhatsApp Button (Mobile) */}
-    <a
-      href={`https://wa.me/${whatsapp}?text=Hi%20FIXplanet,%20I%20need%20help%20with%20my%20device`}
-      className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors z-50 lg:hidden"
-      aria-label="Chat on WhatsApp"
-    >
-      <MessageCircle size={24} />
-    </a>
     </>
   );
 };

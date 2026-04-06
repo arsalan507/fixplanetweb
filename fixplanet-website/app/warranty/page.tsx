@@ -1,6 +1,9 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { Shield, CheckCircle2, Clock, RefreshCw, Phone } from 'lucide-react';
+import ScrollReveal from '@/components/ui/ScrollReveal';
+import Button from '@/components/ui/Button';
 
 export const metadata: Metadata = {
   title: 'Warranty Policy | FIXplanet',
@@ -17,6 +20,30 @@ export default function WarrantyPage() {
           </nav>
           <h1 className="text-4xl font-bold text-white">Warranty Policy</h1>
           <p className="text-gray-300 mt-2">Last updated: October 2024</p>
+        </div>
+      </section>
+
+      {/* Warranty Highlights */}
+      <section className="py-12 bg-gray-light">
+        <div className="container-custom">
+          <ScrollReveal>
+          <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            {[
+              { icon: Shield, label: '12-Month Coverage', desc: 'All parts & labor', badge: 'badge-teal' },
+              { icon: CheckCircle2, label: 'Fixed or Free', desc: "Can't fix? No charge", badge: 'badge-success' },
+              { icon: Clock, label: 'On-Time Promise', desc: 'Late = ₹500 off auto', badge: 'badge-gold' },
+              { icon: RefreshCw, label: 'Free Re-repair', desc: 'No questions asked', badge: 'badge-teal' },
+            ].map((item) => (
+              <div key={item.label} className="bg-white rounded-xl p-6 text-center shadow-card card-3d">
+                <div className="w-14 h-14 bg-teal-accent/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <item.icon className="text-teal-accent" size={28} />
+                </div>
+                <div className={`badge ${item.badge} mb-2`}>{item.label}</div>
+                <p className="text-sm text-gray-dark">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -242,6 +269,21 @@ export default function WarrantyPage() {
                 <li>Store your warranty invoice in a safe place</li>
               </ul>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Warranty CTA */}
+      <section className="py-12 bg-navy-primary text-white">
+        <div className="container-custom text-center">
+          <h2 className="text-2xl font-bold mb-3">Claim Warranty or Book a New Repair</h2>
+          <p className="text-gray-300 mb-6">We&apos;re available 9 AM–9 PM, 7 days a week</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button href="/contact" size="lg">Book Repair Now</Button>
+            <Button href="tel:+918105955009" variant="ghost" size="lg" className="!text-white !border-white hover:!bg-white hover:!text-navy-primary">
+              <Phone className="mr-2" size={18} />
+              +91 8105955009
+            </Button>
           </div>
         </div>
       </section>
