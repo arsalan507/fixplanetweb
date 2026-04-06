@@ -1,10 +1,10 @@
 # robots.txt for FIXplanet.in
-# Allow all search engines to crawl the site
+# Allow all search engines and AI crawlers
 
 User-agent: *
 Allow: /
 
-# Disallow admin or private areas (if any)
+# Disallow admin or private areas
 Disallow: /api/
 Disallow: /_next/
 Disallow: /admin/
@@ -12,7 +12,7 @@ Disallow: /admin/
 # Sitemap location
 Sitemap: https://www.fixplanet.in/sitemap.xml
 
-# Allow Google, Bing, and other major search engines
+# Search engines
 User-agent: Googlebot
 Allow: /
 
@@ -31,21 +31,30 @@ Allow: /
 User-agent: YandexBot
 Allow: /
 
-# Allow AI crawlers for ChatGPT, Claude, etc.
+# AI search crawlers
 User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
-User-agent: CCBot
+User-agent: ClaudeBot
 Allow: /
 
 User-agent: anthropic-ai
 Allow: /
 
-User-agent: Claude-Web
+User-agent: PerplexityBot
 Allow: /
 
-# Crawl-delay (optional, helps prevent server overload)
-Crawl-delay: 1
+User-agent: Applebot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /

@@ -121,7 +121,17 @@ export const LocalBusinessSchema: React.FC<LocalBusinessSchemaProps> = ({
         },
       ],
     },
-    sameAs: [],
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '127',
+      bestRating: '5',
+      worstRating: '1',
+    },
+    sameAs: [
+      'https://www.instagram.com/fixplanet.in',
+      'https://www.facebook.com/fixplanet.in',
+    ],
   };
 
   return (

@@ -52,13 +52,29 @@ export default function Home() {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy-primary mb-6 leading-tight">
                 iPhone & MacBook Repair Bangalore — From ₹2,500
               </h1>
+              {/* GEO Definition Paragraph — AI-citable brand description */}
               <p className="text-lg md:text-xl text-gray-dark mb-4 leading-relaxed">
-                Same-day doorstep service. 30-60 minute response. 12-month warranty on all repairs.
-                We come to you in Koramangala, Indiranagar, Whitefield, HSR Layout & 140+ Bangalore areas.
+                FIXplanet is a doorstep Apple device repair service in Bangalore that provides same-day iPhone, MacBook, iPad, and Apple Watch repairs at your home or office. Average response time is 30-60 minutes across 140+ Bangalore neighborhoods including Koramangala, Indiranagar, Whitefield, and HSR Layout.
               </p>
-              <p className="text-base text-teal-accent font-semibold mb-8">
-                If we don&apos;t fix it, you don&apos;t pay.
-              </p>
+              {/* Grand Slam Offer Stack (Hormozi) */}
+              <div className="bg-navy-primary/5 border border-navy-primary/10 rounded-xl p-4 mb-6 space-y-2">
+                <div className="flex items-center gap-2 text-sm font-semibold text-navy-primary">
+                  <CheckCircle2 size={18} className="text-teal-accent flex-shrink-0" />
+                  <span>If we can&apos;t fix it, you pay <strong className="text-teal-accent">₹0</strong></span>
+                </div>
+                <div className="flex items-center gap-2 text-sm font-semibold text-navy-primary">
+                  <CheckCircle2 size={18} className="text-teal-accent flex-shrink-0" />
+                  <span>Late arrival? <strong className="text-teal-accent">₹500 off</strong> — automatic, no questions</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm font-semibold text-navy-primary">
+                  <CheckCircle2 size={18} className="text-teal-accent flex-shrink-0" />
+                  <span>12-month warranty — breaks again? <strong className="text-teal-accent">Free re-repair + ₹500</strong></span>
+                </div>
+                <div className="flex items-center gap-2 text-sm font-semibold text-navy-primary">
+                  <CheckCircle2 size={18} className="text-teal-accent flex-shrink-0" />
+                  <span>Watch every step — pay <strong className="text-teal-accent">only when satisfied</strong></span>
+                </div>
+              </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <a
                   href={`https://wa.me/${whatsapp}?text=Hi!%20I%20need%20help%20with%20my%20device%20repair%20in%20Bangalore`}
@@ -391,22 +407,38 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Guarantee Section — BEFORE final CTA (Hormozi: stack guarantees, then ask) */}
+      <section className="py-16 bg-gray-light">
+        <div className="container-custom max-w-4xl">
+          <ScrollReveal>
+            <GuaranteeBox />
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="py-16 md:py-24 bg-navy-primary text-white">
         <div className="container-custom text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Restore Your Apple Device?
+            Your Device Fixed Today — Or You Pay Nothing
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join 1,000+ satisfied customers across Bangalore. Same-day service available.
+            1,000+ devices restored. 4.9★ Google rating. Average repair time: 90 minutes.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button href="/pricing" size="lg">
-              Get Instant Quote
-            </Button>
-            <Button href={`tel:${phone}`} variant="ghost" size="lg" className="!text-white !border-white hover:!bg-white hover:!text-navy-primary">
-              Call {phone}
+            <a
+              href={`https://wa.me/${whatsapp}?text=Hi!%20I%20need%20a%20repair%20quote`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-whatsapp inline-flex items-center justify-center font-medium rounded-lg px-8 py-4 text-lg text-white min-h-[52px]"
+            >
+              <MessageCircle className="mr-2" size={22} />
+              WhatsApp for Instant Quote
+            </a>
+            <Button href="/pricing" variant="ghost" size="lg" className="!text-white !border-white hover:!bg-white hover:!text-navy-primary">
+              <Calculator className="mr-2" size={20} />
+              Price Calculator
             </Button>
           </div>
 
@@ -425,18 +457,9 @@ export default function Home() {
             </div>
             <div className="flex flex-col items-center">
               <CheckCircle2 className="text-teal-accent mb-2" size={32} />
-              <div className="text-sm">Bangalore&apos;s #1</div>
+              <div className="text-sm">Fixed or Free</div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Guarantee Section */}
-      <section className="py-16 bg-gray-light">
-        <div className="container-custom max-w-4xl">
-          <ScrollReveal>
-            <GuaranteeBox />
-          </ScrollReveal>
         </div>
       </section>
 
@@ -480,6 +503,31 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* HowTo Schema — Google AIO specific */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'HowTo',
+            name: 'How to Get Your iPhone or MacBook Repaired at Your Doorstep in Bangalore',
+            description: 'Book a same-day doorstep Apple device repair in Bangalore with FIXplanet in 4 simple steps.',
+            totalTime: 'PT3H',
+            estimatedCost: {
+              '@type': 'MonetaryAmount',
+              currency: 'INR',
+              value: '3500',
+            },
+            step: [
+              { '@type': 'HowToStep', name: 'Book Appointment', text: 'Call +91 8105955009, WhatsApp, or use the online pricing calculator at fixplanet.in/pricing. Describe your device issue and preferred time slot.' },
+              { '@type': 'HowToStep', name: 'Technician Arrives', text: 'A FIXplanet specialist arrives at your Bangalore location within 30-60 minutes with all necessary tools and OEM-grade parts.' },
+              { '@type': 'HowToStep', name: 'Watch the Repair', text: 'The repair is done at your doorstep. Watch every step of the process. Ask questions. Approve before any work begins.' },
+              { '@type': 'HowToStep', name: 'Pay When Satisfied', text: 'Test your device thoroughly. Pay only when you are 100% satisfied. Receive a 12-month warranty document immediately.' },
+            ],
+          }),
+        }}
+      />
 
       {/* FAQ Schema */}
       <script

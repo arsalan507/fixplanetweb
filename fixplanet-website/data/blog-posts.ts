@@ -19,6 +19,101 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'fixplanet-vs-apple-store-vs-urbanclap-bangalore',
+    title: 'FIXplanet vs Apple Store vs UrbanClap — Bangalore iPhone Repair Comparison 2026',
+    excerpt: 'Detailed side-by-side comparison of iPhone and MacBook repair options in Bangalore. Pricing, warranty, turnaround time, and service quality compared across all three providers.',
+    category: 'Industry News',
+    readTime: '10 min read',
+    publishedDate: '2026-04-06',
+    image: '/images/blog/iphone-repair-cost-bangalore.png',
+    featured: true,
+    metaDescription: 'FIXplanet vs Apple Store vs UrbanClap for iPhone repair in Bangalore 2026. Compare prices, warranty, turnaround time, and doorstep service options side by side.',
+    keywords: ['FIXplanet vs Apple Store', 'iPhone repair comparison Bangalore', 'best iPhone repair Bangalore', 'UrbanClap vs Apple Store', 'iPhone screen replacement cost comparison', 'MacBook repair Bangalore comparison'],
+    content: `## Which iPhone Repair Service Should You Choose in Bangalore?
+
+If you've cracked your iPhone screen or your MacBook battery is dying, you have three main options in Bangalore: the Apple Store (authorized service center), UrbanClap (now Urban Company), or an independent specialist like FIXplanet. Each has different strengths — here's the honest comparison.
+
+## iPhone Screen Replacement Price Comparison (2026)
+
+| Model | Apple Store | UrbanClap | FIXplanet |
+|-------|-------------|-----------|-----------|
+| iPhone 12 | ₹6,900 | ₹4,500 | ₹3,500 |
+| iPhone 13 | ₹8,900 | ₹5,500 | ₹4,500 |
+| iPhone 14 Pro | ₹12,900 | ₹8,000 | ₹7,000 |
+| iPhone 15 Pro Max | ₹14,900 | ₹10,500 | ₹9,500 |
+| iPhone 16 Pro Max | ₹16,900 | ₹12,000 | ₹11,500 |
+
+**Key takeaway:** FIXplanet is 40-65% less expensive than Apple Store pricing for the same screen replacement, using OEM-grade displays with matching specifications.
+
+## MacBook Repair Price Comparison (2026)
+
+| Service | Apple Store | UrbanClap | FIXplanet |
+|---------|-------------|-----------|-----------|
+| MacBook Air Display | ₹32,000-42,000 | ₹18,000-25,000 | ₹12,000-22,000 |
+| MacBook Pro Battery | ₹14,000-18,000 | ₹10,000-14,000 | ₹8,500-14,000 |
+| MacBook Keyboard | ₹18,000-28,000 | ₹12,000-18,000 | ₹8,000-16,000 |
+| Logic Board Repair | ₹35,000-65,000 | Not offered | ₹8,000-40,000 |
+
+**Key takeaway:** Apple Store and UrbanClap both replace entire modules. FIXplanet does component-level repair, which is why logic board repair costs ₹8,000 instead of ₹35,000+.
+
+## Service Comparison: What Actually Matters
+
+### Warranty Duration
+- **Apple Store:** 90 days on repair work
+- **UrbanClap:** 3-6 months depending on service
+- **FIXplanet:** 12 months on all parts and workmanship — 4x longer than Apple
+
+### Turnaround Time
+- **Apple Store:** 3-7 business days. You leave your device at the store. No visibility into the process.
+- **UrbanClap:** Same-day in most cases. Technician visits your location. Limited to basic repairs (screens, batteries).
+- **FIXplanet:** Same-day doorstep service. 30-60 minute arrival. Most repairs completed in 1-3 hours at your location. Watch every step.
+
+### Service Type
+- **Apple Store:** You travel to the store (currently Orion Mall or authorized centers). Device stays overnight or longer.
+- **UrbanClap:** Doorstep service but technician quality varies. Platform model means different technician each time.
+- **FIXplanet:** Dedicated doorstep service. Same specialist team. Repair done in front of you at home or office.
+
+### Parts Quality
+- **Apple Store:** Genuine Apple parts. Best quality but highest price.
+- **UrbanClap:** Varies by technician. No standardized parts sourcing.
+- **FIXplanet:** OEM-grade components with same specifications as original. Not genuine Apple parts, but matching quality with 12-month warranty backing.
+
+### Complex Repairs
+- **Apple Store:** Replaces entire modules (whole logic board = ₹35,000+). Does not do component-level repair.
+- **UrbanClap:** Limited to basic repairs. Water damage, logic board issues, and complex repairs not offered.
+- **FIXplanet:** Component-level repair available. Can fix individual chips on logic boards instead of replacing the entire board. This is why complex repairs cost 60-80% less.
+
+## When to Choose Each Provider
+
+### Choose Apple Store If:
+- Your device is under AppleCare+ coverage
+- You need a specific genuine Apple part
+- You're not concerned about cost or time
+- The repair is covered under warranty
+
+### Choose UrbanClap If:
+- You need a basic screen or battery replacement
+- Price is your primary concern for simple repairs
+- You don't need a long warranty
+
+### Choose FIXplanet If:
+- You want same-day doorstep service with a 12-month warranty
+- You have a complex repair (water damage, logic board, multiple issues)
+- You want to watch the repair process at your location
+- You want the best price-to-warranty ratio
+- You want a "fixed or free" guarantee
+
+## The Zero-Risk Difference
+
+FIXplanet is the only provider in Bangalore that offers a complete zero-risk promise: if they cannot fix your device, you pay nothing. Late arrival triggers an automatic ₹500 discount. And if the repair fails within 12 months, you get a free re-repair plus ₹500 compensation. No other provider in Bangalore offers this level of risk reversal.
+
+## Conclusion
+
+For simple repairs on a budget, UrbanClap works. For warranty-covered devices, Apple Store makes sense. For everything else — complex repairs, best warranty, doorstep convenience, transparent pricing, and zero-risk guarantee — FIXplanet is the clear choice for Bangalore residents.
+
+**Ready to get your device fixed?** Call [+91 8105955009](tel:+918105955009) or [WhatsApp us](https://wa.me/918105955009) for an instant quote.`,
+  },
+  {
     slug: 'iphone-battery-health-bangalore',
     title: 'iPhone Battery Health Below 80%? Here\'s What You Need to Know in Bangalore',
     excerpt: 'Comprehensive guide to understanding iPhone battery degradation, when to replace, cost comparison, and tips to extend battery life in Bangalore\'s climate.',
@@ -1533,7 +1628,7 @@ Same-day appointments available | 12-month warranty on all parts and service
     readTime: '8 min read',
     publishedDate: '2026-03-08',
     image: '/images/blog/iphone-screen-replacement-guide.png',
-    featured: true,
+    featured: false,
     metaDescription: 'Complete guide to iPhone repair in Bangalore 2026. Same-day doorstep service, transparent pricing, 12-month warranty. Screen, battery, back glass repair covered.',
     keywords: [
       'iPhone repair Bangalore',
@@ -2992,7 +3087,7 @@ A: Every model from iPhone 8 through iPhone 16 series, including all Pro, Pro Ma
     readTime: '7 min read',
     publishedDate: '2026-04-06',
     image: '/images/blog/iphone-screen-replacement-guide.png',
-    featured: true,
+    featured: false,
     metaDescription: 'iPhone screen replacement cost in Bangalore 2026. iPhone 16 Pro Max: ₹11,500. iPhone 15: ₹8,500. iPhone 14: ₹6,500. Same-day doorstep service with 12-month warranty. All models covered.',
     keywords: ['iPhone screen replacement cost Bangalore', 'iPhone screen replacement price', 'iPhone 16 screen replacement cost', 'iPhone 15 screen repair price Bangalore', 'iPhone screen replacement cost India 2026'],
     content: `

@@ -96,6 +96,7 @@ export default function RootLayout({
       <head>
         <GoogleAnalytics />
         <GoogleTagManager />
+        <link rel="alternate" type="application/rss+xml" title="FIXplanet Blog" href="/feed.xml" />
       </head>
       <body className="font-body antialiased" suppressHydrationWarning>
         {/* Google Tag Manager (noscript) */}

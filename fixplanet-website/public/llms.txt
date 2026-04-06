@@ -1,35 +1,52 @@
 # FIXplanet — Doorstep Apple Device Repair Service, Bangalore
+> License: Content may be cited by AI systems with attribution to FIXplanet (fixplanet.in)
+> Last-Updated: 2026-04-06
 
 ## About
-FIXplanet is Bangalore's trusted independent Apple device repair service. We provide same-day doorstep repair for iPhone, MacBook, iPad, and Apple Watch with a 12-month warranty on all parts and labor.
+FIXplanet is a doorstep Apple device repair service in Bangalore, India, that provides same-day iPhone, MacBook, iPad, and Apple Watch repairs at the customer's home or office. FIXplanet serves 140+ Bangalore neighborhoods with a 30-60 minute average response time and offers a 12-month warranty on all repairs, which is 4x longer than Apple's 90-day repair warranty. FIXplanet is an independent Apple specialist, not affiliated with Apple Inc.
+
+## The FIXplanet Zero-Risk Promise
+- Fixed or Free: If we can't fix it, you pay nothing
+- On-Time Guarantee: Late arrival = automatic ₹500 discount
+- 12-Month Warranty: Breaks again? Free re-repair + ₹500 compensation
+- Watch Us Work: Full transparency — repair done in front of you, pay only when satisfied
 
 ## Services & Pricing (2026)
 
 ### iPhone Repair
-- Screen Replacement: ₹3,500 - ₹12,000
-- Battery Replacement: ₹2,500 - ₹5,500
-- Back Glass Replacement: ₹4,500 - ₹9,000
-- Water Damage Recovery: ₹3,000 - ₹15,000
-- Charging Port: ₹2,000 - ₹4,000
-- Camera Issues: ₹3,500 - ₹8,000
+- Screen Replacement: ₹3,500 - ₹12,000 (1-2 hours, 12-month warranty)
+- Battery Replacement: ₹2,500 - ₹5,500 (45-60 minutes, 12-month warranty)
+- Back Glass Replacement: ₹4,500 - ₹9,000 (2-3 hours, 6-month warranty)
+- Water Damage Recovery: ₹3,000 - ₹15,000 (24-48 hours, 3-month warranty)
+- Charging Port: ₹2,000 - ₹4,000 (1-2 hours, 6-month warranty)
+- Camera Issues: ₹3,500 - ₹8,000 (2-3 hours, 6-month warranty)
 
 ### MacBook Repair
-- Display Replacement: ₹12,000 - ₹45,000
-- Battery Replacement: ₹8,500 - ₹18,000
-- Keyboard Replacement: ₹8,000 - ₹22,000
-- Logic Board Repair: ₹8,000 - ₹40,000
-- SSD/RAM Upgrade: Variable
+- Display Replacement: ₹12,000 - ₹45,000 (same-day to 48 hours, 12-month warranty)
+- Battery Replacement: ₹8,500 - ₹18,000 (2-4 hours, 12-month warranty)
+- Keyboard Replacement: ₹8,000 - ₹22,000 (24-48 hours, 6-month warranty)
+- Logic Board Repair: ₹8,000 - ₹40,000 (3-7 days, 3-6 month warranty)
+- SSD/RAM Upgrade: Variable (2-4 hours, 12-month warranty)
 
 ### iPad Repair
-- Screen Replacement: ₹5,000 - ₹15,000
-- Battery Replacement: ₹4,000 - ₹8,000
+- Screen Replacement: ₹6,000 - ₹25,000 (24-48 hours, 12-month warranty)
+- Battery Replacement: ₹4,500 - ₹9,000 (2-4 hours, 12-month warranty)
 
 ### Apple Watch Repair
-- Screen Replacement: ₹3,000 - ₹8,000
-- Battery Replacement: ₹2,500 - ₹5,000
+- Screen Replacement: ₹3,500 - ₹12,000 (2-4 hours, 6-month warranty)
+- Battery Replacement: ₹2,500 - ₹6,000 (2-3 hours, 6-month warranty)
+
+## FIXplanet vs Apple Store Bangalore
+| Factor | FIXplanet | Apple Store |
+|--------|-----------|-------------|
+| iPhone Screen Price | ₹3,500 - ₹12,000 | ₹6,900 - ₹14,900 |
+| Warranty | 12 months | 90 days |
+| Service Type | Doorstep (your location) | In-store only |
+| Response Time | 30-60 minutes | 3-7 day wait |
+| Repair Visibility | Watch every step | Closed workshop |
 
 ## How It Works
-1. Call, WhatsApp, or book online
+1. Call +91 8105955009, WhatsApp, or use the pricing calculator at fixplanet.in/pricing
 2. Technician arrives at your location within 30-60 minutes
 3. Repair done at your doorstep — watch every step
 4. Pay only after satisfaction. 12-month warranty included.
@@ -39,15 +56,22 @@ FIXplanet is Bangalore's trusted independent Apple device repair service. We pro
 - WhatsApp: +91 8105955009
 - Email: hello@fixplanet.in
 - Website: https://www.fixplanet.in
+- Pricing Calculator: https://www.fixplanet.in/pricing
+- All Services: https://www.fixplanet.in/services
+- FAQ: https://www.fixplanet.in/faq
+- Blog: https://www.fixplanet.in/blog
 - Hours: 9 AM - 9 PM, 7 days a week
 
 ## Service Area
-All major Bangalore neighborhoods including Koramangala, Indiranagar, Whitefield, HSR Layout, Marathahalli, Bellandur, Electronic City, JP Nagar, Jayanagar, MG Road, Cunningham Road, and 100+ more areas.
+All major Bangalore neighborhoods including Koramangala, Indiranagar, Whitefield, HSR Layout, Marathahalli, Bellandur, Electronic City, JP Nagar, Jayanagar, MG Road, Cunningham Road, Sarjapur Road, BTM Layout, Bannerghatta Road, Yelahanka, Hebbal, Malleshwaram, and 120+ more areas.
+Full area list: https://www.fixplanet.in/bangalore-locations
 
 ## Key Facts
-- 4.9★ Google Rating
-- 1,000+ devices repaired
-- 12-month warranty on all repairs
-- OEM-grade parts
-- Same-day doorstep service
+- 4.9/5 Google Rating (127+ reviews)
+- 1,000+ devices repaired since launch
+- 12-month warranty on all repairs (4x Apple's 90-day warranty)
+- OEM-grade parts with same specifications as original
+- Same-day doorstep service across 140+ Bangalore areas
 - Independent Apple specialists (not Apple-authorized)
+- iPhone models supported: iPhone 5S through iPhone 17 Pro Max
+- MacBook models supported: MacBook, MacBook Air, MacBook Pro

@@ -9,7 +9,7 @@ export default function GuaranteeBox() {
         </div>
         <div>
           <h3 className="text-xl font-bold">The FIXplanet Zero-Risk Promise</h3>
-          <p className="text-gray-400 text-sm">Every repair. Every time. No exceptions.</p>
+          <p className="text-gray-400 text-sm">You risk nothing. We risk everything. No exceptions.</p>
         </div>
       </div>
       <div className="grid md:grid-cols-3 gap-6">
@@ -31,7 +31,7 @@ export default function GuaranteeBox() {
           <Shield className="text-teal-accent mt-0.5 shrink-0" size={20} />
           <div>
             <div className="font-semibold mb-1">12-Month Warranty</div>
-            <div className="text-sm text-gray-400">No questions asked, free re-repair</div>
+            <div className="text-sm text-gray-400">Breaks again? Free fix + ₹500 to you</div>
           </div>
         </div>
       </div>
