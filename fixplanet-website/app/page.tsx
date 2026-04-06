@@ -41,11 +41,12 @@ export default function Home() {
                 />
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy-primary mb-6 leading-tight">
-                Expert Apple Device Care—At Your Doorstep, Today
+                iPhone & MacBook Repair Bangalore — From ₹2,500
               </h1>
               <p className="text-lg md:text-xl text-gray-dark mb-8 leading-relaxed">
-                Bangalore&apos;s trusted independent Apple specialists. Same-day service in Koramangala,
-                Indiranagar & Whitefield. 12-month warranty. Watch us work at your location.
+                Same-day doorstep service. 30-60 minute response. 12-month warranty on all repairs.
+                We come to you in Koramangala, Indiranagar, Whitefield, HSR Layout & 140+ Bangalore areas.
+                If we don&apos;t fix it, you don&apos;t pay.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Button href="/pricing" size="lg">
@@ -408,6 +409,100 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section with Schema */}
+      <section className="py-16 bg-white">
+        <div className="container-custom max-w-4xl">
+          <h2 className="text-3xl font-bold text-navy-primary text-center mb-10">
+            Frequently Asked Questions
+          </h2>
+          <div className="space-y-4">
+            {[
+              {
+                q: 'How much does iPhone screen replacement cost in Bangalore?',
+                a: 'iPhone screen replacement at FIXplanet starts from ₹3,500 for iPhone 11 and goes up to ₹11,500 for iPhone 16 Pro Max. All prices include doorstep service, OEM-grade display, and 12-month warranty. This is 40-65% less than Apple Store pricing.',
+              },
+              {
+                q: 'Do you provide doorstep iPhone repair in Bangalore?',
+                a: 'Yes. FIXplanet provides same-day doorstep repair across 140+ Bangalore areas including Koramangala, Indiranagar, HSR Layout, Whitefield, Marathahalli, Electronic City, and Jayanagar. Our technician arrives at your home or office within 30-60 minutes with all required parts and tools.',
+              },
+              {
+                q: 'What warranty do you offer on repairs?',
+                a: 'Every FIXplanet repair comes with a 12-month warranty covering parts and workmanship. If the replacement part develops any defect within 12 months, we replace it free of charge. This is 4x longer than Apple\'s 90-day repair warranty.',
+              },
+              {
+                q: 'How long does iPhone screen replacement take?',
+                a: 'Most iPhone screen replacements are completed in 30-45 minutes at your location. Our technician carries pre-tested screens for all iPhone models, so there is no waiting for parts. You can watch the entire repair process.',
+              },
+              {
+                q: 'Do I lose my data during repair?',
+                a: 'No. Screen replacement, battery replacement, and back glass repair do not affect your data. All your photos, apps, and settings remain exactly as they are. We never ask for your Apple ID password.',
+              },
+            ].map((faq, i) => (
+              <details key={i} className="group border border-gray-200 rounded-xl overflow-hidden">
+                <summary className="flex items-center justify-between cursor-pointer p-5 bg-gray-50 hover:bg-gray-100 transition-colors font-semibold text-navy-primary">
+                  {faq.q}
+                  <span className="ml-4 text-teal-accent text-xl group-open:rotate-45 transition-transform">+</span>
+                </summary>
+                <p className="p-5 text-gray-dark leading-relaxed">{faq.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'How much does iPhone screen replacement cost in Bangalore?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'iPhone screen replacement at FIXplanet starts from ₹3,500 for iPhone 11 and goes up to ₹11,500 for iPhone 16 Pro Max. All prices include doorstep service, OEM-grade display, and 12-month warranty.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Do you provide doorstep iPhone repair in Bangalore?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Yes. FIXplanet provides same-day doorstep repair across 140+ Bangalore areas including Koramangala, Indiranagar, HSR Layout, Whitefield, Marathahalli, Electronic City, and Jayanagar.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What warranty do you offer on repairs?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Every FIXplanet repair comes with a 12-month warranty covering parts and workmanship. If the replacement part develops any defect within 12 months, we replace it free of charge.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How long does iPhone screen replacement take?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Most iPhone screen replacements are completed in 30-45 minutes at your location. Our technician carries pre-tested screens for all iPhone models.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Do I lose my data during repair?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'No. Screen replacement, battery replacement, and back glass repair do not affect your data. All your photos, apps, and settings remain exactly as they are.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
     </>
   );
 }

@@ -15,12 +15,22 @@ export const metadata: Metadata = {
   },
 };
 
+// Only show areas that have real pages (not 301-redirected)
+const KEPT_AREA_SLUGS = new Set([
+  'amruthahalli', 'anekal', 'anjanapura', 'avalahalli', 'basaveshwaranagar',
+  'begur', 'bel-road', 'bellandur', 'brookefield', 'btm-layout',
+  'cunningham-road', 'electronic-city', 'hebbal', 'hennur-road', 'hsr-layout',
+  'indiranagar', 'jayanagar', 'jp-nagar', 'koramangala', 'malleshwaram',
+  'marathahalli', 'mg-road', 'sarjapur-road', 'whitefield',
+  'whitefield-main-road', 'yelahanka',
+]);
+
 export default function BangaloreLocationsPage() {
-  const centralAreas = getAreasByZone('Central');
-  const southAreas = getAreasByZone('South');
-  const eastAreas = getAreasByZone('East');
-  const northAreas = getAreasByZone('North');
-  const westAreas = getAreasByZone('West');
+  const centralAreas = getAreasByZone('Central').filter(a => KEPT_AREA_SLUGS.has(a.slug));
+  const southAreas = getAreasByZone('South').filter(a => KEPT_AREA_SLUGS.has(a.slug));
+  const eastAreas = getAreasByZone('East').filter(a => KEPT_AREA_SLUGS.has(a.slug));
+  const northAreas = getAreasByZone('North').filter(a => KEPT_AREA_SLUGS.has(a.slug));
+  const westAreas = getAreasByZone('West').filter(a => KEPT_AREA_SLUGS.has(a.slug));
 
   return (
     <div>
