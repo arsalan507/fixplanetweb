@@ -5,6 +5,7 @@ import Navigation from '@/components/ui/Navigation';
 import Footer from '@/components/ui/Footer';
 import GoogleAnalytics from './GoogleAnalytics';
 import GoogleTagManager from './GoogleTagManager';
+import ClickTracker from '@/components/analytics/ClickTracker';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -111,6 +112,7 @@ export default function RootLayout({
           </noscript>
         )}
         <Navigation />
+        <ClickTracker />
         <main className="min-h-screen pt-20 pb-20 md:pb-0">{children}</main>
         <Footer />
         {/* Sticky Mobile CTA Bar */}
